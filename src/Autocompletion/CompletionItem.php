@@ -245,7 +245,7 @@ final class CompletionItem implements JsonSerializable, ArrayAccess
     /**
      * @inheritDoc
      */
-    public function offsetSet($offset, $value)
+    public function offsetSet($offset, $value): void
     {
         throw new LogicException('Setting properties directly is not allowed, use setters instead');
     }
@@ -253,7 +253,7 @@ final class CompletionItem implements JsonSerializable, ArrayAccess
     /**
      * @inheritDoc
      */
-    public function offsetExists($offset)
+    public function offsetExists($offset): bool
     {
         $array = $this->jsonSerialize();
 
@@ -263,7 +263,7 @@ final class CompletionItem implements JsonSerializable, ArrayAccess
     /**
      * @inheritDoc
      */
-    public function offsetUnset($offset)
+    public function offsetUnset($offset): void
     {
         throw new LogicException('Unsetting properties is not allowed');
     }
