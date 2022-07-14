@@ -12,8 +12,16 @@ final class TextToUtf8Converter implements TextEncodingConverterInterface
      */
     public function convert(string $code): string
     {
-        // Passing null does NOT work with 8.1(.7), although based on PHP docs, it must do the same
-        // thing as calling mb_detect_order(). It might be an internal bug, but not totally sure.
+        // BUG: https://github.com/php/php-src/issues/9008
+        // The workaround is, we suppose the encoding is UTF-8 by default. If it is already, no
+        // action will be done, otherwise, it tries to detect and convert the encoding. Notice that
+        // the latter case would be a rare situation, so no worries.
+        $utf8 = mb_detect_encoding($code, ['UTF-8'], true);
+
+        if ($utf8 !== false) {
+            return $code;
+        }
+
         $encoding = mb_detect_encoding($code, mb_detect_order(), true);
 
         if ($encoding === false) {
