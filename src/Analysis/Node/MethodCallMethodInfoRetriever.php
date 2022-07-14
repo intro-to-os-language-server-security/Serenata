@@ -62,7 +62,7 @@ final class MethodCallMethodInfoRetriever
      * @param TextDocumentItem                                         $textDocumentItem
      * @param Position                                                 $position
      *
-     * @return array[]
+     * @return array<array<string,mixed>>
      */
     public function retrieve(Node\Expr $node, TextDocumentItem $textDocumentItem, Position $position): array
     {
