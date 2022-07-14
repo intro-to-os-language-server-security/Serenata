@@ -48,8 +48,8 @@ test:run-composer-require-checker:
     image: php:7.4-cli-alpine
     stage: test
     script:
-        - curl -sSL https://github.com/maglnet/ComposerRequireChecker/releases/download/2.1.0/composer-require-checker.phar --output composer-require-checker.phar
-        - echo "f5b57c8f4305eb3d5ec605943b5250b10aacb939778be005360f815860474495  composer-require-checker.phar" > checksums
+        - curl -sSL https://github.com/maglnet/ComposerRequireChecker/releases/download/4.1.0/composer-require-checker.phar --output composer-require-checker.phar
+        - echo "2a4c652de474e5dbbda1662ff82f207be7aa86b44912093cf5fb135345506e66  composer-require-checker.phar" > checksums
         - sha256sum -c checksums
         - php ./composer-require-checker.phar check ./composer.json
 
