@@ -45,7 +45,7 @@ build:php-8.0:
 
 # ----- Test stage
 test:run-composer-require-checker:
-    image: php:7.4-cli-alpine
+    image: php:8.0-cli-alpine
     stage: test
     script:
         - curl -sSL https://github.com/maglnet/ComposerRequireChecker/releases/download/4.1.0/composer-require-checker.phar --output composer-require-checker.phar
