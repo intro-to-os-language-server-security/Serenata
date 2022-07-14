@@ -43,6 +43,10 @@ build:php-8.0:
     image: php:8.0-cli-alpine
     <<: *build-job-shared
 
+build:php-8.1:
+    image: php:8.1-cli-alpine
+    <<: *build-job-shared
+
 # ----- Test stage
 test:run-composer-require-checker:
     image: php:8.0-cli-alpine
@@ -117,6 +121,13 @@ test:php-8.0:
         - job: build:php-8.0
           artifacts: true
 
+test:php-8.1:
+    image: php:8.1-cli-alpine
+    <<: *test-job-shared
+    needs:
+        - job: build:php-8.1
+          artifacts: true
+
 # ----- Finalization stage, which contains finishing steps such as metrics and packaging.
 .finalization-package-job-shared: &finalization-package-job-shared
     stage: finalization
@@ -151,6 +162,10 @@ finalization:package-php-7.4:
 
 finalization:package-php-8.0:
     image: php:8.0-cli-alpine
+    <<: *finalization-package-job-shared
+
+finalization:package-php-8.1:
+    image: php:8.1-cli-alpine
     <<: *finalization-package-job-shared
 
 finalization:code-coverage:
