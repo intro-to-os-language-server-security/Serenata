@@ -56,7 +56,7 @@ final class AutocompletionPerformanceTest extends AbstractPerformanceTest
         $testFilePath = $uriToIndex . '/Core/Core_d.php';
         $code = $this->container->get('sourceCodeStreamReader')->getSourceCodeFromFile($testFilePath);
 
-        $positionThatWillGenerateNonEmptyPrefix = strpos($code, "define ('E_ERROR', 1);");
+        $positionThatWillGenerateNonEmptyPrefix = strpos($code, "define('E_ERROR', 1);");
 
         // Empty prefixes are a specially optimized case that we don't want to trigger to have more realistic results.
         self::assertTrue(
