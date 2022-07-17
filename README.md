@@ -31,7 +31,7 @@ If you are writing a new client, please read the following sections.
 
 ### PHAR
 ```sh
-php -d memory_limit=1024M distribution-7.x.phar --uri=tcp://127.0.0.1:11111
+php -d memory_limit=1024M distribution-8.x.phar --uri=tcp://127.0.0.1:11111
 ```
 
 Where `x` is the PHP version you downloaded the PHAR for.
