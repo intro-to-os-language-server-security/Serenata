@@ -58,7 +58,7 @@ test:run-composer-require-checker:
         - php ./composer-require-checker.phar check ./composer.json
 
 test:run-phpcs:
-    image: php:8.0-cli-alpine
+    image: php:8.1-cli-alpine
     stage: test
     script:
         - php vendor/bin/phpcs src tests --warning-severity=8 --report-junit=./phpcs-test-report.xml
@@ -73,7 +73,7 @@ test:run-phpcs:
           artifacts: true
 
 test:run-phpstan:
-    image: php:8.0-cli-alpine
+    image: php:8.1-cli-alpine
     stage: test
     script:
         - php -d memory_limit=2048M vendor/bin/phpstan analyse -c phpstan-ci.neon --no-interaction --no-progress --error-format junit > ./phpstan-report.xml
@@ -169,7 +169,7 @@ finalization:package-php-8.1:
     <<: *finalization-package-job-shared
 
 finalization:code-coverage:
-    image: php:8.0-cli-alpine
+    image: php:8.1-cli-alpine
     stage: finalization
     coverage: '/^\s*Lines:\s*\d+.\d+\%/'
     script:
@@ -181,7 +181,7 @@ finalization:code-coverage:
         paths:
             - coverage/
     needs:
-        - job: build:php-8.0
+        - job: build:php-8.1
           artifacts: true
 
 # See also https://docs.gitlab.com/ee/user/project/code_intelligence.html. Does not support PHP at the moment (yet).
