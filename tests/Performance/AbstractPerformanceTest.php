@@ -4,7 +4,13 @@ namespace Serenata\Tests\Performance;
 
 use Closure;
 
+use Serenata\Sockets\JsonRpcRequest;
+
 use Serenata\Tests\Integration\AbstractIntegrationTest;
+
+use Serenata\UserInterface\JsonRpcQueueItemHandler\InitializeJsonRpcQueueItemHandler;
+
+use Serenata\Utility\InitializeParams;
 
 use Serenata\Workspace\ActiveWorkspaceManager;
 
@@ -56,5 +62,39 @@ abstract class AbstractPerformanceTest extends AbstractIntegrationTest
         assert($manager instanceof ActiveWorkspaceManager);
 
         return $manager;
+    }
+
+    protected function initializeDummyProject(
+        string $uriToIndex,
+        string $dummyDatabaseUri,
+        float $phpVersion = 8.0
+    ): void {
+        @unlink($dummyDatabaseUri);
+
+        $this->getActiveWorkspaceManager()->setActiveWorkspace(null);
+        $this->container->get('managerRegistry')->setDatabaseUri($dummyDatabaseUri);
+
+        $this->container->get('initializeJsonRpcQueueItemHandler')->initialize(
+            new InitializeParams(
+                123,
+                null,
+                $uriToIndex,
+                [
+                    'configuration' => [
+                        'uris'                    => [$uriToIndex],
+                        'indexDatabaseUri'        => $dummyDatabaseUri,
+                        'phpVersion'              => $phpVersion,
+                        'excludedPathExpressions' => [],
+                        'fileExtensions'          => ['php'],
+                    ],
+                ],
+                [],
+                null,
+                []
+            ),
+            $this->mockJsonRpcMessageSenderInterface(),
+            new JsonRpcRequest(null, 'NO_METHOD'),
+            false
+        );
     }
 }

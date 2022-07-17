@@ -21,34 +21,9 @@ final class AutocompletionPerformanceTest extends AbstractPerformanceTest
      */
     public function testProvideAllFromStubs(): void
     {
-        $uriToIndex = 'file://' . $this->normalizePath(__DIR__ . '/../../vendor/jetbrains/phpstorm-stubs');
-        $dummyDatabaseUri = $this->getOutputDirectory() . '/test-stubs.sqlite';
-
-        @unlink($dummyDatabaseUri);
-
-        $this->getActiveWorkspaceManager()->setActiveWorkspace(null);
-        $this->container->get('managerRegistry')->setDatabaseUri($dummyDatabaseUri);
-        $this->container->get('initializeJsonRpcQueueItemHandler')->initialize(
-            new InitializeParams(
-                123,
-                null,
-                $uriToIndex,
-                [
-                    'configuration' => [
-                        'uris'                    => [$uriToIndex],
-                        'indexDatabaseUri'        => $dummyDatabaseUri,
-                        'phpVersion'              => 7.1,
-                        'excludedPathExpressions' => [],
-                        'fileExtensions'          => ['php'],
-                    ],
-                ],
-                [],
-                null,
-                []
-            ),
-            $this->mockJsonRpcMessageSenderInterface(),
-            new JsonRpcRequest('TESTID', 'NOT USED'),
-            false
+        $this->initializeDummyProject(
+            $uriToIndex = 'file://' . $this->normalizePath(__DIR__ . '/../../vendor/jetbrains/phpstorm-stubs'),
+            $dummyDatabaseUri = $this->getOutputDirectory() . '/test-stubs.sqlite'
         );
 
         $this->indexPath($this->container, $uriToIndex);

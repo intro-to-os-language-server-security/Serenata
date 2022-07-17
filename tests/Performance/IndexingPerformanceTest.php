@@ -12,19 +12,13 @@ final class IndexingPerformanceTest extends AbstractPerformanceTest
      */
     public function testIndexStubs(): void
     {
-        $pathToIndex = __DIR__ . '/../../vendor/jetbrains/phpstorm-stubs';
-        $dummyDatabaseUri = 'file://' . $this->getOutputDirectory() . '/test-stubs.sqlite';
-
-        @unlink($dummyDatabaseUri);
-
-        $this->container->get('managerRegistry')->setDatabaseUri($dummyDatabaseUri);
-        $this->container->get('initializeJsonRpcQueueItemHandler')->initialize(
-            $this->mockJsonRpcMessageSenderInterface(),
-            false
+        $this->initializeDummyProject(
+            $uriToIndex = 'file://' . $this->normalizePath(__DIR__ . '/../../vendor/jetbrains/phpstorm-stubs'),
+            $dummyDatabaseUri = $this->getOutputDirectory() . '/test-stubs.sqlite'
         );
 
-        $time = $this->time(function () use ($pathToIndex): void {
-            $this->indexPath($this->container, $pathToIndex);
+        $time = $this->time(function () use ($uriToIndex): void {
+            $this->indexPath($this->container, $uriToIndex);
         });
 
         unlink($dummyDatabaseUri);
@@ -37,20 +31,13 @@ final class IndexingPerformanceTest extends AbstractPerformanceTest
      */
     public function testIndexLargeFile(): void
     {
-        // This file is about 3000 lines at the time of writing.
-        $pathToIndex = __DIR__ . '/../../vendor/doctrine/orm/lib/Doctrine/ORM/UnitOfWork.php';
-        $dummyDatabaseUri = 'file://' . $this->getOutputDirectory() . '/test-large-file.sqlite';
-
-        @unlink($dummyDatabaseUri);
-
-        $this->container->get('managerRegistry')->setDatabaseUri($dummyDatabaseUri);
-        $this->container->get('initializeJsonRpcQueueItemHandler')->initialize(
-            $this->mockJsonRpcMessageSenderInterface(),
-            false
+        $this->initializeDummyProject(
+            $uriToIndex = 'file://' . $this->normalizePath(__DIR__ . '/../../vendor/doctrine/orm/lib/Doctrine/ORM/UnitOfWork.php'),
+            $dummyDatabaseUri = $this->getOutputDirectory() . '/test-large-file.sqlite'
         );
 
-        $time = $this->time(function () use ($pathToIndex): void {
-            $this->indexPath($this->container, $pathToIndex);
+        $time = $this->time(function () use ($uriToIndex): void {
+            $this->indexPath($this->container, $uriToIndex);
         });
 
         unlink($dummyDatabaseUri);

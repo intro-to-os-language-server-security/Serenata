@@ -12,18 +12,12 @@ final class FunctionListProvidingPerformanceTest extends AbstractPerformanceTest
      */
     public function testFetchAllColdFromStubs(): void
     {
-        $pathToIndex = __DIR__ . '/../../vendor/jetbrains/phpstorm-stubs';
-        $dummyDatabaseUri = 'file://' . $this->getOutputDirectory() . '/test-global-functions-stubs.sqlite';
-
-        @unlink($dummyDatabaseUri);
-
-        $this->container->get('managerRegistry')->setDatabaseUri($dummyDatabaseUri);
-        $this->container->get('initializeJsonRpcQueueItemHandler')->initialize(
-            $this->mockJsonRpcMessageSenderInterface(),
-            false
+        $this->initializeDummyProject(
+            $uriToIndex = 'file://' . $this->normalizePath(__DIR__ . '/../../vendor/jetbrains/phpstorm-stubs'),
+            $dummyDatabaseUri = $this->getOutputDirectory() . '/test-global-functions-stubs.sqlite'
         );
 
-        $this->indexPath($this->container, $pathToIndex);
+        $this->indexPath($this->container, $uriToIndex);
 
         $time = $this->time(function (): void {
             $this->container->get('functionListProvider')->getAll();
@@ -39,18 +33,12 @@ final class FunctionListProvidingPerformanceTest extends AbstractPerformanceTest
      */
     public function testFetchAllHotFromStubs(): void
     {
-        $pathToIndex = __DIR__ . '/../../vendor/jetbrains/phpstorm-stubs';
-        $dummyDatabaseUri = $this->getOutputDirectory() . '/test-global-functions-stubs.sqlite';
-
-        @unlink($dummyDatabaseUri);
-
-        $this->container->get('managerRegistry')->setDatabaseUri($dummyDatabaseUri);
-        $this->container->get('initializeJsonRpcQueueItemHandler')->initialize(
-            $this->mockJsonRpcMessageSenderInterface(),
-            false
+        $this->initializeDummyProject(
+            $uriToIndex = 'file://' . $this->normalizePath(__DIR__ . '/../../vendor/jetbrains/phpstorm-stubs'),
+            $dummyDatabaseUri = $this->getOutputDirectory() . '/test-global-functions-stubs.sqlite'
         );
 
-        $this->indexPath($this->container, $pathToIndex);
+        $this->indexPath($this->container, $uriToIndex);
         $this->container->get('functionListProvider')->getAll();
 
         $time = $this->time(function (): void {
