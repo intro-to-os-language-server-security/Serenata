@@ -14,7 +14,6 @@ final class FunctionListProvidingPerformanceTest extends AbstractPerformanceTest
     {
         $this->initializeDummyProject(
             $uriToIndex = 'file://' . $this->normalizePath(__DIR__ . '/../../vendor/jetbrains/phpstorm-stubs'),
-            $dummyDatabaseUri = $this->getOutputDirectory() . '/test-global-functions-stubs.sqlite'
         );
 
         $this->indexPath($this->container, $uriToIndex);
@@ -22,8 +21,6 @@ final class FunctionListProvidingPerformanceTest extends AbstractPerformanceTest
         $time = $this->time(function (): void {
             $this->container->get('functionListProvider')->getAll();
         });
-
-        unlink($dummyDatabaseUri);
 
         $this->finish($time);
     }
@@ -35,7 +32,6 @@ final class FunctionListProvidingPerformanceTest extends AbstractPerformanceTest
     {
         $this->initializeDummyProject(
             $uriToIndex = 'file://' . $this->normalizePath(__DIR__ . '/../../vendor/jetbrains/phpstorm-stubs'),
-            $dummyDatabaseUri = $this->getOutputDirectory() . '/test-global-functions-stubs.sqlite'
         );
 
         $this->indexPath($this->container, $uriToIndex);
@@ -44,8 +40,6 @@ final class FunctionListProvidingPerformanceTest extends AbstractPerformanceTest
         $time = $this->time(function (): void {
             $this->container->get('functionListProvider')->getAll();
         });
-
-        unlink($dummyDatabaseUri);
 
         $this->finish($time);
     }

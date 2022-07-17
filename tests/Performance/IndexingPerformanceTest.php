@@ -14,14 +14,11 @@ final class IndexingPerformanceTest extends AbstractPerformanceTest
     {
         $this->initializeDummyProject(
             $uriToIndex = 'file://' . $this->normalizePath(__DIR__ . '/../../vendor/jetbrains/phpstorm-stubs'),
-            $dummyDatabaseUri = $this->getOutputDirectory() . '/test-stubs.sqlite'
         );
 
         $time = $this->time(function () use ($uriToIndex): void {
             $this->indexPath($this->container, $uriToIndex);
         });
-
-        unlink($dummyDatabaseUri);
 
         $this->finish($time);
     }
@@ -33,14 +30,11 @@ final class IndexingPerformanceTest extends AbstractPerformanceTest
     {
         $this->initializeDummyProject(
             $uriToIndex = 'file://' . $this->normalizePath(__DIR__ . '/../../vendor/doctrine/orm/lib/Doctrine/ORM/UnitOfWork.php'),
-            $dummyDatabaseUri = $this->getOutputDirectory() . '/test-large-file.sqlite'
         );
 
         $time = $this->time(function () use ($uriToIndex): void {
             $this->indexPath($this->container, $uriToIndex);
         });
-
-        unlink($dummyDatabaseUri);
 
         $this->finish($time);
     }

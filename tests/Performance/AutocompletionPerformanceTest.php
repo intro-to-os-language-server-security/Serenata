@@ -23,7 +23,6 @@ final class AutocompletionPerformanceTest extends AbstractPerformanceTest
     {
         $this->initializeDummyProject(
             $uriToIndex = 'file://' . $this->normalizePath(__DIR__ . '/../../vendor/jetbrains/phpstorm-stubs'),
-            $dummyDatabaseUri = $this->getOutputDirectory() . '/test-stubs.sqlite'
         );
 
         $this->indexPath($this->container, $uriToIndex);
@@ -51,8 +50,6 @@ final class AutocompletionPerformanceTest extends AbstractPerformanceTest
 
             self::assertNotEmpty($suggestionItems);
         });
-
-        unlink($dummyDatabaseUri);
 
         $this->finish($time);
     }

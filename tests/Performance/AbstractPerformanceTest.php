@@ -3,6 +3,7 @@
 namespace Serenata\Tests\Performance;
 
 use Closure;
+use RuntimeException;
 
 use Serenata\Sockets\JsonRpcRequest;
 
@@ -64,12 +65,16 @@ abstract class AbstractPerformanceTest extends AbstractIntegrationTest
         return $manager;
     }
 
+    /**
+     * Initializes a project as dummy, with dummy values.
+     */
     protected function initializeDummyProject(
         string $uriToIndex,
-        string $dummyDatabaseUri,
         float $phpVersion = 8.0
     ): void {
-        @unlink($dummyDatabaseUri);
+        $tmpDatabaseFile = tmpfile() ?:
+            throw new RuntimeException('Temporary database file cannot be created');
+        $dummyDatabaseUri = 'file://' . stream_get_meta_data($tmpDatabaseFile)['uri'];
 
         $this->getActiveWorkspaceManager()->setActiveWorkspace(null);
         $this->container->get('managerRegistry')->setDatabaseUri($dummyDatabaseUri);
