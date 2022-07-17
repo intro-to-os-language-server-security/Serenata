@@ -61,7 +61,7 @@ test:run-phpcs:
         reports:
             junit: phpcs-test-report.xml
     needs:
-        - job: build:php-7.4
+        - job: build:php-8.1
           artifacts: true
 
 test:run-phpstan:
@@ -81,7 +81,7 @@ test:run-phpstan:
         reports:
             junit: phpstan-report.xml
     needs:
-        - job: build:php-7.4
+        - job: build:php-8.1
           artifacts: true
 
 .test-run-phpunit: &test-run-phpunit
