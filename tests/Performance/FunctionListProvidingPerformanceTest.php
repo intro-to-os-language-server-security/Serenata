@@ -7,13 +7,10 @@ namespace Serenata\Tests\Performance;
  */
 final class FunctionListProvidingPerformanceTest extends AbstractPerformanceTest
 {
-    /**
-     * @return void
-     */
     public function testFetchAllColdFromStubs(): void
     {
         $this->initializeDummyProject(
-            $uriToIndex = 'file://' . $this->normalizePath(__DIR__ . '/../../vendor/jetbrains/phpstorm-stubs'),
+            $uriToIndex = $this->getNormalizedUri(__DIR__ . '/../../vendor/jetbrains/phpstorm-stubs'),
         );
 
         $this->indexPath($this->container, $uriToIndex);
@@ -25,13 +22,10 @@ final class FunctionListProvidingPerformanceTest extends AbstractPerformanceTest
         $this->finish($time);
     }
 
-    /**
-     * @return void
-     */
     public function testFetchAllHotFromStubs(): void
     {
         $this->initializeDummyProject(
-            $uriToIndex = 'file://' . $this->normalizePath(__DIR__ . '/../../vendor/jetbrains/phpstorm-stubs'),
+            $uriToIndex = $this->getNormalizedUri(__DIR__ . '/../../vendor/jetbrains/phpstorm-stubs'),
         );
 
         $this->indexPath($this->container, $uriToIndex);

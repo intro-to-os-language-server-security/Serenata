@@ -16,13 +16,10 @@ use Serenata\Utility\TextDocumentItem;
  */
 final class AutocompletionPerformanceTest extends AbstractPerformanceTest
 {
-    /**
-     * @return void
-     */
     public function testProvideAllFromStubs(): void
     {
         $this->initializeDummyProject(
-            $uriToIndex = 'file://' . $this->normalizePath(__DIR__ . '/../../vendor/jetbrains/phpstorm-stubs'),
+            $uriToIndex = $this->getNormalizedUri(__DIR__ . '/../../vendor/jetbrains/phpstorm-stubs'),
         );
 
         $this->indexPath($this->container, $uriToIndex);

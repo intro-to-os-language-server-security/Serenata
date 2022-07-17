@@ -20,19 +20,11 @@ use Serenata\Workspace\ActiveWorkspaceManager;
  */
 abstract class AbstractPerformanceTest extends AbstractIntegrationTest
 {
-    /**
-     * @return string
-     */
-    protected function getOutputDirectory(): string
+    protected function getNormalizedUri(string $path): string
     {
-        return 'file://' . $this->normalizePath(__DIR__ . '/Output');
+        return 'file://' . $this->normalizePath($path);
     }
 
-    /**
-     * @param Closure $closure
-     *
-     * @return float
-     */
     protected function time(Closure $closure): float
     {
         $time = microtime(true);
@@ -42,20 +34,11 @@ abstract class AbstractPerformanceTest extends AbstractIntegrationTest
         return (microtime(true) - $time) * 1000;
     }
 
-    /**
-     * @param float $time
-     *
-     * @return void
-     */
     protected function finish(float $time): void
     {
         self::markTestSkipped("Took {$time} milliseconds (" . ($time / 1000) . " seconds)");
     }
 
-
-    /**
-     * @return ActiveWorkspaceManager
-     */
     protected function getActiveWorkspaceManager(): ActiveWorkspaceManager
     {
         $manager = $this->container->get(ActiveWorkspaceManager::class);
@@ -68,13 +51,11 @@ abstract class AbstractPerformanceTest extends AbstractIntegrationTest
     /**
      * Initializes a project as dummy, with dummy values.
      */
-    protected function initializeDummyProject(
-        string $uriToIndex,
-        float $phpVersion = 8.0
-    ): void {
+    protected function initializeDummyProject(string $uriToIndex, float $phpVersion = 8.0): void
+    {
         $tmpDatabaseFile = tmpfile() ?:
             throw new RuntimeException('Temporary database file cannot be created');
-        $dummyDatabaseUri = 'file://' . stream_get_meta_data($tmpDatabaseFile)['uri'];
+        $dummyDatabaseUri = $this->getNormalizedUri(stream_get_meta_data($tmpDatabaseFile)['uri']);
 
         $this->getActiveWorkspaceManager()->setActiveWorkspace(null);
         $this->container->get('managerRegistry')->setDatabaseUri($dummyDatabaseUri);
