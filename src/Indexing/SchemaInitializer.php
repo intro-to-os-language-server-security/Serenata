@@ -21,7 +21,7 @@ final class SchemaInitializer
     public const SCHEMA_VERSION = 30;
 
     /**
-     * @var int
+     * @var string
      */
     public const VERSION_SETTING_NAME = 'version';
 

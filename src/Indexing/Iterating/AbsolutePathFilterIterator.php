@@ -14,7 +14,7 @@ final class AbsolutePathFilterIterator extends PathFilterIterator
     /**
      * @inheritDoc
      */
-    public function accept()
+    public function accept(): bool
     {
         $filename = $this->current()->getPathname();
 

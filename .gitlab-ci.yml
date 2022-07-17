@@ -13,8 +13,8 @@ include:
 # ----- Build stage
 .build-setup-composer: &build-setup-composer
     script:
-        - curl -sSL https://getcomposer.org/download/2.0.1/composer.phar --output composer.phar
-        - echo "4b4b118cc54662e4813ba86efb215fdb19c5b29944c5919b4f2803c915aa2234  composer.phar" > checksums
+        - curl -sSL https://getcomposer.org/download/2.3.5/composer.phar --output composer.phar
+        - echo "3b3b5a899c06a46aec280727bdf50aad14334f6bc40436ea76b07b650870d8f4  composer.phar" > checksums
         - sha256sum -c checksums
         - php composer.phar update --prefer-dist --optimize-autoloader --no-interaction --no-progress
 
@@ -43,13 +43,17 @@ build:php-8.0:
     image: php:8.0-cli-alpine
     <<: *build-job-shared
 
+build:php-8.1:
+    image: php:8.1-cli-alpine
+    <<: *build-job-shared
+
 # ----- Test stage
 test:run-composer-require-checker:
-    image: php:7.4-cli-alpine
+    image: php:8.0-cli-alpine
     stage: test
     script:
-        - curl -sSL https://github.com/maglnet/ComposerRequireChecker/releases/download/2.1.0/composer-require-checker.phar --output composer-require-checker.phar
-        - echo "f5b57c8f4305eb3d5ec605943b5250b10aacb939778be005360f815860474495  composer-require-checker.phar" > checksums
+        - curl -sSL https://github.com/maglnet/ComposerRequireChecker/releases/download/4.1.0/composer-require-checker.phar --output composer-require-checker.phar
+        - echo "2a4c652de474e5dbbda1662ff82f207be7aa86b44912093cf5fb135345506e66  composer-require-checker.phar" > checksums
         - sha256sum -c checksums
         - php ./composer-require-checker.phar check ./composer.json
 
@@ -117,12 +121,19 @@ test:php-8.0:
         - job: build:php-8.0
           artifacts: true
 
+test:php-8.1:
+    image: php:8.1-cli-alpine
+    <<: *test-job-shared
+    needs:
+        - job: build:php-8.1
+          artifacts: true
+
 # ----- Finalization stage, which contains finishing steps such as metrics and packaging.
 .finalization-package-job-shared: &finalization-package-job-shared
     stage: finalization
     script:
-        - curl -sSL https://getcomposer.org/download/2.0.1/composer.phar --output composer.phar
-        - echo "4b4b118cc54662e4813ba86efb215fdb19c5b29944c5919b4f2803c915aa2234  composer.phar" > checksums
+        - curl -sSL https://getcomposer.org/download/2.3.5/composer.phar --output composer.phar
+        - echo "3b3b5a899c06a46aec280727bdf50aad14334f6bc40436ea76b07b650870d8f4  composer.phar" > checksums
         - sha256sum -c checksums
 
         # Do a clean install so we can avoid including dev dependencies.
@@ -151,6 +162,10 @@ finalization:package-php-7.4:
 
 finalization:package-php-8.0:
     image: php:8.0-cli-alpine
+    <<: *finalization-package-job-shared
+
+finalization:package-php-8.1:
+    image: php:8.1-cli-alpine
     <<: *finalization-package-job-shared
 
 finalization:code-coverage:

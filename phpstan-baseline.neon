@@ -66,11 +66,6 @@ parameters:
 			path: src/Indexing/Indexer.php
 
 		-
-			message: "#^Missing @throws Doctrine\\\\ORM\\\\ORMException annotation$#"
-			count: 1
-			path: src/Indexing/ManagerRegistry.php
-
-		-
 			message: "#^Missing @throws Doctrine\\\\ORM\\\\Tools\\\\ToolsException annotation$#"
 			count: 1
 			path: src/Indexing/SchemaInitializer.php
@@ -129,11 +124,6 @@ parameters:
 			message: "#^PHPStan\\\\PhpDocParser\\\\Parser\\\\ParserException is never thrown in the corresponding try block$#"
 			count: 1
 			path: src/Parsing/PhpstanDocblockTypeParser.php
-
-		-
-			message: "#^Unused @throws UnderflowException annotation$#"
-			count: 1
-			path: src/Sockets/JsonRpcQueue.php
 
 		-
 			message: "#^Useless @throws Serenata\\\\Sockets\\\\RequestParsingException annotation$#"
@@ -307,16 +297,6 @@ parameters:
 
 		-
 			message: "#^Cannot call method update\\(\\) on object\\|null\\.$#"
-			count: 1
-			path: tests/Integration/AbstractIntegrationTest.php
-
-		-
-			message: "#^Cannot call method clear\\(\\) on object\\|null\\.$#"
-			count: 1
-			path: tests/Integration/AbstractIntegrationTest.php
-
-		-
-			message: "#^Cannot call method run\\(\\) on object\\|null\\.$#"
 			count: 1
 			path: tests/Integration/AbstractIntegrationTest.php
 
@@ -516,11 +496,6 @@ parameters:
 			path: tests/Integration/Analysis/Typing/Deduction/ExpressionTypeDeducerTest.php
 
 		-
-			message: "#^Method Serenata\\\\Tests\\\\Integration\\\\Analysis\\\\Typing\\\\Deduction\\\\ExpressionTypeDeducerTest\\:\\:getMarkerOffset\\(\\) should return int but returns int\\|false\\.$#"
-			count: 1
-			path: tests/Integration/Analysis/Typing/Deduction/ExpressionTypeDeducerTest.php
-
-		-
 			message: "#^Cannot call method getFileByUri\\(\\) on object\\|null\\.$#"
 			count: 1
 			path: tests/Integration/Analysis/Typing/FileClasslikeListProviderTest.php
@@ -567,11 +542,6 @@ parameters:
 
 		-
 			message: "#^Cannot call method determine\\(\\) on object\\|null\\.$#"
-			count: 1
-			path: tests/Integration/Autocompletion/Providers/AbstractAutocompletionProviderTest.php
-
-		-
-			message: "#^Method Serenata\\\\Tests\\\\Integration\\\\Autocompletion\\\\Providers\\\\AbstractAutocompletionProviderTest\\:\\:getMarkerOffset\\(\\) should return int but returns int\\|false\\.$#"
 			count: 1
 			path: tests/Integration/Autocompletion/Providers/AbstractAutocompletionProviderTest.php
 
@@ -906,11 +876,6 @@ parameters:
 			path: tests/Unit/Analysis/Visiting/ScopeLimitingVisitorTest.php
 
 		-
-			message: "#^Unable to resolve the template type T in call to method Serenata\\\\Autocompletion\\\\ApproximateStringMatching\\\\ApproximateStringMatchingBestStringApproximationDeterminer\\:\\:determine\\(\\)$#"
-			count: 1
-			path: tests/Unit/Autocompletion/ApproximateStringMatching/ApproximateStringMatchingBestStringApproximationDeterminerTest.php
-
-		-
 			message: "#^Property Serenata\\\\Tests\\\\Unit\\\\Autocompletion\\\\AutocompletionPrefixDeterminerTest\\:\\:\\$boundaryTokenRetrieverMock has unknown class PHPUnit_Framework_MockObject_MockObject as its type\\.$#"
 			count: 1
 			path: tests/Unit/Autocompletion/AutocompletionPrefixDeterminerTest.php
@@ -969,9 +934,3 @@ parameters:
 			message: "#^Access to an undefined property PhpParser\\\\Node\\\\Expr\\:\\:\\$value\\.$#"
 			count: 2
 			path: tests/Unit/Parsing/PartialParserTest.php
-
-		-
-			message: "#^Call to static method PHPUnit\\\\Framework\\\\Assert\\:\\:assertInstanceOf\\(\\) with 'PhpParser\\\\\\\\Node\\\\\\\\Arg' and PhpParser\\\\Node\\\\Arg will always evaluate to true\\.$#"
-			count: 12
-			path: tests/Unit/Parsing/PartialParserTest.php
-

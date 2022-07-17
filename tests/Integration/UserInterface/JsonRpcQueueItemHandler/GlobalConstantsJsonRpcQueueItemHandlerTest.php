@@ -39,7 +39,7 @@ final class GlobalConstantsJsonRpcQueueItemHandlerTest extends AbstractIntegrati
     {
         $output = $this->getGlobalConstants('DefineWithExpression.phpt');
 
-        self::assertSame('(($version{0} * 10000) + ($version{2} * 100) + $version{4})', $output['\TEST_CONSTANT']['defaultValue']);
+        self::assertSame('(($version[0] * 10000) + ($version[2] * 100) + $version[4])', $output['\TEST_CONSTANT']['defaultValue']);
     }
 
     /**

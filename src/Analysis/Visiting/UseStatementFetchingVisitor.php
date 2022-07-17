@@ -92,7 +92,7 @@ final class UseStatementFetchingVisitor extends NodeVisitorAbstract
     /**
      * Retrieves a list of namespaces.
      *
-     * @return array[]
+     * @return array<array<string,mixed>>
      */
     public function getNamespaces(): array
     {
