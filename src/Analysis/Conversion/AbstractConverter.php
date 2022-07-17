@@ -14,7 +14,7 @@ abstract class AbstractConverter
     /**
      * @param TypeNode $type
      *
-     * @return array[]
+     * @return array<string,mixed>
      */
     protected function convertDocblockType(TypeNode $type): array
     {

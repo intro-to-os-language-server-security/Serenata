@@ -8,7 +8,7 @@ namespace Serenata\Analysis;
 interface ClasslikeListProviderInterface
 {
     /**
-     * @return array<string, array> mapping FQCN's to classlikes.
+     * @return array<string,array<mixed>> mapping FQCN's to classlikes.
      */
     public function getAll(): array;
 }

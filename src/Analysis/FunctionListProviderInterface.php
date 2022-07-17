@@ -8,7 +8,7 @@ namespace Serenata\Analysis;
 interface FunctionListProviderInterface
 {
     /**
-     * @return array<string,array<string,array>> mapping FQCN's to functions.
+     * @return array<string,array<string,array<mixed>>> mapping FQCN's to functions.
      */
     public function getAll(): array;
 }

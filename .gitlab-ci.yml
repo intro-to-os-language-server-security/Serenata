@@ -41,7 +41,7 @@ build:php-8.1:
 
 # ----- Test stage
 test:run-composer-require-checker:
-    image: php:7.4-cli-alpine
+    image: php:8.0-cli-alpine
     stage: test
     script:
         - curl -sSL https://github.com/maglnet/ComposerRequireChecker/releases/download/4.1.0/composer-require-checker.phar --output composer-require-checker.phar
@@ -110,8 +110,8 @@ test:php-8.1:
 .finalization-package-job-shared: &finalization-package-job-shared
     stage: finalization
     script:
-        - curl -sSL https://getcomposer.org/download/2.0.1/composer.phar --output composer.phar
-        - echo "4b4b118cc54662e4813ba86efb215fdb19c5b29944c5919b4f2803c915aa2234  composer.phar" > checksums
+        - curl -sSL https://getcomposer.org/download/2.3.5/composer.phar --output composer.phar
+        - echo "3b3b5a899c06a46aec280727bdf50aad14334f6bc40436ea76b07b650870d8f4  composer.phar" > checksums
         - sha256sum -c checksums
 
         # Do a clean install so we can avoid including dev dependencies.
