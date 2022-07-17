@@ -1,6 +1,71 @@
 parameters:
 	ignoreErrors:
 		-
+			message: "#^Anonymous function should return bool but returns mixed\\.$#"
+			count: 1
+			path: src/Analysis/AnnotationFilteringClasslikeListProvider.php
+
+		-
+			message: "#^Argument of an invalid type mixed supplied for foreach, only iterables are supported\\.$#"
+			count: 8
+			path: src/Analysis/ClasslikeInfoBuilder.php
+
+		-
+			message: "#^Cannot access an offset on mixed\\.$#"
+			count: 9
+			path: src/Analysis/ClasslikeInfoBuilder.php
+
+		-
+			message: "#^Cannot access offset 'parameters' on mixed\\.$#"
+			count: 1
+			path: src/Analysis/ClasslikeInfoBuilder.php
+
+		-
+			message: "#^Cannot access offset 'returnTypes' on mixed\\.$#"
+			count: 1
+			path: src/Analysis/ClasslikeInfoBuilder.php
+
+		-
+			message: "#^Cannot access offset 'types' on mixed\\.$#"
+			count: 3
+			path: src/Analysis/ClasslikeInfoBuilder.php
+
+		-
+			message: "#^Cannot access offset string on mixed\\.$#"
+			count: 3
+			path: src/Analysis/ClasslikeInfoBuilder.php
+
+		-
+			message: "#^Parameter \\#2 \\$elementFqcn of method Serenata\\\\Analysis\\\\ClasslikeInfoBuilder\\:\\:resolveSelfTypesTo\\(\\) expects string, mixed given\\.$#"
+			count: 1
+			path: src/Analysis/ClasslikeInfoBuilder.php
+
+		-
+			message: "#^Parameter \\#2 \\$elementFqcn of method Serenata\\\\Analysis\\\\ClasslikeInfoBuilder\\:\\:resolveStaticTypesTo\\(\\) expects string, mixed given\\.$#"
+			count: 1
+			path: src/Analysis/ClasslikeInfoBuilder.php
+
+		-
+			message: "#^Parameter \\#2 \\$originFqcn of method Serenata\\\\Analysis\\\\ClasslikeInfoBuilder\\:\\:getCheckedClasslikeInfo\\(\\) expects string, mixed given\\.$#"
+			count: 3
+			path: src/Analysis/ClasslikeInfoBuilder.php
+
+		-
+			message: "#^Property Serenata\\\\Analysis\\\\ClasslikeListRegistry\\:\\:\\$registry \\(array\\<string, array\\<string, mixed\\>\\>\\|null\\) does not accept array\\<int\\|string, array\\<string, mixed\\>\\>\\.$#"
+			count: 1
+			path: src/Analysis/ClasslikeListRegistry.php
+
+		-
+			message: "#^Property Serenata\\\\Analysis\\\\ConstantListRegistry\\:\\:\\$registry \\(array\\<string, array\\<string, mixed\\>\\>\\|null\\) does not accept array\\<int\\|string, array\\<string, mixed\\>\\>\\.$#"
+			count: 1
+			path: src/Analysis/ConstantListRegistry.php
+
+		-
+			message: "#^Class Serenata\\\\Analysis\\\\Conversion\\\\MethodConverter extends @final class Serenata\\\\Analysis\\\\Conversion\\\\FunctionConverter\\.$#"
+			count: 1
+			path: src/Analysis/Conversion/MethodConverter.php
+
+		-
 			message: "#^Unused @throws Serenata\\\\NameQualificationUtilities\\\\Exception\\\\MalformedNameEncounteredException annotation$#"
 			count: 1
 			path: src/Analysis/DocblockPositionalNameResolver.php
@@ -11,9 +76,384 @@ parameters:
 			path: src/Analysis/DocblockPositionalNameResolver.php
 
 		-
+			message: "#^Method Serenata\\\\Analysis\\\\DoctrineFunctionListProvider\\:\\:getAll\\(\\) should return array\\<string, array\\<string, array\\>\\> but returns array\\<string, array\\<string, mixed\\>\\>\\.$#"
+			count: 1
+			path: src/Analysis/DoctrineFunctionListProvider.php
+
+		-
+			message: "#^Cannot call method contains\\(\\) on mixed\\.$#"
+			count: 1
+			path: src/Analysis/FilePositionClasslikeDeterminer.php
+
+		-
+			message: "#^Method Serenata\\\\Analysis\\\\FunctionListRegistry\\:\\:getAll\\(\\) should return array\\<string, array\\<string, array\\>\\> but returns array\\<string, array\\<string, mixed\\>\\>\\.$#"
+			count: 1
+			path: src/Analysis/FunctionListRegistry.php
+
+		-
+			message: "#^Property Serenata\\\\Analysis\\\\FunctionListRegistry\\:\\:\\$registry \\(array\\<string, array\\<string, mixed\\>\\>\\|null\\) does not accept array\\<int\\|string, array\\<string, mixed\\>\\>\\.$#"
+			count: 1
+			path: src/Analysis/FunctionListRegistry.php
+
+		-
+			message: "#^Property Serenata\\\\Analysis\\\\NamespaceListRegistry\\:\\:\\$registry \\(array\\<string, array\\<string, mixed\\>\\>\\|null\\) does not accept array\\<int\\|string, array\\<string, mixed\\>\\>\\.$#"
+			count: 1
+			path: src/Analysis/NamespaceListRegistry.php
+
+		-
+			message: "#^Cannot call method toString\\(\\) on PhpParser\\\\Node\\\\Name\\|null\\.$#"
+			count: 1
+			path: src/Analysis/Node/FunctionFunctionInfoRetriever.php
+
+		-
+			message: "#^Cannot access offset string on mixed\\.$#"
+			count: 2
+			path: src/Analysis/Node/MethodCallMethodInfoRetriever.php
+
+		-
+			message: "#^Method Serenata\\\\Analysis\\\\Node\\\\MethodCallMethodInfoRetriever\\:\\:retrieve\\(\\) should return array\\<array\\<string, mixed\\>\\> but returns array\\<int, mixed\\>\\.$#"
+			count: 1
+			path: src/Analysis/Node/MethodCallMethodInfoRetriever.php
+
+		-
+			message: "#^Cannot access offset string on mixed\\.$#"
+			count: 2
+			path: src/Analysis/Node/PropertyFetchPropertyInfoRetriever.php
+
+		-
+			message: "#^Method Serenata\\\\Analysis\\\\Node\\\\PropertyFetchPropertyInfoRetriever\\:\\:retrieve\\(\\) should return array\\<array\\<string, mixed\\>\\> but returns array\\<int, mixed\\>\\.$#"
+			count: 1
+			path: src/Analysis/Node/PropertyFetchPropertyInfoRetriever.php
+
+		-
+			message: "#^Parameter \\#1 \\$callback of function array_map expects \\(callable\\(mixed\\)\\: mixed\\)\\|null, Closure\\(array\\)\\: mixed given\\.$#"
+			count: 2
+			path: src/Analysis/Relations/AbstractResolver.php
+
+		-
+			message: "#^Parameter \\#1 \\$shortDescription of method Serenata\\\\Analysis\\\\DocblockAnalyzer\\:\\:isFullInheritDocSyntax\\(\\) expects string, mixed given\\.$#"
+			count: 1
+			path: src/Analysis/Relations/AbstractResolver.php
+
+		-
+			message: "#^Parameter \\#2 \\$array of function array_map expects array, mixed given\\.$#"
+			count: 2
+			path: src/Analysis/Relations/AbstractResolver.php
+
+		-
+			message: "#^Argument of an invalid type mixed supplied for foreach, only iterables are supported\\.$#"
+			count: 3
+			path: src/Analysis/Relations/InheritanceResolver.php
+
+		-
+			message: "#^Cannot access offset 'declaringClass' on mixed\\.$#"
+			count: 1
+			path: src/Analysis/Relations/InheritanceResolver.php
+
+		-
+			message: "#^Cannot access offset 'declaringStructure' on mixed\\.$#"
+			count: 1
+			path: src/Analysis/Relations/InheritanceResolver.php
+
+		-
+			message: "#^Cannot access offset 'implementations' on mixed\\.$#"
+			count: 1
+			path: src/Analysis/Relations/InheritanceResolver.php
+
+		-
+			message: "#^Cannot access offset 'longDescription' on mixed\\.$#"
+			count: 4
+			path: src/Analysis/Relations/InheritanceResolver.php
+
+		-
+			message: "#^Cannot access offset 'range' on mixed\\.$#"
+			count: 1
+			path: src/Analysis/Relations/InheritanceResolver.php
+
+		-
+			message: "#^Cannot access offset 'type' on mixed\\.$#"
+			count: 1
+			path: src/Analysis/Relations/InheritanceResolver.php
+
+		-
+			message: "#^Cannot access offset mixed on mixed\\.$#"
+			count: 7
+			path: src/Analysis/Relations/InheritanceResolver.php
+
+		-
+			message: "#^Parameter \\#1 \\$description of method Serenata\\\\Analysis\\\\Relations\\\\AbstractResolver\\:\\:resolveInheritDoc\\(\\) expects string, mixed given\\.$#"
+			count: 3
+			path: src/Analysis/Relations/InheritanceResolver.php
+
+		-
+			message: "#^Parameter \\#1 \\$parentConstantData of method Serenata\\\\Analysis\\\\Relations\\\\InheritanceResolver\\:\\:resolveInheritanceOfConstant\\(\\) expects array\\<string, mixed\\>, mixed given\\.$#"
+			count: 1
+			path: src/Analysis/Relations/InheritanceResolver.php
+
+		-
+			message: "#^Parameter \\#1 \\$parentMethodData of method Serenata\\\\Analysis\\\\Relations\\\\InheritanceResolver\\:\\:resolveInheritanceOfMethod\\(\\) expects array\\<string, mixed\\>, mixed given\\.$#"
+			count: 1
+			path: src/Analysis/Relations/InheritanceResolver.php
+
+		-
+			message: "#^Parameter \\#1 \\$parentPropertyData of method Serenata\\\\Analysis\\\\Relations\\\\InheritanceResolver\\:\\:resolveInheritanceOfProperty\\(\\) expects array\\<string, mixed\\>, mixed given\\.$#"
+			count: 1
+			path: src/Analysis/Relations/InheritanceResolver.php
+
+		-
+			message: "#^Parameter \\#1 \\$processedData of method Serenata\\\\Analysis\\\\Relations\\\\AbstractResolver\\:\\:isInheritingFullDocumentation\\(\\) expects array\\<string, mixed\\>, mixed given\\.$#"
+			count: 2
+			path: src/Analysis/Relations/InheritanceResolver.php
+
+		-
+			message: "#^Parameter \\#1 \\.\\.\\.\\$arrays of function array_merge expects array, mixed given\\.$#"
+			count: 4
+			path: src/Analysis/Relations/InheritanceResolver.php
+
+		-
+			message: "#^Parameter \\#2 \\$inheritingMethodData of method Serenata\\\\Analysis\\\\Relations\\\\AbstractResolver\\:\\:extractInheritedMethodInfo\\(\\) expects array\\<string, mixed\\>, mixed given\\.$#"
+			count: 1
+			path: src/Analysis/Relations/InheritanceResolver.php
+
+		-
+			message: "#^Parameter \\#2 \\$parentDescription of method Serenata\\\\Analysis\\\\Relations\\\\AbstractResolver\\:\\:resolveInheritDoc\\(\\) expects string, mixed given\\.$#"
+			count: 3
+			path: src/Analysis/Relations/InheritanceResolver.php
+
+		-
+			message: "#^Parameter \\#2 \\.\\.\\.\\$arrays of function array_merge expects array, mixed given\\.$#"
+			count: 5
+			path: src/Analysis/Relations/InheritanceResolver.php
+
+		-
+			message: "#^Argument of an invalid type mixed supplied for foreach, only iterables are supported\\.$#"
+			count: 2
+			path: src/Analysis/Relations/InterfaceImplementationResolver.php
+
+		-
+			message: "#^Cannot access an offset on mixed\\.$#"
+			count: 1
+			path: src/Analysis/Relations/InterfaceImplementationResolver.php
+
+		-
+			message: "#^Cannot access offset 'declaringStructure' on mixed\\.$#"
+			count: 1
+			path: src/Analysis/Relations/InterfaceImplementationResolver.php
+
+		-
+			message: "#^Cannot access offset 'longDescription' on mixed\\.$#"
+			count: 2
+			path: src/Analysis/Relations/InterfaceImplementationResolver.php
+
+		-
+			message: "#^Cannot access offset 'type' on mixed\\.$#"
+			count: 1
+			path: src/Analysis/Relations/InterfaceImplementationResolver.php
+
+		-
+			message: "#^Cannot access offset mixed on mixed\\.$#"
+			count: 4
+			path: src/Analysis/Relations/InterfaceImplementationResolver.php
+
+		-
+			message: "#^Parameter \\#1 \\$description of method Serenata\\\\Analysis\\\\Relations\\\\AbstractResolver\\:\\:resolveInheritDoc\\(\\) expects string, mixed given\\.$#"
+			count: 1
+			path: src/Analysis/Relations/InterfaceImplementationResolver.php
+
+		-
+			message: "#^Parameter \\#1 \\$interfaceConstantData of method Serenata\\\\Analysis\\\\Relations\\\\InterfaceImplementationResolver\\:\\:resolveInheritanceOfConstant\\(\\) expects array\\<string, mixed\\>, mixed given\\.$#"
+			count: 1
+			path: src/Analysis/Relations/InterfaceImplementationResolver.php
+
+		-
+			message: "#^Parameter \\#1 \\$interfaceMethodData of method Serenata\\\\Analysis\\\\Relations\\\\InterfaceImplementationResolver\\:\\:resolveImplementationOfMethod\\(\\) expects array\\<string, mixed\\>, mixed given\\.$#"
+			count: 1
+			path: src/Analysis/Relations/InterfaceImplementationResolver.php
+
+		-
+			message: "#^Parameter \\#1 \\$processedData of method Serenata\\\\Analysis\\\\Relations\\\\AbstractResolver\\:\\:isInheritingFullDocumentation\\(\\) expects array\\<string, mixed\\>, mixed given\\.$#"
+			count: 1
+			path: src/Analysis/Relations/InterfaceImplementationResolver.php
+
+		-
+			message: "#^Parameter \\#2 \\$inheritingMethodData of method Serenata\\\\Analysis\\\\Relations\\\\AbstractResolver\\:\\:extractInheritedMethodInfo\\(\\) expects array\\<string, mixed\\>, mixed given\\.$#"
+			count: 1
+			path: src/Analysis/Relations/InterfaceImplementationResolver.php
+
+		-
+			message: "#^Parameter \\#2 \\$parentDescription of method Serenata\\\\Analysis\\\\Relations\\\\AbstractResolver\\:\\:resolveInheritDoc\\(\\) expects string, mixed given\\.$#"
+			count: 1
+			path: src/Analysis/Relations/InterfaceImplementationResolver.php
+
+		-
+			message: "#^Parameter \\#2 \\.\\.\\.\\$arrays of function array_merge expects array, mixed given\\.$#"
+			count: 1
+			path: src/Analysis/Relations/InterfaceImplementationResolver.php
+
+		-
+			message: "#^Argument of an invalid type mixed supplied for foreach, only iterables are supported\\.$#"
+			count: 2
+			path: src/Analysis/Relations/TraitUsageResolver.php
+
+		-
+			message: "#^Cannot access offset 'declaringClass' on mixed\\.$#"
+			count: 3
+			path: src/Analysis/Relations/TraitUsageResolver.php
+
+		-
+			message: "#^Cannot access offset 'declaringStructure' on mixed\\.$#"
+			count: 5
+			path: src/Analysis/Relations/TraitUsageResolver.php
+
+		-
+			message: "#^Cannot access offset 'fqcn' on mixed\\.$#"
+			count: 5
+			path: src/Analysis/Relations/TraitUsageResolver.php
+
+		-
+			message: "#^Cannot access offset 'implementations' on mixed\\.$#"
+			count: 1
+			path: src/Analysis/Relations/TraitUsageResolver.php
+
+		-
+			message: "#^Cannot access offset 'isPrivate' on mixed\\.$#"
+			count: 1
+			path: src/Analysis/Relations/TraitUsageResolver.php
+
+		-
+			message: "#^Cannot access offset 'isProtected' on mixed\\.$#"
+			count: 1
+			path: src/Analysis/Relations/TraitUsageResolver.php
+
+		-
+			message: "#^Cannot access offset 'isPublic' on mixed\\.$#"
+			count: 1
+			path: src/Analysis/Relations/TraitUsageResolver.php
+
+		-
+			message: "#^Cannot access offset 'longDescription' on mixed\\.$#"
+			count: 4
+			path: src/Analysis/Relations/TraitUsageResolver.php
+
+		-
+			message: "#^Cannot access offset 'name' on mixed\\.$#"
+			count: 4
+			path: src/Analysis/Relations/TraitUsageResolver.php
+
+		-
+			message: "#^Cannot access offset 'override' on mixed\\.$#"
+			count: 1
+			path: src/Analysis/Relations/TraitUsageResolver.php
+
+		-
+			message: "#^Cannot access offset 'range' on mixed\\.$#"
+			count: 4
+			path: src/Analysis/Relations/TraitUsageResolver.php
+
+		-
+			message: "#^Cannot access offset 'type' on mixed\\.$#"
+			count: 4
+			path: src/Analysis/Relations/TraitUsageResolver.php
+
+		-
+			message: "#^Cannot access offset 'uri' on mixed\\.$#"
+			count: 3
+			path: src/Analysis/Relations/TraitUsageResolver.php
+
+		-
+			message: "#^Cannot access offset mixed on mixed\\.$#"
+			count: 6
+			path: src/Analysis/Relations/TraitUsageResolver.php
+
+		-
+			message: "#^Only booleans are allowed in a negated boolean, mixed given\\.$#"
+			count: 1
+			path: src/Analysis/Relations/TraitUsageResolver.php
+
+		-
+			message: "#^Parameter \\#1 \\$description of method Serenata\\\\Analysis\\\\Relations\\\\AbstractResolver\\:\\:resolveInheritDoc\\(\\) expects string, mixed given\\.$#"
+			count: 2
+			path: src/Analysis/Relations/TraitUsageResolver.php
+
+		-
+			message: "#^Parameter \\#1 \\$processedData of method Serenata\\\\Analysis\\\\Relations\\\\AbstractResolver\\:\\:isInheritingFullDocumentation\\(\\) expects array\\<string, mixed\\>, mixed given\\.$#"
+			count: 2
+			path: src/Analysis/Relations/TraitUsageResolver.php
+
+		-
+			message: "#^Parameter \\#1 \\$traitMethodData of method Serenata\\\\Analysis\\\\Relations\\\\TraitUsageResolver\\:\\:resolveTraitUseOfMethod\\(\\) expects array\\<string, mixed\\>, mixed given\\.$#"
+			count: 1
+			path: src/Analysis/Relations/TraitUsageResolver.php
+
+		-
+			message: "#^Parameter \\#1 \\$traitPropertyData of method Serenata\\\\Analysis\\\\Relations\\\\TraitUsageResolver\\:\\:resolveTraitUseOfProperty\\(\\) expects array\\<string, mixed\\>, mixed given\\.$#"
+			count: 1
+			path: src/Analysis/Relations/TraitUsageResolver.php
+
+		-
+			message: "#^Parameter \\#1 \\.\\.\\.\\$arrays of function array_merge expects array, mixed given\\.$#"
+			count: 1
+			path: src/Analysis/Relations/TraitUsageResolver.php
+
+		-
+			message: "#^Parameter \\#2 \\$inheritingMethodData of method Serenata\\\\Analysis\\\\Relations\\\\AbstractResolver\\:\\:extractInheritedMethodInfo\\(\\) expects array\\<string, mixed\\>, mixed given\\.$#"
+			count: 1
+			path: src/Analysis/Relations/TraitUsageResolver.php
+
+		-
+			message: "#^Parameter \\#2 \\$parentDescription of method Serenata\\\\Analysis\\\\Relations\\\\AbstractResolver\\:\\:resolveInheritDoc\\(\\) expects string, mixed given\\.$#"
+			count: 2
+			path: src/Analysis/Relations/TraitUsageResolver.php
+
+		-
+			message: "#^Parameter \\#2 \\.\\.\\.\\$arrays of function array_merge expects array, mixed given\\.$#"
+			count: 2
+			path: src/Analysis/Relations/TraitUsageResolver.php
+
+		-
 			message: "#^Unused @throws Serenata\\\\Analysis\\\\SourceCodeReading\\\\FileSourceCodeReaderException annotation$#"
 			count: 1
 			path: src/Analysis/SourceCodeReading/FileSourceCodeStreamReader.php
+
+		-
+			message: "#^Parameter \\#2 \\$encodings of function mb_detect_encoding expects array\\|string\\|null, array\\|bool given\\.$#"
+			count: 1
+			path: src/Analysis/SourceCodeReading/TextToUtf8Converter.php
+
+		-
+			message: "#^Parameter \\#3 \\$from_encoding of function mb_convert_encoding expects array\\|string\\|null, string\\|false given\\.$#"
+			count: 1
+			path: src/Analysis/SourceCodeReading/TextToUtf8Converter.php
+
+		-
+			message: "#^Method Serenata\\\\Analysis\\\\Typing\\\\Deduction\\\\AbstractNodeTypeDeducer\\:\\:fetchResolvedTypeFromTypeArray\\(\\) should return string\\|null but returns mixed\\.$#"
+			count: 1
+			path: src/Analysis/Typing/Deduction/AbstractNodeTypeDeducer.php
+
+		-
+			message: "#^Parameter \\#1 \\$offset of static method Serenata\\\\Common\\\\Position\\:\\:createFromByteOffset\\(\\) expects int, mixed given\\.$#"
+			count: 1
+			path: src/Analysis/Typing/Deduction/AssignNodeTypeDeducer.php
+
+		-
+			message: "#^Cannot access offset 'types' on mixed\\.$#"
+			count: 1
+			path: src/Analysis/Typing/Deduction/ClassConstFetchNodeTypeDeducer.php
+
+		-
+			message: "#^Cannot access offset string on mixed\\.$#"
+			count: 2
+			path: src/Analysis/Typing/Deduction/ClassConstFetchNodeTypeDeducer.php
+
+		-
+			message: "#^Parameter \\#1 \\$callback of function array_map expects \\(callable\\(string\\|null\\)\\: mixed\\)\\|null, Closure\\(string\\)\\: PHPStan\\\\PhpDocParser\\\\Ast\\\\Type\\\\TypeNode given\\.$#"
+			count: 1
+			path: src/Analysis/Typing/Deduction/ClassConstFetchNodeTypeDeducer.php
+
+		-
+			message: "#^Parameter \\#1 \\$typeArrays of method Serenata\\\\Analysis\\\\Typing\\\\Deduction\\\\AbstractNodeTypeDeducer\\:\\:fetchResolvedTypesFromTypeArrays\\(\\) expects array\\<array\\<string, mixed\\>\\>, mixed given\\.$#"
+			count: 1
+			path: src/Analysis/Typing/Deduction/ClassConstFetchNodeTypeDeducer.php
 
 		-
 			message: "#^Missing @throws Serenata\\\\Analysis\\\\Typing\\\\Deduction\\\\TypeDeductionException annotation$#"
@@ -21,12 +461,57 @@ parameters:
 			path: src/Analysis/Typing/Deduction/ExpressionTypeDeducer.php
 
 		-
+			message: "#^Cannot access offset 'type' on mixed\\.$#"
+			count: 1
+			path: src/Analysis/Typing/Deduction/FunctionLikeParameterTypeDeducer.php
+
+		-
+			message: "#^Cannot access offset non\\-empty\\-string on mixed\\.$#"
+			count: 2
+			path: src/Analysis/Typing/Deduction/FunctionLikeParameterTypeDeducer.php
+
+		-
+			message: "#^Method Serenata\\\\Analysis\\\\Typing\\\\Deduction\\\\FunctionLikeParameterTypeDeducer\\:\\:deduce\\(\\) should return PHPStan\\\\PhpDocParser\\\\Ast\\\\Type\\\\TypeNode but returns mixed\\.$#"
+			count: 1
+			path: src/Analysis/Typing/Deduction/FunctionLikeParameterTypeDeducer.php
+
+		-
 			message: "#^Missing @throws Serenata\\\\Analysis\\\\Typing\\\\Deduction\\\\TypeDeductionException annotation$#"
 			count: 5
 			path: src/Analysis/Typing/Deduction/LocalTypeScanner.php
 
 		-
+			message: "#^Access to an undefined property PhpParser\\\\Node\\\\Arg\\|PhpParser\\\\Node\\\\VariadicPlaceholder\\:\\:\\$value\\.$#"
+			count: 2
+			path: src/Analysis/Typing/Deduction/MethodCallNodeMetaTypeDeducer.php
+
+		-
+			message: "#^Parameter \\#1 \\$callback of function array_map expects \\(callable\\(string\\|null\\)\\: mixed\\)\\|null, Closure\\(string\\)\\: PHPStan\\\\PhpDocParser\\\\Ast\\\\Type\\\\TypeNode given\\.$#"
+			count: 1
+			path: src/Analysis/Typing/Deduction/MethodCallNodeTypeDeducer.php
+
+		-
+			message: "#^Parameter \\#1 \\$typeArrays of method Serenata\\\\Analysis\\\\Typing\\\\Deduction\\\\AbstractNodeTypeDeducer\\:\\:fetchResolvedTypesFromTypeArrays\\(\\) expects array\\<array\\<string, mixed\\>\\>, mixed given\\.$#"
+			count: 1
+			path: src/Analysis/Typing/Deduction/MethodCallNodeTypeDeducer.php
+
+		-
+			message: "#^Cannot access offset 0 on mixed\\.$#"
+			count: 1
+			path: src/Analysis/Typing/Deduction/NameNodeTypeDeducer.php
+
+		-
 			message: "#^Missing @throws Serenata\\\\Analysis\\\\ClasslikeBuildingFailedException annotation$#"
+			count: 1
+			path: src/Analysis/Typing/Deduction/NameNodeTypeDeducer.php
+
+		-
+			message: "#^Parameter \\#1 \\$fqcn of method Serenata\\\\Analysis\\\\Typing\\\\TypeNormalizerInterface\\:\\:getNormalizedFqcn\\(\\) expects string, mixed given\\.$#"
+			count: 1
+			path: src/Analysis/Typing/Deduction/NameNodeTypeDeducer.php
+
+		-
+			message: "#^Parameter \\#1 \\$value of function count expects array\\|Countable, mixed given\\.$#"
 			count: 1
 			path: src/Analysis/Typing/Deduction/NameNodeTypeDeducer.php
 
@@ -36,9 +521,1004 @@ parameters:
 			path: src/Analysis/Typing/Deduction/PropertyFetchNodeTypeDeducer.php
 
 		-
+			message: "#^Parameter \\#1 \\$typeArrays of method Serenata\\\\Analysis\\\\Typing\\\\Deduction\\\\AbstractNodeTypeDeducer\\:\\:fetchResolvedTypesFromTypeArrays\\(\\) expects array\\<array\\<string, mixed\\>\\>, mixed given\\.$#"
+			count: 1
+			path: src/Analysis/Typing/Deduction/PropertyFetchNodeTypeDeducer.php
+
+		-
+			message: "#^Parameter \\#1 \\$offset of static method Serenata\\\\Common\\\\Position\\:\\:createFromByteOffset\\(\\) expects int, mixed given\\.$#"
+			count: 1
+			path: src/Analysis/Typing/Deduction/TypeDeductionContext.php
+
+		-
+			message: "#^Parameter \\#1 \\$node of method Serenata\\\\Analysis\\\\VariableScanningVisitor\\:\\:isCurrentOffsetInsideClosureUses\\(\\) expects PhpParser\\\\Node\\\\Expr\\\\Closure, mixed given\\.$#"
+			count: 1
+			path: src/Analysis/VariableScanningVisitor.php
+
+		-
+			message: "#^Cannot access offset 0 on mixed\\.$#"
+			count: 1
+			path: src/Analysis/Visiting/FunctionLikeBodyOffsetAttachingVisitor.php
+
+		-
+			message: "#^Method Serenata\\\\Analysis\\\\Visiting\\\\FunctionLikeBodyOffsetAttachingVisitor\\:\\:locateBodyEndByteOffset\\(\\) should return int\\|null but returns mixed\\.$#"
+			count: 2
+			path: src/Analysis/Visiting/FunctionLikeBodyOffsetAttachingVisitor.php
+
+		-
+			message: "#^Method Serenata\\\\Analysis\\\\Visiting\\\\FunctionLikeBodyOffsetAttachingVisitor\\:\\:locateBodyStartByteOffset\\(\\) should return int\\|null but returns mixed\\.$#"
+			count: 1
+			path: src/Analysis/Visiting/FunctionLikeBodyOffsetAttachingVisitor.php
+
+		-
+			message: "#^Access to an undefined property PhpParser\\\\Node\\\\Arg\\|PhpParser\\\\Node\\\\VariadicPlaceholder\\:\\:\\$unpack\\.$#"
+			count: 1
+			path: src/Analysis/Visiting/TypeQueryingVisitor.php
+
+		-
+			message: "#^Access to an undefined property PhpParser\\\\Node\\\\Arg\\|PhpParser\\\\Node\\\\VariadicPlaceholder\\:\\:\\$value\\.$#"
+			count: 2
+			path: src/Analysis/Visiting/TypeQueryingVisitor.php
+
+		-
+			message: "#^Argument of an invalid type mixed supplied for foreach, only iterables are supported\\.$#"
+			count: 1
+			path: src/Analysis/Visiting/TypeQueryingVisitor.php
+
+		-
+			message: "#^Cannot access offset 'type' on mixed\\.$#"
+			count: 2
+			path: src/Analysis/Visiting/TypeQueryingVisitor.php
+
+		-
+			message: "#^Only booleans are allowed in an if condition, mixed given\\.$#"
+			count: 1
+			path: src/Analysis/Visiting/TypeQueryingVisitor.php
+
+		-
+			message: "#^Parameter \\#1 \\$expression of method Serenata\\\\Analysis\\\\Visiting\\\\ExpressionTypeInfoMap\\:\\:setBestTypeOverrideMatch\\(\\) expects string, mixed given\\.$#"
+			count: 1
+			path: src/Analysis/Visiting/TypeQueryingVisitor.php
+
+		-
+			message: "#^Parameter \\#2 \\$type of method Serenata\\\\Analysis\\\\Visiting\\\\ExpressionTypeInfoMap\\:\\:setBestTypeOverrideMatch\\(\\) expects string, mixed given\\.$#"
+			count: 1
+			path: src/Analysis/Visiting/TypeQueryingVisitor.php
+
+		-
+			message: "#^Cannot access offset string on mixed\\.$#"
+			count: 1
+			path: src/Analysis/Visiting/UseStatementFetchingVisitor.php
+
+		-
+			message: "#^Cannot call method getStart\\(\\) on mixed\\.$#"
+			count: 2
+			path: src/Analysis/Visiting/UseStatementFetchingVisitor.php
+
+		-
+			message: "#^Parameter \\#1 \\$offset of static method Serenata\\\\Common\\\\Position\\:\\:createFromByteOffset\\(\\) expects int, mixed given\\.$#"
+			count: 3
+			path: src/Analysis/Visiting/UseStatementFetchingVisitor.php
+
+		-
+			message: "#^Cannot access property \\$type on mixed\\.$#"
+			count: 1
+			path: src/Autocompletion/ApplicabilityChecking/ClassAutocompletionApplicabilityChecker.php
+
+		-
+			message: "#^Parameter \\#1 \\$node of method Serenata\\\\Autocompletion\\\\ApplicabilityChecking\\\\ClassAutocompletionApplicabilityChecker\\:\\:doesApplyToNode\\(\\) expects PhpParser\\\\Node, mixed given\\.$#"
+			count: 3
+			path: src/Autocompletion/ApplicabilityChecking/ClassAutocompletionApplicabilityChecker.php
+
+		-
+			message: "#^Parameter \\#1 \\$node of method Serenata\\\\Autocompletion\\\\ApplicabilityChecking\\\\ClassConstantAutocompletionApplicabilityChecker\\:\\:doesApplyToNode\\(\\) expects PhpParser\\\\Node, mixed given\\.$#"
+			count: 2
+			path: src/Autocompletion/ApplicabilityChecking/ClassConstantAutocompletionApplicabilityChecker.php
+
+		-
+			message: "#^Cannot access property \\$type on mixed\\.$#"
+			count: 1
+			path: src/Autocompletion/ApplicabilityChecking/ConstantAutocompletionApplicabilityChecker.php
+
+		-
+			message: "#^Parameter \\#1 \\$node of method Serenata\\\\Autocompletion\\\\ApplicabilityChecking\\\\ConstantAutocompletionApplicabilityChecker\\:\\:doesApplyToNode\\(\\) expects PhpParser\\\\Node, mixed given\\.$#"
+			count: 3
+			path: src/Autocompletion/ApplicabilityChecking/ConstantAutocompletionApplicabilityChecker.php
+
+		-
+			message: "#^Cannot access property \\$type on mixed\\.$#"
+			count: 1
+			path: src/Autocompletion/ApplicabilityChecking/FunctionAutocompletionApplicabilityChecker.php
+
+		-
+			message: "#^Parameter \\#1 \\$node of method Serenata\\\\Autocompletion\\\\ApplicabilityChecking\\\\FunctionAutocompletionApplicabilityChecker\\:\\:doesApplyToNode\\(\\) expects PhpParser\\\\Node, mixed given\\.$#"
+			count: 3
+			path: src/Autocompletion/ApplicabilityChecking/FunctionAutocompletionApplicabilityChecker.php
+
+		-
+			message: "#^Cannot access property \\$type on mixed\\.$#"
+			count: 1
+			path: src/Autocompletion/ApplicabilityChecking/InterfaceAutocompletionApplicabilityChecker.php
+
+		-
+			message: "#^Parameter \\#1 \\$node of method Serenata\\\\Autocompletion\\\\ApplicabilityChecking\\\\InterfaceAutocompletionApplicabilityChecker\\:\\:doesApplyToNode\\(\\) expects PhpParser\\\\Node, mixed given\\.$#"
+			count: 3
+			path: src/Autocompletion/ApplicabilityChecking/InterfaceAutocompletionApplicabilityChecker.php
+
+		-
+			message: "#^Parameter \\#1 \\$node of method Serenata\\\\Autocompletion\\\\ApplicabilityChecking\\\\KeywordAutocompletionApplicabilityChecker\\:\\:doesApplyToNode\\(\\) expects PhpParser\\\\Node, mixed given\\.$#"
+			count: 3
+			path: src/Autocompletion/ApplicabilityChecking/KeywordAutocompletionApplicabilityChecker.php
+
+		-
+			message: "#^Parameter \\#1 \\$node of method Serenata\\\\Autocompletion\\\\ApplicabilityChecking\\\\LocalVariableAutocompletionApplicabilityChecker\\:\\:doesApplyToNode\\(\\) expects PhpParser\\\\Node, mixed given\\.$#"
+			count: 3
+			path: src/Autocompletion/ApplicabilityChecking/LocalVariableAutocompletionApplicabilityChecker.php
+
+		-
+			message: "#^Cannot access property \\$type on mixed\\.$#"
+			count: 1
+			path: src/Autocompletion/ApplicabilityChecking/NamespaceAutocompletionApplicabilityChecker.php
+
+		-
+			message: "#^Parameter \\#1 \\$node of method Serenata\\\\Autocompletion\\\\ApplicabilityChecking\\\\NamespaceAutocompletionApplicabilityChecker\\:\\:doesApplyToNode\\(\\) expects PhpParser\\\\Node, mixed given\\.$#"
+			count: 2
+			path: src/Autocompletion/ApplicabilityChecking/NamespaceAutocompletionApplicabilityChecker.php
+
+		-
+			message: "#^Parameter \\#1 \\$node of method Serenata\\\\Autocompletion\\\\ApplicabilityChecking\\\\NonStaticMethodAutocompletionApplicabilityChecker\\:\\:doesApplyToNode\\(\\) expects PhpParser\\\\Node, mixed given\\.$#"
+			count: 2
+			path: src/Autocompletion/ApplicabilityChecking/NonStaticMethodAutocompletionApplicabilityChecker.php
+
+		-
+			message: "#^Parameter \\#1 \\$node of method Serenata\\\\Autocompletion\\\\ApplicabilityChecking\\\\NonStaticPropertyAutocompletionApplicabilityChecker\\:\\:doesApplyToNode\\(\\) expects PhpParser\\\\Node, mixed given\\.$#"
+			count: 2
+			path: src/Autocompletion/ApplicabilityChecking/NonStaticPropertyAutocompletionApplicabilityChecker.php
+
+		-
+			message: "#^Parameter \\#1 \\$node of method Serenata\\\\Autocompletion\\\\ApplicabilityChecking\\\\ParameterNameAutocompletionApplicabilityChecker\\:\\:doesApplyToNode\\(\\) expects PhpParser\\\\Node, mixed given\\.$#"
+			count: 1
+			path: src/Autocompletion/ApplicabilityChecking/ParameterNameAutocompletionApplicabilityChecker.php
+
+		-
+			message: "#^Parameter \\#1 \\$node of method Serenata\\\\Autocompletion\\\\ApplicabilityChecking\\\\StaticMethodAutocompletionApplicabilityChecker\\:\\:doesApplyToNode\\(\\) expects PhpParser\\\\Node, mixed given\\.$#"
+			count: 2
+			path: src/Autocompletion/ApplicabilityChecking/StaticMethodAutocompletionApplicabilityChecker.php
+
+		-
+			message: "#^Parameter \\#1 \\$node of method Serenata\\\\Autocompletion\\\\ApplicabilityChecking\\\\StaticPropertyAutocompletionApplicabilityChecker\\:\\:doesApplyToNode\\(\\) expects PhpParser\\\\Node, mixed given\\.$#"
+			count: 2
+			path: src/Autocompletion/ApplicabilityChecking/StaticPropertyAutocompletionApplicabilityChecker.php
+
+		-
+			message: "#^Cannot access property \\$type on mixed\\.$#"
+			count: 1
+			path: src/Autocompletion/ApplicabilityChecking/TraitAutocompletionApplicabilityChecker.php
+
+		-
+			message: "#^Parameter \\#1 \\$node of method Serenata\\\\Autocompletion\\\\ApplicabilityChecking\\\\TraitAutocompletionApplicabilityChecker\\:\\:doesApplyToNode\\(\\) expects PhpParser\\\\Node, mixed given\\.$#"
+			count: 3
+			path: src/Autocompletion/ApplicabilityChecking/TraitAutocompletionApplicabilityChecker.php
+
+		-
+			message: "#^Parameter \\#1 \\$approximation of method Serenata\\\\Autocompletion\\\\ApproximateStringMatching\\\\ApproximateStringMatcherInterface\\:\\:score\\(\\) expects string, mixed given\\.$#"
+			count: 1
+			path: src/Autocompletion/ApproximateStringMatching/ApproximateStringMatchingBestStringApproximationDeterminer.php
+
+		-
+			message: "#^Method Serenata\\\\Autocompletion\\\\CompletionItemDetailFormatter\\:\\:format\\(\\) has parameter \\$typeArrayList with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Autocompletion/CompletionItemDetailFormatter.php
+
+		-
+			message: "#^Method Serenata\\\\Autocompletion\\\\CompletionItemDetailFormatter\\:\\:formatTypes\\(\\) has parameter \\$typeArrayList with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Autocompletion/CompletionItemDetailFormatter.php
+
+		-
+			message: "#^Argument of an invalid type mixed supplied for foreach, only iterables are supported\\.$#"
+			count: 1
+			path: src/Autocompletion/FunctionAutocompletionSuggestionLabelCreator.php
+
+		-
+			message: "#^Cannot access offset 'defaultValue' on mixed\\.$#"
+			count: 3
+			path: src/Autocompletion/FunctionAutocompletionSuggestionLabelCreator.php
+
+		-
+			message: "#^Cannot access offset 'isOptional' on mixed\\.$#"
+			count: 3
+			path: src/Autocompletion/FunctionAutocompletionSuggestionLabelCreator.php
+
+		-
+			message: "#^Cannot access offset 'isReference' on mixed\\.$#"
+			count: 1
+			path: src/Autocompletion/FunctionAutocompletionSuggestionLabelCreator.php
+
+		-
+			message: "#^Cannot access offset 'isVariadic' on mixed\\.$#"
+			count: 1
+			path: src/Autocompletion/FunctionAutocompletionSuggestionLabelCreator.php
+
+		-
+			message: "#^Cannot access offset 'name' on mixed\\.$#"
+			count: 1
+			path: src/Autocompletion/FunctionAutocompletionSuggestionLabelCreator.php
+
+		-
+			message: "#^Only booleans are allowed in &&, mixed given on the left side\\.$#"
+			count: 2
+			path: src/Autocompletion/FunctionAutocompletionSuggestionLabelCreator.php
+
+		-
+			message: "#^Only booleans are allowed in a negated boolean, mixed given\\.$#"
+			count: 1
+			path: src/Autocompletion/FunctionAutocompletionSuggestionLabelCreator.php
+
+		-
+			message: "#^Only booleans are allowed in an if condition, mixed given\\.$#"
+			count: 2
+			path: src/Autocompletion/FunctionAutocompletionSuggestionLabelCreator.php
+
+		-
+			message: "#^Parameter \\#1 \\$value of function count expects array\\|Countable, mixed given\\.$#"
+			count: 1
+			path: src/Autocompletion/FunctionAutocompletionSuggestionLabelCreator.php
+
+		-
+			message: "#^Argument of an invalid type mixed supplied for foreach, only iterables are supported\\.$#"
+			count: 1
+			path: src/Autocompletion/FunctionParametersEvaluator.php
+
+		-
+			message: "#^Cannot access offset 'isOptional' on mixed\\.$#"
+			count: 1
+			path: src/Autocompletion/FunctionParametersEvaluator.php
+
+		-
+			message: "#^Only booleans are allowed in a negated boolean, mixed given\\.$#"
+			count: 1
+			path: src/Autocompletion/FunctionParametersEvaluator.php
+
+		-
+			message: "#^Argument of an invalid type mixed supplied for foreach, only iterables are supported\\.$#"
+			count: 1
+			path: src/Autocompletion/Providers/ClassConstantAutocompletionProvider.php
+
+		-
+			message: "#^Cannot access offset 'fqcn' on mixed\\.$#"
+			count: 1
+			path: src/Autocompletion/Providers/ClassConstantAutocompletionProvider.php
+
+		-
+			message: "#^Parameter \\#1 \\$callback of function array_map expects \\(callable\\(PHPStan\\\\PhpDocParser\\\\Ast\\\\Type\\\\TypeNode\\)\\: mixed\\)\\|null, Closure\\(string\\)\\: array\\<string, mixed\\>\\|null given\\.$#"
+			count: 1
+			path: src/Autocompletion/Providers/ClassConstantAutocompletionProvider.php
+
+		-
+			message: "#^Parameter \\#1 \\$constant of method Serenata\\\\Autocompletion\\\\Providers\\\\ClassConstantAutocompletionProvider\\:\\:createSuggestion\\(\\) expects array\\<string, mixed\\>, mixed given\\.$#"
+			count: 1
+			path: src/Autocompletion/Providers/ClassConstantAutocompletionProvider.php
+
+		-
+			message: "#^Parameter \\#1 \\$declaringStructureFqcn of method Serenata\\\\Autocompletion\\\\CompletionItemDetailFormatter\\:\\:format\\(\\) expects string\\|null, mixed given\\.$#"
+			count: 1
+			path: src/Autocompletion/Providers/ClassConstantAutocompletionProvider.php
+
+		-
+			message: "#^Parameter \\#1 \\$filterText of class Serenata\\\\Autocompletion\\\\CompletionItem constructor expects string, mixed given\\.$#"
+			count: 1
+			path: src/Autocompletion/Providers/ClassConstantAutocompletionProvider.php
+
+		-
+			message: "#^Parameter \\#1 \\$text of static method Serenata\\\\Autocompletion\\\\SnippetInsertionTextEscaper\\:\\:escape\\(\\) expects string, mixed given\\.$#"
+			count: 2
+			path: src/Autocompletion/Providers/ClassConstantAutocompletionProvider.php
+
+		-
+			message: "#^Parameter \\#3 \\$typeArrayList of method Serenata\\\\Autocompletion\\\\CompletionItemDetailFormatter\\:\\:format\\(\\) expects array\\<array\\>, mixed given\\.$#"
+			count: 1
+			path: src/Autocompletion/Providers/ClassConstantAutocompletionProvider.php
+
+		-
+			message: "#^Parameter \\#5 \\$label of class Serenata\\\\Autocompletion\\\\CompletionItem constructor expects string, mixed given\\.$#"
+			count: 1
+			path: src/Autocompletion/Providers/ClassConstantAutocompletionProvider.php
+
+		-
+			message: "#^Parameter \\#6 \\$documentation of class Serenata\\\\Autocompletion\\\\CompletionItem constructor expects string\\|null, mixed given\\.$#"
+			count: 1
+			path: src/Autocompletion/Providers/ClassConstantAutocompletionProvider.php
+
+		-
+			message: "#^Parameter \\#8 \\$deprecated of class Serenata\\\\Autocompletion\\\\CompletionItem constructor expects bool, mixed given\\.$#"
+			count: 1
+			path: src/Autocompletion/Providers/ClassConstantAutocompletionProvider.php
+
+		-
+			message: "#^Cannot access offset 0 on mixed\\.$#"
+			count: 1
+			path: src/Autocompletion/Providers/ClasslikeAutocompletionProvider.php
+
+		-
+			message: "#^Method Serenata\\\\Autocompletion\\\\Providers\\\\ClasslikeAutocompletionProvider\\:\\:getFqcnWithoutLeadingSlash\\(\\) should return string but returns mixed\\.$#"
+			count: 1
+			path: src/Autocompletion/Providers/ClasslikeAutocompletionProvider.php
+
+		-
+			message: "#^PHPDoc tag @var for variable \\$bestApproximations has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Autocompletion/Providers/ClasslikeAutocompletionProvider.php
+
+		-
+			message: "#^Parameter \\#1 \\$filterText of class Serenata\\\\Autocompletion\\\\CompletionItem constructor expects string, mixed given\\.$#"
+			count: 1
+			path: src/Autocompletion/Providers/ClasslikeAutocompletionProvider.php
+
+		-
+			message: "#^Parameter \\#1 \\$string of function mb_substr expects string, mixed given\\.$#"
+			count: 2
+			path: src/Autocompletion/Providers/ClasslikeAutocompletionProvider.php
+
+		-
+			message: "#^Parameter \\#1 \\$text of static method Serenata\\\\Autocompletion\\\\SnippetInsertionTextEscaper\\:\\:escape\\(\\) expects string, mixed given\\.$#"
+			count: 1
+			path: src/Autocompletion/Providers/ClasslikeAutocompletionProvider.php
+
+		-
+			message: "#^Parameter \\#5 \\$label of class Serenata\\\\Autocompletion\\\\CompletionItem constructor expects string, mixed given\\.$#"
+			count: 1
+			path: src/Autocompletion/Providers/ClasslikeAutocompletionProvider.php
+
+		-
+			message: "#^Parameter \\#6 \\$documentation of class Serenata\\\\Autocompletion\\\\CompletionItem constructor expects string\\|null, mixed given\\.$#"
+			count: 1
+			path: src/Autocompletion/Providers/ClasslikeAutocompletionProvider.php
+
+		-
+			message: "#^Parameter \\#8 \\$deprecated of class Serenata\\\\Autocompletion\\\\CompletionItem constructor expects bool, mixed given\\.$#"
+			count: 1
+			path: src/Autocompletion/Providers/ClasslikeAutocompletionProvider.php
+
+		-
+			message: "#^Cannot access offset 0 on mixed\\.$#"
+			count: 1
+			path: src/Autocompletion/Providers/ConstantAutocompletionProvider.php
+
+		-
+			message: "#^Method Serenata\\\\Autocompletion\\\\Providers\\\\ConstantAutocompletionProvider\\:\\:getFqcnWithoutLeadingSlash\\(\\) should return string but returns mixed\\.$#"
+			count: 1
+			path: src/Autocompletion/Providers/ConstantAutocompletionProvider.php
+
+		-
+			message: "#^PHPDoc tag @var for variable \\$bestApproximations has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Autocompletion/Providers/ConstantAutocompletionProvider.php
+
+		-
+			message: "#^Parameter \\#1 \\$filterText of class Serenata\\\\Autocompletion\\\\CompletionItem constructor expects string, mixed given\\.$#"
+			count: 1
+			path: src/Autocompletion/Providers/ConstantAutocompletionProvider.php
+
+		-
+			message: "#^Parameter \\#1 \\$string of function mb_substr expects string, mixed given\\.$#"
+			count: 2
+			path: src/Autocompletion/Providers/ConstantAutocompletionProvider.php
+
+		-
+			message: "#^Parameter \\#1 \\$text of static method Serenata\\\\Autocompletion\\\\SnippetInsertionTextEscaper\\:\\:escape\\(\\) expects string, mixed given\\.$#"
+			count: 1
+			path: src/Autocompletion/Providers/ConstantAutocompletionProvider.php
+
+		-
+			message: "#^Parameter \\#3 \\$typeArrayList of method Serenata\\\\Autocompletion\\\\CompletionItemDetailFormatter\\:\\:format\\(\\) expects array\\<array\\>, mixed given\\.$#"
+			count: 1
+			path: src/Autocompletion/Providers/ConstantAutocompletionProvider.php
+
+		-
+			message: "#^Parameter \\#5 \\$label of class Serenata\\\\Autocompletion\\\\CompletionItem constructor expects string, mixed given\\.$#"
+			count: 1
+			path: src/Autocompletion/Providers/ConstantAutocompletionProvider.php
+
+		-
+			message: "#^Parameter \\#6 \\$documentation of class Serenata\\\\Autocompletion\\\\CompletionItem constructor expects string\\|null, mixed given\\.$#"
+			count: 1
+			path: src/Autocompletion/Providers/ConstantAutocompletionProvider.php
+
+		-
+			message: "#^Parameter \\#8 \\$deprecated of class Serenata\\\\Autocompletion\\\\CompletionItem constructor expects bool, mixed given\\.$#"
+			count: 1
+			path: src/Autocompletion/Providers/ConstantAutocompletionProvider.php
+
+		-
+			message: "#^Method Serenata\\\\Autocompletion\\\\Providers\\\\DocblockTagAutocompletionProvider\\:\\:getTags\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Autocompletion/Providers/DocblockTagAutocompletionProvider.php
+
+		-
+			message: "#^Parameter \\#1 \\$filterText of class Serenata\\\\Autocompletion\\\\CompletionItem constructor expects string, mixed given\\.$#"
+			count: 1
+			path: src/Autocompletion/Providers/DocblockTagAutocompletionProvider.php
+
+		-
+			message: "#^Parameter \\#2 \\$newText of class Serenata\\\\Utility\\\\TextEdit constructor expects string, mixed given\\.$#"
+			count: 1
+			path: src/Autocompletion/Providers/DocblockTagAutocompletionProvider.php
+
+		-
+			message: "#^Parameter \\#3 \\$insertText of class Serenata\\\\Autocompletion\\\\CompletionItem constructor expects string\\|null, mixed given\\.$#"
+			count: 1
+			path: src/Autocompletion/Providers/DocblockTagAutocompletionProvider.php
+
+		-
+			message: "#^Parameter \\#5 \\$label of class Serenata\\\\Autocompletion\\\\CompletionItem constructor expects string, mixed given\\.$#"
+			count: 1
+			path: src/Autocompletion/Providers/DocblockTagAutocompletionProvider.php
+
+		-
+			message: "#^Cannot access offset 0 on mixed\\.$#"
+			count: 1
+			path: src/Autocompletion/Providers/FunctionAutocompletionProvider.php
+
+		-
+			message: "#^Method Serenata\\\\Autocompletion\\\\Providers\\\\FunctionAutocompletionProvider\\:\\:getFqcnWithoutLeadingSlash\\(\\) should return string but returns mixed\\.$#"
+			count: 1
+			path: src/Autocompletion/Providers/FunctionAutocompletionProvider.php
+
+		-
+			message: "#^PHPDoc tag @var for variable \\$bestApproximations has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Autocompletion/Providers/FunctionAutocompletionProvider.php
+
+		-
+			message: "#^Parameter \\#1 \\$filterText of class Serenata\\\\Autocompletion\\\\CompletionItem constructor expects string, mixed given\\.$#"
+			count: 1
+			path: src/Autocompletion/Providers/FunctionAutocompletionProvider.php
+
+		-
+			message: "#^Parameter \\#1 \\$string of function mb_substr expects string, mixed given\\.$#"
+			count: 2
+			path: src/Autocompletion/Providers/FunctionAutocompletionProvider.php
+
+		-
+			message: "#^Parameter \\#1 \\$text of static method Serenata\\\\Autocompletion\\\\SnippetInsertionTextEscaper\\:\\:escape\\(\\) expects string, mixed given\\.$#"
+			count: 1
+			path: src/Autocompletion/Providers/FunctionAutocompletionProvider.php
+
+		-
+			message: "#^Parameter \\#3 \\$typeArrayList of method Serenata\\\\Autocompletion\\\\CompletionItemDetailFormatter\\:\\:format\\(\\) expects array\\<array\\>, mixed given\\.$#"
+			count: 1
+			path: src/Autocompletion/Providers/FunctionAutocompletionProvider.php
+
+		-
+			message: "#^Parameter \\#6 \\$documentation of class Serenata\\\\Autocompletion\\\\CompletionItem constructor expects string\\|null, mixed given\\.$#"
+			count: 1
+			path: src/Autocompletion/Providers/FunctionAutocompletionProvider.php
+
+		-
+			message: "#^Parameter \\#8 \\$deprecated of class Serenata\\\\Autocompletion\\\\CompletionItem constructor expects bool, mixed given\\.$#"
+			count: 1
+			path: src/Autocompletion/Providers/FunctionAutocompletionProvider.php
+
+		-
+			message: "#^Parameter \\#1 \\$filterText of class Serenata\\\\Autocompletion\\\\CompletionItem constructor expects string, mixed given\\.$#"
+			count: 1
+			path: src/Autocompletion/Providers/KeywordAutocompletionProvider.php
+
+		-
+			message: "#^Parameter \\#1 \\$text of static method Serenata\\\\Autocompletion\\\\SnippetInsertionTextEscaper\\:\\:escape\\(\\) expects string, mixed given\\.$#"
+			count: 2
+			path: src/Autocompletion/Providers/KeywordAutocompletionProvider.php
+
+		-
+			message: "#^Parameter \\#5 \\$label of class Serenata\\\\Autocompletion\\\\CompletionItem constructor expects string, mixed given\\.$#"
+			count: 1
+			path: src/Autocompletion/Providers/KeywordAutocompletionProvider.php
+
+		-
+			message: "#^Parameter \\#1 \\$filterText of class Serenata\\\\Autocompletion\\\\CompletionItem constructor expects string, mixed given\\.$#"
+			count: 1
+			path: src/Autocompletion/Providers/LocalVariableAutocompletionProvider.php
+
+		-
+			message: "#^Parameter \\#1 \\$string of function mb_substr expects string, mixed given\\.$#"
+			count: 1
+			path: src/Autocompletion/Providers/LocalVariableAutocompletionProvider.php
+
+		-
+			message: "#^Parameter \\#1 \\$text of static method Serenata\\\\Autocompletion\\\\SnippetInsertionTextEscaper\\:\\:escape\\(\\) expects string, mixed given\\.$#"
+			count: 2
+			path: src/Autocompletion/Providers/LocalVariableAutocompletionProvider.php
+
+		-
+			message: "#^Parameter \\#2 \\$string of function explode expects string, mixed given\\.$#"
+			count: 1
+			path: src/Autocompletion/Providers/LocalVariableAutocompletionProvider.php
+
+		-
+			message: "#^Cannot access offset 0 on mixed\\.$#"
+			count: 1
+			path: src/Autocompletion/Providers/NamespaceAutocompletionProvider.php
+
+		-
+			message: "#^Parameter \\#1 \\$filterText of class Serenata\\\\Autocompletion\\\\CompletionItem constructor expects string, mixed given\\.$#"
+			count: 1
+			path: src/Autocompletion/Providers/NamespaceAutocompletionProvider.php
+
+		-
+			message: "#^Parameter \\#1 \\$string of function mb_substr expects string, mixed given\\.$#"
+			count: 1
+			path: src/Autocompletion/Providers/NamespaceAutocompletionProvider.php
+
+		-
+			message: "#^Parameter \\#1 \\$text of static method Serenata\\\\Autocompletion\\\\SnippetInsertionTextEscaper\\:\\:escape\\(\\) expects string, mixed given\\.$#"
+			count: 2
+			path: src/Autocompletion/Providers/NamespaceAutocompletionProvider.php
+
+		-
+			message: "#^Parameter \\#5 \\$label of class Serenata\\\\Autocompletion\\\\CompletionItem constructor expects string, mixed given\\.$#"
+			count: 1
+			path: src/Autocompletion/Providers/NamespaceAutocompletionProvider.php
+
+		-
+			message: "#^Argument of an invalid type mixed supplied for foreach, only iterables are supported\\.$#"
+			count: 1
+			path: src/Autocompletion/Providers/NonStaticMethodAutocompletionProvider.php
+
+		-
+			message: "#^Cannot access offset 'fqcn' on mixed\\.$#"
+			count: 1
+			path: src/Autocompletion/Providers/NonStaticMethodAutocompletionProvider.php
+
+		-
+			message: "#^Cannot access offset 'isStatic' on mixed\\.$#"
+			count: 1
+			path: src/Autocompletion/Providers/NonStaticMethodAutocompletionProvider.php
+
+		-
+			message: "#^Only booleans are allowed in a negated boolean, mixed given\\.$#"
+			count: 1
+			path: src/Autocompletion/Providers/NonStaticMethodAutocompletionProvider.php
+
+		-
+			message: "#^Parameter \\#1 \\$declaringStructureFqcn of method Serenata\\\\Autocompletion\\\\CompletionItemDetailFormatter\\:\\:format\\(\\) expects string\\|null, mixed given\\.$#"
+			count: 1
+			path: src/Autocompletion/Providers/NonStaticMethodAutocompletionProvider.php
+
+		-
+			message: "#^Parameter \\#1 \\$filterText of class Serenata\\\\Autocompletion\\\\CompletionItem constructor expects string, mixed given\\.$#"
+			count: 1
+			path: src/Autocompletion/Providers/NonStaticMethodAutocompletionProvider.php
+
+		-
+			message: "#^Parameter \\#1 \\$method of method Serenata\\\\Autocompletion\\\\Providers\\\\NonStaticMethodAutocompletionProvider\\:\\:createSuggestion\\(\\) expects array\\<string, mixed\\>, mixed given\\.$#"
+			count: 1
+			path: src/Autocompletion/Providers/NonStaticMethodAutocompletionProvider.php
+
+		-
+			message: "#^Parameter \\#1 \\$text of static method Serenata\\\\Autocompletion\\\\SnippetInsertionTextEscaper\\:\\:escape\\(\\) expects string, mixed given\\.$#"
+			count: 1
+			path: src/Autocompletion/Providers/NonStaticMethodAutocompletionProvider.php
+
+		-
+			message: "#^Parameter \\#3 \\$typeArrayList of method Serenata\\\\Autocompletion\\\\CompletionItemDetailFormatter\\:\\:format\\(\\) expects array\\<array\\>, mixed given\\.$#"
+			count: 1
+			path: src/Autocompletion/Providers/NonStaticMethodAutocompletionProvider.php
+
+		-
+			message: "#^Parameter \\#6 \\$documentation of class Serenata\\\\Autocompletion\\\\CompletionItem constructor expects string\\|null, mixed given\\.$#"
+			count: 1
+			path: src/Autocompletion/Providers/NonStaticMethodAutocompletionProvider.php
+
+		-
+			message: "#^Parameter \\#8 \\$deprecated of class Serenata\\\\Autocompletion\\\\CompletionItem constructor expects bool, mixed given\\.$#"
+			count: 1
+			path: src/Autocompletion/Providers/NonStaticMethodAutocompletionProvider.php
+
+		-
+			message: "#^Argument of an invalid type mixed supplied for foreach, only iterables are supported\\.$#"
+			count: 1
+			path: src/Autocompletion/Providers/NonStaticPropertyAutocompletionProvider.php
+
+		-
+			message: "#^Cannot access offset 'fqcn' on mixed\\.$#"
+			count: 1
+			path: src/Autocompletion/Providers/NonStaticPropertyAutocompletionProvider.php
+
+		-
+			message: "#^Cannot access offset 'isStatic' on mixed\\.$#"
+			count: 1
+			path: src/Autocompletion/Providers/NonStaticPropertyAutocompletionProvider.php
+
+		-
+			message: "#^Only booleans are allowed in a negated boolean, mixed given\\.$#"
+			count: 1
+			path: src/Autocompletion/Providers/NonStaticPropertyAutocompletionProvider.php
+
+		-
+			message: "#^Parameter \\#1 \\$declaringStructureFqcn of method Serenata\\\\Autocompletion\\\\CompletionItemDetailFormatter\\:\\:format\\(\\) expects string\\|null, mixed given\\.$#"
+			count: 1
+			path: src/Autocompletion/Providers/NonStaticPropertyAutocompletionProvider.php
+
+		-
+			message: "#^Parameter \\#1 \\$filterText of class Serenata\\\\Autocompletion\\\\CompletionItem constructor expects string, mixed given\\.$#"
+			count: 1
+			path: src/Autocompletion/Providers/NonStaticPropertyAutocompletionProvider.php
+
+		-
+			message: "#^Parameter \\#1 \\$property of method Serenata\\\\Autocompletion\\\\Providers\\\\NonStaticPropertyAutocompletionProvider\\:\\:createSuggestion\\(\\) expects array\\<string, mixed\\>, mixed given\\.$#"
+			count: 1
+			path: src/Autocompletion/Providers/NonStaticPropertyAutocompletionProvider.php
+
+		-
+			message: "#^Parameter \\#1 \\$text of static method Serenata\\\\Autocompletion\\\\SnippetInsertionTextEscaper\\:\\:escape\\(\\) expects string, mixed given\\.$#"
+			count: 2
+			path: src/Autocompletion/Providers/NonStaticPropertyAutocompletionProvider.php
+
+		-
+			message: "#^Parameter \\#3 \\$typeArrayList of method Serenata\\\\Autocompletion\\\\CompletionItemDetailFormatter\\:\\:format\\(\\) expects array\\<array\\>, mixed given\\.$#"
+			count: 1
+			path: src/Autocompletion/Providers/NonStaticPropertyAutocompletionProvider.php
+
+		-
+			message: "#^Parameter \\#5 \\$label of class Serenata\\\\Autocompletion\\\\CompletionItem constructor expects string, mixed given\\.$#"
+			count: 1
+			path: src/Autocompletion/Providers/NonStaticPropertyAutocompletionProvider.php
+
+		-
+			message: "#^Parameter \\#6 \\$documentation of class Serenata\\\\Autocompletion\\\\CompletionItem constructor expects string\\|null, mixed given\\.$#"
+			count: 1
+			path: src/Autocompletion/Providers/NonStaticPropertyAutocompletionProvider.php
+
+		-
+			message: "#^Parameter \\#8 \\$deprecated of class Serenata\\\\Autocompletion\\\\CompletionItem constructor expects bool, mixed given\\.$#"
+			count: 1
+			path: src/Autocompletion/Providers/NonStaticPropertyAutocompletionProvider.php
+
+		-
+			message: "#^Cannot cast mixed to string\\.$#"
+			count: 1
+			path: src/Autocompletion/Providers/SortTextConfiguringAutocompletionProvider.php
+
+		-
+			message: "#^Argument of an invalid type mixed supplied for foreach, only iterables are supported\\.$#"
+			count: 1
+			path: src/Autocompletion/Providers/StaticMethodAutocompletionProvider.php
+
+		-
+			message: "#^Cannot access offset 'fqcn' on mixed\\.$#"
+			count: 1
+			path: src/Autocompletion/Providers/StaticMethodAutocompletionProvider.php
+
+		-
+			message: "#^Cannot access offset 'isStatic' on mixed\\.$#"
+			count: 1
+			path: src/Autocompletion/Providers/StaticMethodAutocompletionProvider.php
+
+		-
+			message: "#^Only booleans are allowed in an if condition, mixed given\\.$#"
+			count: 1
+			path: src/Autocompletion/Providers/StaticMethodAutocompletionProvider.php
+
+		-
+			message: "#^Parameter \\#1 \\$declaringStructureFqcn of method Serenata\\\\Autocompletion\\\\CompletionItemDetailFormatter\\:\\:format\\(\\) expects string\\|null, mixed given\\.$#"
+			count: 1
+			path: src/Autocompletion/Providers/StaticMethodAutocompletionProvider.php
+
+		-
+			message: "#^Parameter \\#1 \\$filterText of class Serenata\\\\Autocompletion\\\\CompletionItem constructor expects string, mixed given\\.$#"
+			count: 1
+			path: src/Autocompletion/Providers/StaticMethodAutocompletionProvider.php
+
+		-
+			message: "#^Parameter \\#1 \\$method of method Serenata\\\\Autocompletion\\\\Providers\\\\StaticMethodAutocompletionProvider\\:\\:createSuggestion\\(\\) expects array\\<string, mixed\\>, mixed given\\.$#"
+			count: 1
+			path: src/Autocompletion/Providers/StaticMethodAutocompletionProvider.php
+
+		-
+			message: "#^Parameter \\#1 \\$text of static method Serenata\\\\Autocompletion\\\\SnippetInsertionTextEscaper\\:\\:escape\\(\\) expects string, mixed given\\.$#"
+			count: 1
+			path: src/Autocompletion/Providers/StaticMethodAutocompletionProvider.php
+
+		-
+			message: "#^Parameter \\#3 \\$typeArrayList of method Serenata\\\\Autocompletion\\\\CompletionItemDetailFormatter\\:\\:format\\(\\) expects array\\<array\\>, mixed given\\.$#"
+			count: 1
+			path: src/Autocompletion/Providers/StaticMethodAutocompletionProvider.php
+
+		-
+			message: "#^Parameter \\#6 \\$documentation of class Serenata\\\\Autocompletion\\\\CompletionItem constructor expects string\\|null, mixed given\\.$#"
+			count: 1
+			path: src/Autocompletion/Providers/StaticMethodAutocompletionProvider.php
+
+		-
+			message: "#^Parameter \\#8 \\$deprecated of class Serenata\\\\Autocompletion\\\\CompletionItem constructor expects bool, mixed given\\.$#"
+			count: 1
+			path: src/Autocompletion/Providers/StaticMethodAutocompletionProvider.php
+
+		-
+			message: "#^Argument of an invalid type mixed supplied for foreach, only iterables are supported\\.$#"
+			count: 1
+			path: src/Autocompletion/Providers/StaticPropertyAutocompletionProvider.php
+
+		-
+			message: "#^Cannot access offset 'fqcn' on mixed\\.$#"
+			count: 1
+			path: src/Autocompletion/Providers/StaticPropertyAutocompletionProvider.php
+
+		-
+			message: "#^Cannot access offset 'isStatic' on mixed\\.$#"
+			count: 1
+			path: src/Autocompletion/Providers/StaticPropertyAutocompletionProvider.php
+
+		-
+			message: "#^Only booleans are allowed in an if condition, mixed given\\.$#"
+			count: 1
+			path: src/Autocompletion/Providers/StaticPropertyAutocompletionProvider.php
+
+		-
+			message: "#^Parameter \\#1 \\$declaringStructureFqcn of method Serenata\\\\Autocompletion\\\\CompletionItemDetailFormatter\\:\\:format\\(\\) expects string\\|null, mixed given\\.$#"
+			count: 1
+			path: src/Autocompletion/Providers/StaticPropertyAutocompletionProvider.php
+
+		-
+			message: "#^Parameter \\#1 \\$property of method Serenata\\\\Autocompletion\\\\Providers\\\\StaticPropertyAutocompletionProvider\\:\\:createSuggestion\\(\\) expects array\\<string, mixed\\>, mixed given\\.$#"
+			count: 1
+			path: src/Autocompletion/Providers/StaticPropertyAutocompletionProvider.php
+
+		-
+			message: "#^Parameter \\#3 \\$typeArrayList of method Serenata\\\\Autocompletion\\\\CompletionItemDetailFormatter\\:\\:format\\(\\) expects array\\<array\\>, mixed given\\.$#"
+			count: 1
+			path: src/Autocompletion/Providers/StaticPropertyAutocompletionProvider.php
+
+		-
+			message: "#^Parameter \\#5 \\$label of class Serenata\\\\Autocompletion\\\\CompletionItem constructor expects string, mixed given\\.$#"
+			count: 1
+			path: src/Autocompletion/Providers/StaticPropertyAutocompletionProvider.php
+
+		-
+			message: "#^Parameter \\#6 \\$documentation of class Serenata\\\\Autocompletion\\\\CompletionItem constructor expects string\\|null, mixed given\\.$#"
+			count: 1
+			path: src/Autocompletion/Providers/StaticPropertyAutocompletionProvider.php
+
+		-
+			message: "#^Parameter \\#8 \\$deprecated of class Serenata\\\\Autocompletion\\\\CompletionItem constructor expects bool, mixed given\\.$#"
+			count: 1
+			path: src/Autocompletion/Providers/StaticPropertyAutocompletionProvider.php
+
+		-
+			message: "#^Parameter \\#1 \\$filterText of class Serenata\\\\Autocompletion\\\\CompletionItem constructor expects string, mixed given\\.$#"
+			count: 1
+			path: src/Autocompletion/Providers/SuperglobalAutocompletionProvider.php
+
+		-
+			message: "#^Parameter \\#1 \\$string of function mb_substr expects string, mixed given\\.$#"
+			count: 1
+			path: src/Autocompletion/Providers/SuperglobalAutocompletionProvider.php
+
+		-
+			message: "#^Parameter \\#1 \\$text of static method Serenata\\\\Autocompletion\\\\SnippetInsertionTextEscaper\\:\\:escape\\(\\) expects string, mixed given\\.$#"
+			count: 2
+			path: src/Autocompletion/Providers/SuperglobalAutocompletionProvider.php
+
+		-
+			message: "#^Parameter \\#9 \\$detail of class Serenata\\\\Autocompletion\\\\CompletionItem constructor expects string\\|null, mixed given\\.$#"
+			count: 1
+			path: src/Autocompletion/Providers/SuperglobalAutocompletionProvider.php
+
+		-
+			message: "#^Parameter \\#1 \\$array of function array_shift expects array, mixed given\\.$#"
+			count: 1
+			path: src/Bootstrap.php
+
+		-
+			message: "#^Parameter \\#1 \\$version1 of function version_compare expects string, mixed given\\.$#"
+			count: 1
+			path: src/Bootstrap.php
+
+		-
+			message: "#^Part \\$sqliteVersion \\(mixed\\) of encapsed string cannot be cast to string\\.$#"
+			count: 1
+			path: src/Bootstrap.php
+
+		-
+			message: "#^Argument of an invalid type mixed supplied for foreach, only iterables are supported\\.$#"
+			count: 2
+			path: src/CodeLenses/CodeLensesRetriever.php
+
+		-
+			message: "#^Cannot access offset 'declaringStructure' on mixed\\.$#"
+			count: 6
+			path: src/CodeLenses/CodeLensesRetriever.php
+
+		-
+			message: "#^Cannot access offset 'fqcn' on mixed\\.$#"
+			count: 2
+			path: src/CodeLenses/CodeLensesRetriever.php
+
+		-
+			message: "#^Cannot access offset 'implementations' on mixed\\.$#"
+			count: 3
+			path: src/CodeLenses/CodeLensesRetriever.php
+
+		-
+			message: "#^Cannot access offset 'memberRange' on mixed\\.$#"
+			count: 2
+			path: src/CodeLenses/CodeLensesRetriever.php
+
+		-
+			message: "#^Cannot access offset 'override' on mixed\\.$#"
+			count: 7
+			path: src/CodeLenses/CodeLensesRetriever.php
+
+		-
+			message: "#^Cannot access offset 'range' on mixed\\.$#"
+			count: 2
+			path: src/CodeLenses/CodeLensesRetriever.php
+
+		-
+			message: "#^Cannot access offset 'uri' on mixed\\.$#"
+			count: 2
+			path: src/CodeLenses/CodeLensesRetriever.php
+
+		-
+			message: "#^Cannot access offset 0 on mixed\\.$#"
+			count: 1
+			path: src/CodeLenses/CodeLensesRetriever.php
+
+		-
+			message: "#^Cannot call method getStart\\(\\) on mixed\\.$#"
+			count: 2
+			path: src/CodeLenses/CodeLensesRetriever.php
+
+		-
 			message: "#^Missing @throws Serenata\\\\Analysis\\\\ClasslikeBuildingFailedException annotation$#"
 			count: 1
 			path: src/CodeLenses/CodeLensesRetriever.php
+
+		-
+			message: "#^Only booleans are allowed in a negated boolean, mixed given\\.$#"
+			count: 3
+			path: src/CodeLenses/CodeLensesRetriever.php
+
+		-
+			message: "#^Only booleans are allowed in a ternary operator condition, mixed given\\.$#"
+			count: 1
+			path: src/CodeLenses/CodeLensesRetriever.php
+
+		-
+			message: "#^Only booleans are allowed in an elseif condition, mixed given\\.$#"
+			count: 1
+			path: src/CodeLenses/CodeLensesRetriever.php
+
+		-
+			message: "#^Only booleans are allowed in an if condition, mixed given\\.$#"
+			count: 1
+			path: src/CodeLenses/CodeLensesRetriever.php
+
+		-
+			message: "#^Parameter \\#1 \\$fqcn of method Serenata\\\\CodeLenses\\\\CodeLensesRetriever\\:\\:generateOverrideAndImplementationLenses\\(\\) expects string, mixed given\\.$#"
+			count: 1
+			path: src/CodeLenses/CodeLensesRetriever.php
+
+		-
+			message: "#^Parameter \\#1 \\$range of class Serenata\\\\CodeLenses\\\\CodeLens constructor expects Serenata\\\\Common\\\\Range, mixed given\\.$#"
+			count: 2
+			path: src/CodeLenses/CodeLensesRetriever.php
+
+		-
+			message: "#^Parameter \\#2 \\$uri of class Serenata\\\\Commands\\\\OpenTextDocumentCommand constructor expects string, mixed given\\.$#"
+			count: 2
+			path: src/CodeLenses/CodeLensesRetriever.php
+
+		-
+			message: "#^Cannot access offset string on mixed\\.$#"
+			count: 2
+			path: src/GotoDefinition/ClassConstFetchNodeDefinitionLocator.php
+
+		-
+			message: "#^Method Serenata\\\\GotoDefinition\\\\ClassConstFetchNodeDefinitionLocator\\:\\:fetchClassConstantInfo\\(\\) should return array\\<string, mixed\\>\\|null but returns mixed\\.$#"
+			count: 1
+			path: src/GotoDefinition/ClassConstFetchNodeDefinitionLocator.php
+
+		-
+			message: "#^Parameter \\#1 \\$uri of class Serenata\\\\Utility\\\\Location constructor expects string, mixed given\\.$#"
+			count: 1
+			path: src/GotoDefinition/ClassConstFetchNodeDefinitionLocator.php
+
+		-
+			message: "#^Parameter \\#2 \\$range of class Serenata\\\\Utility\\\\Location constructor expects Serenata\\\\Common\\\\Range, mixed given\\.$#"
+			count: 1
+			path: src/GotoDefinition/ClassConstFetchNodeDefinitionLocator.php
+
+		-
+			message: "#^Parameter \\#1 \\$uri of class Serenata\\\\Utility\\\\Location constructor expects string, mixed given\\.$#"
+			count: 1
+			path: src/GotoDefinition/ConstFetchNodeDefinitionLocator.php
+
+		-
+			message: "#^Parameter \\#2 \\$range of class Serenata\\\\Utility\\\\Location constructor expects Serenata\\\\Common\\\\Range, mixed given\\.$#"
+			count: 1
+			path: src/GotoDefinition/ConstFetchNodeDefinitionLocator.php
+
+		-
+			message: "#^Parameter \\#1 \\$uri of class Serenata\\\\Utility\\\\Location constructor expects string, mixed given\\.$#"
+			count: 1
+			path: src/GotoDefinition/DocblockDefinitionLocator.php
+
+		-
+			message: "#^Parameter \\#2 \\$range of class Serenata\\\\Utility\\\\Location constructor expects Serenata\\\\Common\\\\Range, mixed given\\.$#"
+			count: 1
+			path: src/GotoDefinition/DocblockDefinitionLocator.php
+
+		-
+			message: "#^Parameter \\#1 \\$uri of class Serenata\\\\Utility\\\\Location constructor expects string, mixed given\\.$#"
+			count: 1
+			path: src/GotoDefinition/FuncCallNodeDefinitionLocator.php
+
+		-
+			message: "#^Parameter \\#2 \\$range of class Serenata\\\\Utility\\\\Location constructor expects Serenata\\\\Common\\\\Range, mixed given\\.$#"
+			count: 1
+			path: src/GotoDefinition/FuncCallNodeDefinitionLocator.php
+
+		-
+			message: "#^Parameter \\#1 \\$uri of class Serenata\\\\Utility\\\\Location constructor expects string, mixed given\\.$#"
+			count: 1
+			path: src/GotoDefinition/MethodCallNodeDefinitionLocator.php
+
+		-
+			message: "#^Parameter \\#2 \\$range of class Serenata\\\\Utility\\\\Location constructor expects Serenata\\\\Common\\\\Range, mixed given\\.$#"
+			count: 1
+			path: src/GotoDefinition/MethodCallNodeDefinitionLocator.php
+
+		-
+			message: "#^Parameter \\#1 \\$uri of class Serenata\\\\Utility\\\\Location constructor expects string, mixed given\\.$#"
+			count: 1
+			path: src/GotoDefinition/NameNodeDefinitionLocator.php
+
+		-
+			message: "#^Parameter \\#2 \\$range of class Serenata\\\\Utility\\\\Location constructor expects Serenata\\\\Common\\\\Range, mixed given\\.$#"
+			count: 1
+			path: src/GotoDefinition/NameNodeDefinitionLocator.php
+
+		-
+			message: "#^Parameter \\#1 \\$uri of class Serenata\\\\Utility\\\\Location constructor expects string, mixed given\\.$#"
+			count: 1
+			path: src/GotoDefinition/PropertyFetchDefinitionLocator.php
+
+		-
+			message: "#^Parameter \\#2 \\$range of class Serenata\\\\Utility\\\\Location constructor expects Serenata\\\\Common\\\\Range, mixed given\\.$#"
+			count: 1
+			path: src/GotoDefinition/PropertyFetchDefinitionLocator.php
+
+		-
+			message: "#^Parameter \\#1 \\$uri of class Serenata\\\\Utility\\\\Location constructor expects string, mixed given\\.$#"
+			count: 1
+			path: src/GotoDefinition/StaticMethodCallNodeDefinitionLocator.php
+
+		-
+			message: "#^Parameter \\#2 \\$range of class Serenata\\\\Utility\\\\Location constructor expects Serenata\\\\Common\\\\Range, mixed given\\.$#"
+			count: 1
+			path: src/GotoDefinition/StaticMethodCallNodeDefinitionLocator.php
+
+		-
+			message: "#^Parameter \\#1 \\$uri of class Serenata\\\\Utility\\\\Location constructor expects string, mixed given\\.$#"
+			count: 1
+			path: src/GotoDefinition/StaticPropertyFetchNodeDefinitionLocator.php
+
+		-
+			message: "#^Parameter \\#2 \\$range of class Serenata\\\\Utility\\\\Location constructor expects Serenata\\\\Common\\\\Range, mixed given\\.$#"
+			count: 1
+			path: src/GotoDefinition/StaticPropertyFetchNodeDefinitionLocator.php
+
+		-
+			message: "#^Parameter \\#1 \\$offset of static method Serenata\\\\Common\\\\Position\\:\\:createFromByteOffset\\(\\) expects int, mixed given\\.$#"
+			count: 1
+			path: src/Highlights/DocumentHighlightsVisitor.php
+
+		-
+			message: "#^PHPDoc tag @var for constant Serenata\\\\Indexing\\\\DebouncingIndexer\\:\\:INDEXING_DELAY_SECONDS with type int is incompatible with value 0\\.5\\.$#"
+			count: 1
+			path: src/Indexing/DebouncingIndexer.php
 
 		-
 			message: "#^Missing @throws DivisionByZeroError annotation$#"
@@ -46,8 +1526,13 @@ parameters:
 			path: src/Indexing/DirectoryIndexRequestDemuxer.php
 
 		-
-			message: "#^Unused @throws Serenata\\\\Indexing\\\\StorageException annotation$#"
-			count: 8
+			message: "#^Parameter \\#1 \\$iterator of method IteratorIterator\\<int,SplFileInfo,Serenata\\\\Indexing\\\\DirectoryIndexableFileIterator\\>\\:\\:__construct\\(\\) expects Serenata\\\\Indexing\\\\DirectoryIndexableFileIterator, Serenata\\\\Indexing\\\\Iterating\\\\ModificationTimeFilterIterator given\\.$#"
+			count: 1
+			path: src/Indexing/DirectoryIndexableFileIterator.php
+
+		-
+			message: "#^Missing @throws Throwable annotation$#"
+			count: 10
 			path: src/Indexing/DoctrineStorage.php
 
 		-
@@ -56,14 +1541,29 @@ parameters:
 			path: src/Indexing/DoctrineStorage.php
 
 		-
-			message: "#^Missing @throws Throwable annotation$#"
-			count: 10
+			message: "#^Unused @throws Serenata\\\\Indexing\\\\StorageException annotation$#"
+			count: 8
 			path: src/Indexing/DoctrineStorage.php
+
+		-
+			message: "#^Dead catch \\- UnexpectedValueException is never thrown in the try block\\.$#"
+			count: 1
+			path: src/Indexing/Indexer.php
 
 		-
 			message: "#^Missing @throws Serenata\\\\Analysis\\\\SourceCodeReading\\\\FileSourceCodeReaderException annotation$#"
 			count: 1
 			path: src/Indexing/Indexer.php
+
+		-
+			message: "#^Missing @throws Doctrine\\\\ORM\\\\Exception\\\\ORMException annotation$#"
+			count: 1
+			path: src/Indexing/ManagerRegistry.php
+
+		-
+			message: "#^Parameter \\#2 \\$cacheItemPool of class Doctrine\\\\ORM\\\\Cache\\\\DefaultCacheFactory constructor expects Psr\\\\Cache\\\\CacheItemPoolInterface, Doctrine\\\\Common\\\\Cache\\\\Cache given\\.$#"
+			count: 1
+			path: src/Indexing/ManagerRegistry.php
 
 		-
 			message: "#^Missing @throws Doctrine\\\\ORM\\\\Tools\\\\ToolsException annotation$#"
@@ -91,9 +1591,64 @@ parameters:
 			path: src/Indexing/StorageVersionChecker.php
 
 		-
+			message: "#^Property Serenata\\\\Indexing\\\\Structures\\\\Setting\\:\\:\\$id is never read, only written\\.$#"
+			count: 1
+			path: src/Indexing/Structures/Setting.php
+
+		-
 			message: "#^Missing @throws Serenata\\\\Analysis\\\\SourceCodeReading\\\\FileSourceCodeReaderException annotation$#"
 			count: 1
 			path: src/Indexing/TextDocumentContentRegistry.php
+
+		-
+			message: "#^Access to an undefined property PhpParser\\\\Node\\\\ComplexType\\:\\:\\$types\\.$#"
+			count: 2
+			path: src/Indexing/Visiting/ClasslikeIndexingVisitor.php
+
+		-
+			message: "#^Argument of an invalid type mixed supplied for foreach, only iterables are supported\\.$#"
+			count: 4
+			path: src/Indexing/Visiting/ClasslikeIndexingVisitor.php
+
+		-
+			message: "#^Call to an undefined method PhpParser\\\\Node\\\\ComplexType\\|PhpParser\\\\Node\\\\Identifier\\|PhpParser\\\\Node\\\\Name\\:\\:toString\\(\\)\\.$#"
+			count: 1
+			path: src/Indexing/Visiting/ClasslikeIndexingVisitor.php
+
+		-
+			message: "#^Cannot access offset 'description' on mixed\\.$#"
+			count: 12
+			path: src/Indexing/Visiting/ClasslikeIndexingVisitor.php
+
+		-
+			message: "#^Cannot access offset 'long' on mixed\\.$#"
+			count: 12
+			path: src/Indexing/Visiting/ClasslikeIndexingVisitor.php
+
+		-
+			message: "#^Cannot access offset 'name' on mixed\\.$#"
+			count: 2
+			path: src/Indexing/Visiting/ClasslikeIndexingVisitor.php
+
+		-
+			message: "#^Cannot access offset 'short' on mixed\\.$#"
+			count: 10
+			path: src/Indexing/Visiting/ClasslikeIndexingVisitor.php
+
+		-
+			message: "#^Cannot access offset 'type' on mixed\\.$#"
+			count: 10
+			path: src/Indexing/Visiting/ClasslikeIndexingVisitor.php
+
+		-
+			message: "#^Cannot access offset non\\-empty\\-string on mixed\\.$#"
+			count: 6
+			path: src/Indexing/Visiting/ClasslikeIndexingVisitor.php
+
+		-
+			message: "#^Cannot call method toString\\(\\) on PhpParser\\\\Node\\\\Name\\|null\\.$#"
+			count: 3
+			path: src/Indexing/Visiting/ClasslikeIndexingVisitor.php
 
 		-
 			message: "#^Missing @throws Serenata\\\\Analysis\\\\Typing\\\\Deduction\\\\TypeDeductionException annotation$#"
@@ -101,14 +1656,474 @@ parameters:
 			path: src/Indexing/Visiting/ClasslikeIndexingVisitor.php
 
 		-
+			message: "#^Only booleans are allowed in a ternary operator condition, mixed given\\.$#"
+			count: 3
+			path: src/Indexing/Visiting/ClasslikeIndexingVisitor.php
+
+		-
+			message: "#^Only booleans are allowed in an if condition, mixed given\\.$#"
+			count: 6
+			path: src/Indexing/Visiting/ClasslikeIndexingVisitor.php
+
+		-
+			message: "#^Parameter \\#1 \\$name of class Serenata\\\\Indexing\\\\Structures\\\\Method constructor expects string, mixed given\\.$#"
+			count: 1
+			path: src/Indexing/Visiting/ClasslikeIndexingVisitor.php
+
+		-
+			message: "#^Parameter \\#1 \\$name of class Serenata\\\\Indexing\\\\Structures\\\\Property constructor expects string, mixed given\\.$#"
+			count: 1
+			path: src/Indexing/Visiting/ClasslikeIndexingVisitor.php
+
+		-
+			message: "#^Parameter \\#1 \\$name of static method Serenata\\\\Utility\\\\NodeHelpers\\:\\:fetchClassName\\(\\) expects PhpParser\\\\Node\\\\Name, mixed given\\.$#"
+			count: 8
+			path: src/Indexing/Visiting/ClasslikeIndexingVisitor.php
+
+		-
+			message: "#^Parameter \\#1 \\$offset of static method Serenata\\\\Common\\\\Position\\:\\:createFromByteOffset\\(\\) expects int, mixed given\\.$#"
+			count: 4
+			path: src/Indexing/Visiting/ClasslikeIndexingVisitor.php
+
+		-
+			message: "#^Parameter \\#1 \\$rawData of method Serenata\\\\Indexing\\\\Visiting\\\\ClasslikeIndexingVisitor\\:\\:indexMagicMethod\\(\\) expects array\\<string, mixed\\>, mixed given\\.$#"
+			count: 1
+			path: src/Indexing/Visiting/ClasslikeIndexingVisitor.php
+
+		-
+			message: "#^Parameter \\#1 \\$rawData of method Serenata\\\\Indexing\\\\Visiting\\\\ClasslikeIndexingVisitor\\:\\:indexMagicProperty\\(\\) expects array\\<string, mixed\\>, mixed given\\.$#"
+			count: 1
+			path: src/Indexing/Visiting/ClasslikeIndexingVisitor.php
+
+		-
+			message: "#^Parameter \\#1 \\$specification of method Serenata\\\\Parsing\\\\DocblockTypeParserInterface\\:\\:parse\\(\\) expects string, mixed given\\.$#"
+			count: 6
+			path: src/Indexing/Visiting/ClasslikeIndexingVisitor.php
+
+		-
+			message: "#^Parameter \\#1 \\$string of function mb_substr expects string, mixed given\\.$#"
+			count: 2
+			path: src/Indexing/Visiting/ClasslikeIndexingVisitor.php
+
+		-
+			message: "#^Parameter \\#1 \\$type of method Serenata\\\\Analysis\\\\Typing\\\\TypeResolvingDocblockTypeTransformer\\:\\:resolve\\(\\) expects PHPStan\\\\PhpDocParser\\\\Ast\\\\Type\\\\TypeNode, mixed given\\.$#"
+			count: 3
+			path: src/Indexing/Visiting/ClasslikeIndexingVisitor.php
+
+		-
+			message: "#^Parameter \\#1 \\.\\.\\.\\$arrays of function array_merge expects array, mixed given\\.$#"
+			count: 1
+			path: src/Indexing/Visiting/ClasslikeIndexingVisitor.php
+
+		-
+			message: "#^Parameter \\#10 \\$isAnnotation of class Serenata\\\\Indexing\\\\Structures\\\\Class_ constructor expects bool, mixed given\\.$#"
+			count: 1
+			path: src/Indexing/Visiting/ClasslikeIndexingVisitor.php
+
+		-
+			message: "#^Parameter \\#10 \\$longDescription of class Serenata\\\\Indexing\\\\Structures\\\\Property constructor expects string\\|null, mixed given\\.$#"
+			count: 1
+			path: src/Indexing/Visiting/ClasslikeIndexingVisitor.php
+
+		-
+			message: "#^Parameter \\#11 \\$isDeprecated of class Serenata\\\\Indexing\\\\Structures\\\\Class_ constructor expects bool, mixed given\\.$#"
+			count: 1
+			path: src/Indexing/Visiting/ClasslikeIndexingVisitor.php
+
+		-
+			message: "#^Parameter \\#11 \\$typeDescription of class Serenata\\\\Indexing\\\\Structures\\\\Property constructor expects string\\|null, mixed given\\.$#"
+			count: 1
+			path: src/Indexing/Visiting/ClasslikeIndexingVisitor.php
+
+		-
+			message: "#^Parameter \\#12 \\$isStatic of class Serenata\\\\Indexing\\\\Structures\\\\Method constructor expects bool, mixed given\\.$#"
+			count: 1
+			path: src/Indexing/Visiting/ClasslikeIndexingVisitor.php
+
+		-
+			message: "#^Parameter \\#2 \\$offset of function substr expects int, mixed given\\.$#"
+			count: 3
+			path: src/Indexing/Visiting/ClasslikeIndexingVisitor.php
+
+		-
+			message: "#^Parameter \\#2 \\.\\.\\.\\$arrays of function array_merge expects array, mixed given\\.$#"
+			count: 1
+			path: src/Indexing/Visiting/ClasslikeIndexingVisitor.php
+
+		-
+			message: "#^Parameter \\#3 \\$description of class Serenata\\\\Indexing\\\\Structures\\\\ThrowsInfo constructor expects string\\|null, mixed given\\.$#"
+			count: 1
+			path: src/Indexing/Visiting/ClasslikeIndexingVisitor.php
+
+		-
+			message: "#^Parameter \\#3 \\.\\.\\.\\$arrays of function array_merge expects array, mixed given\\.$#"
+			count: 1
+			path: src/Indexing/Visiting/ClasslikeIndexingVisitor.php
+
+		-
+			message: "#^Parameter \\#4 \\$isDeprecated of class Serenata\\\\Indexing\\\\Structures\\\\Method constructor expects bool, mixed given\\.$#"
+			count: 1
+			path: src/Indexing/Visiting/ClasslikeIndexingVisitor.php
+
+		-
+			message: "#^Parameter \\#5 \\$description of class Serenata\\\\Indexing\\\\Structures\\\\MethodParameter constructor expects string\\|null, mixed given\\.$#"
+			count: 1
+			path: src/Indexing/Visiting/ClasslikeIndexingVisitor.php
+
+		-
+			message: "#^Parameter \\#5 \\$isDeprecated of class Serenata\\\\Indexing\\\\Structures\\\\ClassConstant constructor expects bool, mixed given\\.$#"
+			count: 1
+			path: src/Indexing/Visiting/ClasslikeIndexingVisitor.php
+
+		-
+			message: "#^Parameter \\#5 \\$isDeprecated of class Serenata\\\\Indexing\\\\Structures\\\\Property constructor expects bool, mixed given\\.$#"
+			count: 1
+			path: src/Indexing/Visiting/ClasslikeIndexingVisitor.php
+
+		-
+			message: "#^Parameter \\#5 \\$shortDescription of class Serenata\\\\Indexing\\\\Structures\\\\Class_ constructor expects string\\|null, mixed given\\.$#"
+			count: 1
+			path: src/Indexing/Visiting/ClasslikeIndexingVisitor.php
+
+		-
+			message: "#^Parameter \\#5 \\$shortDescription of class Serenata\\\\Indexing\\\\Structures\\\\Interface_ constructor expects string\\|null, mixed given\\.$#"
+			count: 1
+			path: src/Indexing/Visiting/ClasslikeIndexingVisitor.php
+
+		-
+			message: "#^Parameter \\#5 \\$shortDescription of class Serenata\\\\Indexing\\\\Structures\\\\Method constructor expects string\\|null, mixed given\\.$#"
+			count: 2
+			path: src/Indexing/Visiting/ClasslikeIndexingVisitor.php
+
+		-
+			message: "#^Parameter \\#5 \\$shortDescription of class Serenata\\\\Indexing\\\\Structures\\\\Trait_ constructor expects string\\|null, mixed given\\.$#"
+			count: 1
+			path: src/Indexing/Visiting/ClasslikeIndexingVisitor.php
+
+		-
+			message: "#^Parameter \\#6 \\$longDescription of class Serenata\\\\Indexing\\\\Structures\\\\Class_ constructor expects string\\|null, mixed given\\.$#"
+			count: 1
+			path: src/Indexing/Visiting/ClasslikeIndexingVisitor.php
+
+		-
+			message: "#^Parameter \\#6 \\$longDescription of class Serenata\\\\Indexing\\\\Structures\\\\Interface_ constructor expects string\\|null, mixed given\\.$#"
+			count: 1
+			path: src/Indexing/Visiting/ClasslikeIndexingVisitor.php
+
+		-
+			message: "#^Parameter \\#6 \\$longDescription of class Serenata\\\\Indexing\\\\Structures\\\\Method constructor expects string\\|null, mixed given\\.$#"
+			count: 1
+			path: src/Indexing/Visiting/ClasslikeIndexingVisitor.php
+
+		-
+			message: "#^Parameter \\#6 \\$longDescription of class Serenata\\\\Indexing\\\\Structures\\\\Trait_ constructor expects string\\|null, mixed given\\.$#"
+			count: 1
+			path: src/Indexing/Visiting/ClasslikeIndexingVisitor.php
+
+		-
+			message: "#^Parameter \\#7 \\$isDeprecated of class Serenata\\\\Indexing\\\\Structures\\\\Interface_ constructor expects bool, mixed given\\.$#"
+			count: 1
+			path: src/Indexing/Visiting/ClasslikeIndexingVisitor.php
+
+		-
+			message: "#^Parameter \\#7 \\$isDeprecated of class Serenata\\\\Indexing\\\\Structures\\\\Trait_ constructor expects bool, mixed given\\.$#"
+			count: 1
+			path: src/Indexing/Visiting/ClasslikeIndexingVisitor.php
+
+		-
+			message: "#^Parameter \\#7 \\$isStatic of class Serenata\\\\Indexing\\\\Structures\\\\Property constructor expects bool, mixed given\\.$#"
+			count: 1
+			path: src/Indexing/Visiting/ClasslikeIndexingVisitor.php
+
+		-
+			message: "#^Parameter \\#7 \\$returnDescription of class Serenata\\\\Indexing\\\\Structures\\\\Method constructor expects string\\|null, mixed given\\.$#"
+			count: 1
+			path: src/Indexing/Visiting/ClasslikeIndexingVisitor.php
+
+		-
+			message: "#^Parameter \\#7 \\$shortDescription of class Serenata\\\\Indexing\\\\Structures\\\\ClassConstant constructor expects string\\|null, mixed given\\.$#"
+			count: 1
+			path: src/Indexing/Visiting/ClasslikeIndexingVisitor.php
+
+		-
+			message: "#^Parameter \\#8 \\$longDescription of class Serenata\\\\Indexing\\\\Structures\\\\ClassConstant constructor expects string\\|null, mixed given\\.$#"
+			count: 1
+			path: src/Indexing/Visiting/ClasslikeIndexingVisitor.php
+
+		-
+			message: "#^Parameter \\#9 \\$shortDescription of class Serenata\\\\Indexing\\\\Structures\\\\Property constructor expects string\\|null, mixed given\\.$#"
+			count: 2
+			path: src/Indexing/Visiting/ClasslikeIndexingVisitor.php
+
+		-
+			message: "#^Parameter \\#9 \\$typeDescription of class Serenata\\\\Indexing\\\\Structures\\\\ClassConstant constructor expects string\\|null, mixed given\\.$#"
+			count: 1
+			path: src/Indexing/Visiting/ClasslikeIndexingVisitor.php
+
+		-
+			message: "#^Cannot access offset 'description' on mixed\\.$#"
+			count: 4
+			path: src/Indexing/Visiting/ConstantIndexingVisitor.php
+
+		-
+			message: "#^Cannot access offset 'long' on mixed\\.$#"
+			count: 2
+			path: src/Indexing/Visiting/ConstantIndexingVisitor.php
+
+		-
+			message: "#^Cannot access offset 'short' on mixed\\.$#"
+			count: 1
+			path: src/Indexing/Visiting/ConstantIndexingVisitor.php
+
+		-
+			message: "#^Cannot access offset 'type' on mixed\\.$#"
+			count: 1
+			path: src/Indexing/Visiting/ConstantIndexingVisitor.php
+
+		-
+			message: "#^Cannot access offset non\\-empty\\-string on mixed\\.$#"
+			count: 2
+			path: src/Indexing/Visiting/ConstantIndexingVisitor.php
+
+		-
+			message: "#^Cannot call method toString\\(\\) on PhpParser\\\\Node\\\\Name\\|null\\.$#"
+			count: 1
+			path: src/Indexing/Visiting/ConstantIndexingVisitor.php
+
+		-
+			message: "#^Only booleans are allowed in a ternary operator condition, mixed given\\.$#"
+			count: 3
+			path: src/Indexing/Visiting/ConstantIndexingVisitor.php
+
+		-
+			message: "#^Only booleans are allowed in an if condition, mixed given\\.$#"
+			count: 1
+			path: src/Indexing/Visiting/ConstantIndexingVisitor.php
+
+		-
+			message: "#^Parameter \\#1 \\$offset of static method Serenata\\\\Common\\\\Position\\:\\:createFromByteOffset\\(\\) expects int, mixed given\\.$#"
+			count: 1
+			path: src/Indexing/Visiting/ConstantIndexingVisitor.php
+
+		-
+			message: "#^Parameter \\#1 \\$type of method Serenata\\\\Analysis\\\\Typing\\\\TypeResolvingDocblockTypeTransformer\\:\\:resolve\\(\\) expects PHPStan\\\\PhpDocParser\\\\Ast\\\\Type\\\\TypeNode, mixed given\\.$#"
+			count: 1
+			path: src/Indexing/Visiting/ConstantIndexingVisitor.php
+
+		-
+			message: "#^Parameter \\#10 \\$typeDescription of class Serenata\\\\Indexing\\\\Structures\\\\Constant constructor expects string\\|null, mixed given\\.$#"
+			count: 1
+			path: src/Indexing/Visiting/ConstantIndexingVisitor.php
+
+		-
+			message: "#^Parameter \\#2 \\$offset of function substr expects int, mixed given\\.$#"
+			count: 1
+			path: src/Indexing/Visiting/ConstantIndexingVisitor.php
+
+		-
+			message: "#^Parameter \\#6 \\$isDeprecated of class Serenata\\\\Indexing\\\\Structures\\\\Constant constructor expects bool, mixed given\\.$#"
+			count: 1
+			path: src/Indexing/Visiting/ConstantIndexingVisitor.php
+
+		-
+			message: "#^Parameter \\#8 \\$shortDescription of class Serenata\\\\Indexing\\\\Structures\\\\Constant constructor expects string\\|null, mixed given\\.$#"
+			count: 1
+			path: src/Indexing/Visiting/ConstantIndexingVisitor.php
+
+		-
+			message: "#^Parameter \\#9 \\$longDescription of class Serenata\\\\Indexing\\\\Structures\\\\Constant constructor expects string\\|null, mixed given\\.$#"
+			count: 1
+			path: src/Indexing/Visiting/ConstantIndexingVisitor.php
+
+		-
+			message: "#^Access to an undefined property PhpParser\\\\Node\\\\Arg\\|PhpParser\\\\Node\\\\VariadicPlaceholder\\:\\:\\$value\\.$#"
+			count: 2
+			path: src/Indexing/Visiting/DefineIndexingVisitor.php
+
+		-
+			message: "#^Cannot access offset 'description' on mixed\\.$#"
+			count: 4
+			path: src/Indexing/Visiting/DefineIndexingVisitor.php
+
+		-
+			message: "#^Cannot access offset 'long' on mixed\\.$#"
+			count: 2
+			path: src/Indexing/Visiting/DefineIndexingVisitor.php
+
+		-
+			message: "#^Cannot access offset 'short' on mixed\\.$#"
+			count: 1
+			path: src/Indexing/Visiting/DefineIndexingVisitor.php
+
+		-
+			message: "#^Cannot access offset 'type' on mixed\\.$#"
+			count: 1
+			path: src/Indexing/Visiting/DefineIndexingVisitor.php
+
+		-
+			message: "#^Cannot access offset non\\-empty\\-string on mixed\\.$#"
+			count: 2
+			path: src/Indexing/Visiting/DefineIndexingVisitor.php
+
+		-
+			message: "#^Only booleans are allowed in a ternary operator condition, mixed given\\.$#"
+			count: 3
+			path: src/Indexing/Visiting/DefineIndexingVisitor.php
+
+		-
+			message: "#^Only booleans are allowed in an if condition, mixed given\\.$#"
+			count: 1
+			path: src/Indexing/Visiting/DefineIndexingVisitor.php
+
+		-
+			message: "#^Parameter \\#1 \\$offset of static method Serenata\\\\Common\\\\Position\\:\\:createFromByteOffset\\(\\) expects int, mixed given\\.$#"
+			count: 1
+			path: src/Indexing/Visiting/DefineIndexingVisitor.php
+
+		-
+			message: "#^Parameter \\#1 \\$type of method Serenata\\\\Analysis\\\\Typing\\\\TypeResolvingDocblockTypeTransformer\\:\\:resolve\\(\\) expects PHPStan\\\\PhpDocParser\\\\Ast\\\\Type\\\\TypeNode, mixed given\\.$#"
+			count: 1
+			path: src/Indexing/Visiting/DefineIndexingVisitor.php
+
+		-
+			message: "#^Parameter \\#10 \\$typeDescription of class Serenata\\\\Indexing\\\\Structures\\\\Constant constructor expects string\\|null, mixed given\\.$#"
+			count: 1
+			path: src/Indexing/Visiting/DefineIndexingVisitor.php
+
+		-
+			message: "#^Parameter \\#2 \\$offset of function substr expects int, mixed given\\.$#"
+			count: 1
+			path: src/Indexing/Visiting/DefineIndexingVisitor.php
+
+		-
+			message: "#^Parameter \\#6 \\$isDeprecated of class Serenata\\\\Indexing\\\\Structures\\\\Constant constructor expects bool, mixed given\\.$#"
+			count: 1
+			path: src/Indexing/Visiting/DefineIndexingVisitor.php
+
+		-
+			message: "#^Parameter \\#8 \\$shortDescription of class Serenata\\\\Indexing\\\\Structures\\\\Constant constructor expects string\\|null, mixed given\\.$#"
+			count: 1
+			path: src/Indexing/Visiting/DefineIndexingVisitor.php
+
+		-
+			message: "#^Parameter \\#9 \\$longDescription of class Serenata\\\\Indexing\\\\Structures\\\\Constant constructor expects string\\|null, mixed given\\.$#"
+			count: 1
+			path: src/Indexing/Visiting/DefineIndexingVisitor.php
+
+		-
+			message: "#^Access to an undefined property PhpParser\\\\Node\\\\ComplexType\\:\\:\\$types\\.$#"
+			count: 1
+			path: src/Indexing/Visiting/FunctionIndexingVisitor.php
+
+		-
+			message: "#^Argument of an invalid type mixed supplied for foreach, only iterables are supported\\.$#"
+			count: 1
+			path: src/Indexing/Visiting/FunctionIndexingVisitor.php
+
+		-
+			message: "#^Call to an undefined method PhpParser\\\\Node\\\\ComplexType\\|PhpParser\\\\Node\\\\Identifier\\|PhpParser\\\\Node\\\\Name\\:\\:toString\\(\\)\\.$#"
+			count: 1
+			path: src/Indexing/Visiting/FunctionIndexingVisitor.php
+
+		-
+			message: "#^Cannot access offset 'description' on mixed\\.$#"
+			count: 4
+			path: src/Indexing/Visiting/FunctionIndexingVisitor.php
+
+		-
+			message: "#^Cannot access offset 'long' on mixed\\.$#"
+			count: 2
+			path: src/Indexing/Visiting/FunctionIndexingVisitor.php
+
+		-
+			message: "#^Cannot access offset 'short' on mixed\\.$#"
+			count: 2
+			path: src/Indexing/Visiting/FunctionIndexingVisitor.php
+
+		-
+			message: "#^Cannot access offset 'type' on mixed\\.$#"
+			count: 4
+			path: src/Indexing/Visiting/FunctionIndexingVisitor.php
+
+		-
+			message: "#^Cannot access offset non\\-empty\\-string on mixed\\.$#"
+			count: 2
+			path: src/Indexing/Visiting/FunctionIndexingVisitor.php
+
+		-
+			message: "#^Cannot call method toString\\(\\) on PhpParser\\\\Node\\\\Name\\|null\\.$#"
+			count: 1
+			path: src/Indexing/Visiting/FunctionIndexingVisitor.php
+
+		-
 			message: "#^Missing @throws Serenata\\\\Analysis\\\\Typing\\\\Deduction\\\\TypeDeductionException annotation$#"
 			count: 1
 			path: src/Indexing/Visiting/FunctionIndexingVisitor.php
 
 		-
-			message: "#^Parameter \\#1 \\$node of method Serenata\\\\Indexing\\\\Visiting\\\\MetaStaticMethodTypeIndexingVisitor\\:\\:enterStaticMethodTypesElementNode\\(\\) expects PhpParser\\\\Node\\\\Expr\\\\ArrayItem, PhpParser\\\\Node\\\\Expr\\\\ArrayItem\\|null given\\.$#"
+			message: "#^Only booleans are allowed in a ternary operator condition, mixed given\\.$#"
 			count: 1
-			path: src/Indexing/Visiting/MetaStaticMethodTypeIndexingVisitor.php
+			path: src/Indexing/Visiting/FunctionIndexingVisitor.php
+
+		-
+			message: "#^Only booleans are allowed in an if condition, mixed given\\.$#"
+			count: 2
+			path: src/Indexing/Visiting/FunctionIndexingVisitor.php
+
+		-
+			message: "#^Parameter \\#1 \\$name of static method Serenata\\\\Utility\\\\NodeHelpers\\:\\:fetchClassName\\(\\) expects PhpParser\\\\Node\\\\Name, mixed given\\.$#"
+			count: 2
+			path: src/Indexing/Visiting/FunctionIndexingVisitor.php
+
+		-
+			message: "#^Parameter \\#1 \\$offset of static method Serenata\\\\Common\\\\Position\\:\\:createFromByteOffset\\(\\) expects int, mixed given\\.$#"
+			count: 1
+			path: src/Indexing/Visiting/FunctionIndexingVisitor.php
+
+		-
+			message: "#^Parameter \\#1 \\$specification of method Serenata\\\\Parsing\\\\DocblockTypeParserInterface\\:\\:parse\\(\\) expects string, mixed given\\.$#"
+			count: 2
+			path: src/Indexing/Visiting/FunctionIndexingVisitor.php
+
+		-
+			message: "#^Parameter \\#1 \\$type of method Serenata\\\\Analysis\\\\Typing\\\\TypeResolvingDocblockTypeTransformer\\:\\:resolve\\(\\) expects PHPStan\\\\PhpDocParser\\\\Ast\\\\Type\\\\TypeNode, mixed given\\.$#"
+			count: 1
+			path: src/Indexing/Visiting/FunctionIndexingVisitor.php
+
+		-
+			message: "#^Parameter \\#2 \\$offset of function substr expects int, mixed given\\.$#"
+			count: 1
+			path: src/Indexing/Visiting/FunctionIndexingVisitor.php
+
+		-
+			message: "#^Parameter \\#3 \\$description of class Serenata\\\\Indexing\\\\Structures\\\\ThrowsInfo constructor expects string\\|null, mixed given\\.$#"
+			count: 1
+			path: src/Indexing/Visiting/FunctionIndexingVisitor.php
+
+		-
+			message: "#^Parameter \\#5 \\$description of class Serenata\\\\Indexing\\\\Structures\\\\FunctionParameter constructor expects string\\|null, mixed given\\.$#"
+			count: 1
+			path: src/Indexing/Visiting/FunctionIndexingVisitor.php
+
+		-
+			message: "#^Parameter \\#5 \\$isDeprecated of class Serenata\\\\Indexing\\\\Structures\\\\Function_ constructor expects bool, mixed given\\.$#"
+			count: 1
+			path: src/Indexing/Visiting/FunctionIndexingVisitor.php
+
+		-
+			message: "#^Parameter \\#6 \\$shortDescription of class Serenata\\\\Indexing\\\\Structures\\\\Function_ constructor expects string\\|null, mixed given\\.$#"
+			count: 1
+			path: src/Indexing/Visiting/FunctionIndexingVisitor.php
+
+		-
+			message: "#^Parameter \\#7 \\$longDescription of class Serenata\\\\Indexing\\\\Structures\\\\Function_ constructor expects string\\|null, mixed given\\.$#"
+			count: 1
+			path: src/Indexing/Visiting/FunctionIndexingVisitor.php
+
+		-
+			message: "#^Parameter \\#8 \\$returnDescription of class Serenata\\\\Indexing\\\\Structures\\\\Function_ constructor expects string\\|null, mixed given\\.$#"
+			count: 1
+			path: src/Indexing/Visiting/FunctionIndexingVisitor.php
 
 		-
 			message: "#^Parameter \\#1 \\$item of method Serenata\\\\Indexing\\\\Visiting\\\\MetaStaticMethodTypeIndexingVisitor\\:\\:enterStaticMethodTypesValueNode\\(\\) expects PhpParser\\\\Node\\\\Expr\\\\ArrayItem, PhpParser\\\\Node\\\\Expr\\\\ArrayItem\\|null given\\.$#"
@@ -116,14 +2131,214 @@ parameters:
 			path: src/Indexing/Visiting/MetaStaticMethodTypeIndexingVisitor.php
 
 		-
+			message: "#^Parameter \\#1 \\$name of static method Serenata\\\\Utility\\\\NodeHelpers\\:\\:fetchClassName\\(\\) expects PhpParser\\\\Node\\\\Name, mixed given\\.$#"
+			count: 2
+			path: src/Indexing/Visiting/MetaStaticMethodTypeIndexingVisitor.php
+
+		-
+			message: "#^Parameter \\#1 \\$node of method Serenata\\\\Indexing\\\\Visiting\\\\MetaStaticMethodTypeIndexingVisitor\\:\\:enterStaticMethodTypesElementNode\\(\\) expects PhpParser\\\\Node\\\\Expr\\\\ArrayItem, PhpParser\\\\Node\\\\Expr\\\\ArrayItem\\|null given\\.$#"
+			count: 1
+			path: src/Indexing/Visiting/MetaStaticMethodTypeIndexingVisitor.php
+
+		-
+			message: "#^Argument of an invalid type mixed supplied for foreach, only iterables are supported\\.$#"
+			count: 1
+			path: src/Indexing/Visiting/UseStatementIndexingVisitor.php
+
+		-
+			message: "#^Parameter \\#1 \\$range of class Serenata\\\\Indexing\\\\Structures\\\\FileNamespace constructor expects Serenata\\\\Common\\\\Range, mixed given\\.$#"
+			count: 1
+			path: src/Indexing/Visiting/UseStatementIndexingVisitor.php
+
+		-
+			message: "#^Parameter \\#1 \\$range of class Serenata\\\\Indexing\\\\Structures\\\\FileNamespaceImport constructor expects Serenata\\\\Common\\\\Range, mixed given\\.$#"
+			count: 1
+			path: src/Indexing/Visiting/UseStatementIndexingVisitor.php
+
+		-
+			message: "#^Parameter \\#1 \\$useStatement of method Serenata\\\\Indexing\\\\Visiting\\\\UseStatementIndexingVisitor\\:\\:indexUseStatement\\(\\) expects array\\<string, mixed\\>, mixed given\\.$#"
+			count: 1
+			path: src/Indexing/Visiting/UseStatementIndexingVisitor.php
+
+		-
+			message: "#^Parameter \\#2 \\$alias of class Serenata\\\\Indexing\\\\Structures\\\\FileNamespaceImport constructor expects string, mixed given\\.$#"
+			count: 1
+			path: src/Indexing/Visiting/UseStatementIndexingVisitor.php
+
+		-
+			message: "#^Parameter \\#2 \\$name of class Serenata\\\\Indexing\\\\Structures\\\\FileNamespace constructor expects string\\|null, mixed given\\.$#"
+			count: 1
+			path: src/Indexing/Visiting/UseStatementIndexingVisitor.php
+
+		-
+			message: "#^Parameter \\#3 \\$name of class Serenata\\\\Indexing\\\\Structures\\\\FileNamespaceImport constructor expects string, mixed given\\.$#"
+			count: 1
+			path: src/Indexing/Visiting/UseStatementIndexingVisitor.php
+
+		-
+			message: "#^Parameter \\#4 \\$kind of class Serenata\\\\Indexing\\\\Structures\\\\FileNamespaceImport constructor expects string, mixed given\\.$#"
+			count: 1
+			path: src/Indexing/Visiting/UseStatementIndexingVisitor.php
+
+		-
+			message: "#^Argument of an invalid type mixed supplied for foreach, only iterables are supported\\.$#"
+			count: 5
+			path: src/Parsing/DocblockParser.php
+
+		-
+			message: "#^Cannot access offset 0 on mixed\\.$#"
+			count: 4
+			path: src/Parsing/DocblockParser.php
+
+		-
+			message: "#^Parameter \\#1 \\$text of method Serenata\\\\Parsing\\\\DocblockParser\\:\\:convertHtmlToMarkdown\\(\\) expects string, mixed given\\.$#"
+			count: 6
+			path: src/Parsing/DocblockParser.php
+
+		-
+			message: "#^Parameter \\#1 \\$text of method Serenata\\\\Parsing\\\\DocblockParser\\:\\:sanitizeText\\(\\) expects string, mixed given\\.$#"
+			count: 10
+			path: src/Parsing/DocblockParser.php
+
+		-
+			message: "#^Parameter \\#1 \\$value of method Serenata\\\\Parsing\\\\DocblockParser\\:\\:filterParameterTag\\(\\) expects string, mixed given\\.$#"
+			count: 9
+			path: src/Parsing/DocblockParser.php
+
+		-
+			message: "#^Parameter \\#2 \\$subject of function preg_match expects string, mixed given\\.$#"
+			count: 1
+			path: src/Parsing/DocblockParser.php
+
+		-
+			message: "#^For loop initial assignment overwrites variable \\$i\\.$#"
+			count: 2
+			path: src/Parsing/LastExpressionParser.php
+
+		-
 			message: "#^Unused @throws PhpParser\\\\Error annotation$#"
 			count: 1
 			path: src/Parsing/LastExpressionParser.php
 
 		-
+			message: "#^Access to an undefined property PhpParser\\\\Node\\\\Arg\\|PhpParser\\\\Node\\\\VariadicPlaceholder\\:\\:\\$value\\.$#"
+			count: 1
+			path: src/Parsing/PartialParser.php
+
+		-
 			message: "#^PHPStan\\\\PhpDocParser\\\\Parser\\\\ParserException is never thrown in the corresponding try block$#"
 			count: 1
 			path: src/Parsing/PhpstanDocblockTypeParser.php
+
+		-
+			message: "#^Parameter \\#1 \\$callback of function array_map expects \\(callable\\(mixed\\)\\: mixed\\)\\|null, Closure\\(array\\)\\: string given\\.$#"
+			count: 1
+			path: src/PrettyPrinting/FunctionParameterPrettyPrinter.php
+
+		-
+			message: "#^Parameter \\#1 \\$value of function count expects array\\|Countable, mixed given\\.$#"
+			count: 1
+			path: src/PrettyPrinting/FunctionParameterPrettyPrinter.php
+
+		-
+			message: "#^Parameter \\#1 \\$value of method Serenata\\\\PrettyPrinting\\\\ParameterDefaultValuePrettyPrinter\\:\\:print\\(\\) expects string, mixed given\\.$#"
+			count: 1
+			path: src/PrettyPrinting/FunctionParameterPrettyPrinter.php
+
+		-
+			message: "#^Parameter \\#2 \\$array of function array_map expects array, mixed given\\.$#"
+			count: 1
+			path: src/PrettyPrinting/FunctionParameterPrettyPrinter.php
+
+		-
+			message: "#^Class Serenata\\\\Refactoring\\\\NonCompoundNameInAnonymousNamespaceException extends @final class Serenata\\\\Refactoring\\\\UseStatementInsertionCreationException\\.$#"
+			count: 1
+			path: src/Refactoring/NonCompoundNameInAnonymousNamespaceException.php
+
+		-
+			message: "#^Class Serenata\\\\Refactoring\\\\UseStatementAlreadyExistsException extends @final class Serenata\\\\Refactoring\\\\UseStatementInsertionCreationException\\.$#"
+			count: 1
+			path: src/Refactoring/UseStatementAlreadyExistsException.php
+
+		-
+			message: "#^Class Serenata\\\\Refactoring\\\\UseStatementEqualsNamespaceException extends @final class Serenata\\\\Refactoring\\\\UseStatementInsertionCreationException\\.$#"
+			count: 1
+			path: src/Refactoring/UseStatementEqualsNamespaceException.php
+
+		-
+			message: "#^Class Serenata\\\\Refactoring\\\\UseStatementUnnecessaryException extends @final class Serenata\\\\Refactoring\\\\UseStatementInsertionCreationException\\.$#"
+			count: 1
+			path: src/Refactoring/UseStatementUnnecessaryException.php
+
+		-
+			message: "#^Cannot access offset 'isVariadic' on mixed\\.$#"
+			count: 1
+			path: src/SignatureHelp/SignatureHelpRetriever.php
+
+		-
+			message: "#^Cannot access offset int\\<0, max\\> on mixed\\.$#"
+			count: 1
+			path: src/SignatureHelp/SignatureHelpRetriever.php
+
+		-
+			message: "#^Only booleans are allowed in &&, mixed given on the right side\\.$#"
+			count: 1
+			path: src/SignatureHelp/SignatureHelpRetriever.php
+
+		-
+			message: "#^Parameter \\#1 \\$invocationNode of method Serenata\\\\SignatureHelp\\\\SignatureHelpRetriever\\:\\:getArgumentIndex\\(\\) expects PhpParser\\\\Node\\\\Expr\\\\FuncCall\\|PhpParser\\\\Node\\\\Expr\\\\MethodCall\\|PhpParser\\\\Node\\\\Expr\\\\New_\\|PhpParser\\\\Node\\\\Expr\\\\StaticCall, mixed given\\.$#"
+			count: 1
+			path: src/SignatureHelp/SignatureHelpRetriever.php
+
+		-
+			message: "#^Parameter \\#1 \\$name of method Serenata\\\\SignatureHelp\\\\SignatureHelpRetriever\\:\\:formatSignatureLabel\\(\\) expects string, mixed given\\.$#"
+			count: 1
+			path: src/SignatureHelp/SignatureHelpRetriever.php
+
+		-
+			message: "#^Parameter \\#1 \\$node of method Serenata\\\\SignatureHelp\\\\SignatureHelpRetriever\\:\\:generateResponseFor\\(\\) expects PhpParser\\\\Node, mixed given\\.$#"
+			count: 1
+			path: src/SignatureHelp/SignatureHelpRetriever.php
+
+		-
+			message: "#^Parameter \\#1 \\$parameters of method Serenata\\\\SignatureHelp\\\\SignatureHelpRetriever\\:\\:getResponseParametersForFunctionParameters\\(\\) expects array\\<array\\<string, mixed\\>\\>, mixed given\\.$#"
+			count: 1
+			path: src/SignatureHelp/SignatureHelpRetriever.php
+
+		-
+			message: "#^Parameter \\#1 \\$value of function count expects array\\|Countable, mixed given\\.$#"
+			count: 1
+			path: src/SignatureHelp/SignatureHelpRetriever.php
+
+		-
+			message: "#^Parameter \\#2 \\$documentation of class Serenata\\\\SignatureHelp\\\\ParameterInformation constructor expects string\\|null, mixed given\\.$#"
+			count: 1
+			path: src/SignatureHelp/SignatureHelpRetriever.php
+
+		-
+			message: "#^Parameter \\#2 \\$documentation of class Serenata\\\\SignatureHelp\\\\SignatureInformation constructor expects string\\|null, mixed given\\.$#"
+			count: 1
+			path: src/SignatureHelp/SignatureHelpRetriever.php
+
+		-
+			message: "#^Parameter \\#1 \\$json of function json_decode expects string, mixed given\\.$#"
+			count: 1
+			path: src/Sockets/JsonRpcConnectionHandler.php
+
+		-
+			message: "#^Parameter \\#1 \\$code of class Serenata\\\\Sockets\\\\JsonRpcError constructor expects int, mixed given\\.$#"
+			count: 1
+			path: src/Sockets/JsonRpcError.php
+
+		-
+			message: "#^Parameter \\#2 \\$message of class Serenata\\\\Sockets\\\\JsonRpcError constructor expects string, mixed given\\.$#"
+			count: 1
+			path: src/Sockets/JsonRpcError.php
+
+		-
+			message: "#^Parameter \\#1 \\$contents of method Serenata\\\\Utility\\\\StreamInterface\\:\\:set\\(\\) expects string, mixed given\\.$#"
+			count: 1
+			path: src/Sockets/JsonRpcQueueItemProcessor.php
 
 		-
 			message: "#^Useless @throws Serenata\\\\Sockets\\\\RequestParsingException annotation$#"
@@ -141,14 +2356,189 @@ parameters:
 			path: src/Sockets/JsonRpcQueueItemProcessor.php
 
 		-
+			message: "#^Parameter \\#1 \\$id of class Serenata\\\\Sockets\\\\JsonRpcRequest constructor expects int\\|string\\|null, mixed given\\.$#"
+			count: 1
+			path: src/Sockets/JsonRpcRequest.php
+
+		-
+			message: "#^Parameter \\#2 \\$method of class Serenata\\\\Sockets\\\\JsonRpcRequest constructor expects string, mixed given\\.$#"
+			count: 1
+			path: src/Sockets/JsonRpcRequest.php
+
+		-
+			message: "#^Parameter \\#3 \\$params of class Serenata\\\\Sockets\\\\JsonRpcRequest constructor expects array\\<string, mixed\\>\\|null, mixed given\\.$#"
+			count: 1
+			path: src/Sockets/JsonRpcRequest.php
+
+		-
+			message: "#^Parameter \\#4 \\$jsonrpc of class Serenata\\\\Sockets\\\\JsonRpcRequest constructor expects string, mixed given\\.$#"
+			count: 1
+			path: src/Sockets/JsonRpcRequest.php
+
+		-
 			message: "#^TypeError is never thrown in the corresponding try block$#"
 			count: 1
 			path: src/Sockets/JsonRpcRequest.php
 
 		-
+			message: "#^Cannot access offset 'code' on mixed\\.$#"
+			count: 1
+			path: src/Sockets/JsonRpcResponse.php
+
+		-
+			message: "#^Cannot access offset 'data' on mixed\\.$#"
+			count: 1
+			path: src/Sockets/JsonRpcResponse.php
+
+		-
+			message: "#^Cannot access offset 'message' on mixed\\.$#"
+			count: 1
+			path: src/Sockets/JsonRpcResponse.php
+
+		-
+			message: "#^Parameter \\#1 \\$code of class Serenata\\\\Sockets\\\\JsonRpcError constructor expects int, mixed given\\.$#"
+			count: 1
+			path: src/Sockets/JsonRpcResponse.php
+
+		-
+			message: "#^Parameter \\#1 \\$id of class Serenata\\\\Sockets\\\\JsonRpcResponse constructor expects int\\|string\\|null, mixed given\\.$#"
+			count: 1
+			path: src/Sockets/JsonRpcResponse.php
+
+		-
+			message: "#^Parameter \\#2 \\$message of class Serenata\\\\Sockets\\\\JsonRpcError constructor expects string, mixed given\\.$#"
+			count: 1
+			path: src/Sockets/JsonRpcResponse.php
+
+		-
+			message: "#^Parameter \\#4 \\$jsonrpc of class Serenata\\\\Sockets\\\\JsonRpcResponse constructor expects string, mixed given\\.$#"
+			count: 1
+			path: src/Sockets/JsonRpcResponse.php
+
+		-
 			message: "#^Unused @throws RuntimeException annotation$#"
 			count: 1
 			path: src/Sockets/SocketServer.php
+
+		-
+			message: "#^Cannot access offset string on mixed\\.$#"
+			count: 2
+			path: src/Tooltips/ClassConstFetchNodeTooltipGenerator.php
+
+		-
+			message: "#^Method Serenata\\\\Tooltips\\\\ClassConstFetchNodeTooltipGenerator\\:\\:fetchClassConstantInfo\\(\\) should return array\\<string, mixed\\>\\|null but returns mixed\\.$#"
+			count: 1
+			path: src/Tooltips/ClassConstFetchNodeTooltipGenerator.php
+
+		-
+			message: "#^Method Serenata\\\\Tooltips\\\\ClassLikeTooltipGenerator\\:\\:generateSummary\\(\\) should return string but returns mixed\\.$#"
+			count: 1
+			path: src/Tooltips/ClassLikeTooltipGenerator.php
+
+		-
+			message: "#^Part \\$info\\['fqcn'\\] \\(mixed\\) of encapsed string cannot be cast to string\\.$#"
+			count: 1
+			path: src/Tooltips/ClassLikeTooltipGenerator.php
+
+		-
+			message: "#^Cannot access offset string on mixed\\.$#"
+			count: 2
+			path: src/Tooltips/ClassMethodNodeTooltipGenerator.php
+
+		-
+			message: "#^Method Serenata\\\\Tooltips\\\\ClassMethodNodeTooltipGenerator\\:\\:getMethodInfo\\(\\) should return array\\<string, mixed\\> but returns mixed\\.$#"
+			count: 1
+			path: src/Tooltips/ClassMethodNodeTooltipGenerator.php
+
+		-
+			message: "#^Parameter \\#1 \\$line of class Serenata\\\\Common\\\\Position constructor expects int, mixed given\\.$#"
+			count: 1
+			path: src/Tooltips/ClassMethodNodeTooltipGenerator.php
+
+		-
+			message: "#^Method Serenata\\\\Tooltips\\\\ConstantTooltipGenerator\\:\\:generateSummary\\(\\) should return string but returns mixed\\.$#"
+			count: 1
+			path: src/Tooltips/ConstantTooltipGenerator.php
+
+		-
+			message: "#^Parameter \\#1 \\$callback of function array_map expects \\(callable\\(mixed\\)\\: mixed\\)\\|null, Closure\\(array\\)\\: mixed given\\.$#"
+			count: 1
+			path: src/Tooltips/ConstantTooltipGenerator.php
+
+		-
+			message: "#^Parameter \\#1 \\$value of function count expects array\\|Countable, mixed given\\.$#"
+			count: 1
+			path: src/Tooltips/ConstantTooltipGenerator.php
+
+		-
+			message: "#^Parameter \\#2 \\$array of function array_map expects array, mixed given\\.$#"
+			count: 1
+			path: src/Tooltips/ConstantTooltipGenerator.php
+
+		-
+			message: "#^Argument of an invalid type mixed supplied for foreach, only iterables are supported\\.$#"
+			count: 2
+			path: src/Tooltips/FunctionTooltipGenerator.php
+
+		-
+			message: "#^Cannot access offset 'description' on mixed\\.$#"
+			count: 3
+			path: src/Tooltips/FunctionTooltipGenerator.php
+
+		-
+			message: "#^Cannot access offset 'type' on mixed\\.$#"
+			count: 1
+			path: src/Tooltips/FunctionTooltipGenerator.php
+
+		-
+			message: "#^Method Serenata\\\\Tooltips\\\\FunctionTooltipGenerator\\:\\:generateSummary\\(\\) should return string but returns mixed\\.$#"
+			count: 1
+			path: src/Tooltips/FunctionTooltipGenerator.php
+
+		-
+			message: "#^Parameter \\#1 \\$callback of function array_map expects \\(callable\\(mixed\\)\\: mixed\\)\\|null, Closure\\(array\\)\\: string given\\.$#"
+			count: 2
+			path: src/Tooltips/FunctionTooltipGenerator.php
+
+		-
+			message: "#^Parameter \\#1 \\$fqcn of method Serenata\\\\Tooltips\\\\FunctionTooltipGenerator\\:\\:getClassNameFromFqcn\\(\\) expects string, mixed given\\.$#"
+			count: 1
+			path: src/Tooltips/FunctionTooltipGenerator.php
+
+		-
+			message: "#^Parameter \\#1 \\$parameter of method Serenata\\\\Tooltips\\\\FunctionTooltipGenerator\\:\\:generateParameter\\(\\) expects array\\<string, mixed\\>, mixed given\\.$#"
+			count: 1
+			path: src/Tooltips/FunctionTooltipGenerator.php
+
+		-
+			message: "#^Parameter \\#1 \\$value of function count expects array\\|Countable, mixed given\\.$#"
+			count: 3
+			path: src/Tooltips/FunctionTooltipGenerator.php
+
+		-
+			message: "#^Parameter \\#2 \\$array of function array_map expects array, mixed given\\.$#"
+			count: 2
+			path: src/Tooltips/FunctionTooltipGenerator.php
+
+		-
+			message: "#^Method Serenata\\\\Tooltips\\\\PropertyTooltipGenerator\\:\\:generateSummary\\(\\) should return string but returns mixed\\.$#"
+			count: 1
+			path: src/Tooltips/PropertyTooltipGenerator.php
+
+		-
+			message: "#^Parameter \\#1 \\$callback of function array_map expects \\(callable\\(mixed\\)\\: mixed\\)\\|null, Closure\\(array\\)\\: mixed given\\.$#"
+			count: 1
+			path: src/Tooltips/PropertyTooltipGenerator.php
+
+		-
+			message: "#^Parameter \\#1 \\$value of function count expects array\\|Countable, mixed given\\.$#"
+			count: 1
+			path: src/Tooltips/PropertyTooltipGenerator.php
+
+		-
+			message: "#^Parameter \\#2 \\$array of function array_map expects array, mixed given\\.$#"
+			count: 1
+			path: src/Tooltips/PropertyTooltipGenerator.php
 
 		-
 			message: "#^Missing @throws Exception annotation$#"
@@ -161,9 +2551,44 @@ parameters:
 			path: src/UserInterface/JsonRpcApplication.php
 
 		-
+			message: "#^PHPDoc tag @var for constant Serenata\\\\UserInterface\\\\JsonRpcApplication\\:\\:REQUEST_HANDLE_FREQUENCY_SECONDS with type float is incompatible with value 0\\.$#"
+			count: 1
+			path: src/UserInterface/JsonRpcApplication.php
+
+		-
+			message: "#^Parameter \\#1 \\$requestId of method Serenata\\\\Sockets\\\\JsonRpcQueue\\:\\:cancel\\(\\) expects string, mixed given\\.$#"
+			count: 1
+			path: src/UserInterface/JsonRpcQueueItemHandler/CancelRequestJsonRpcQueueItemHandler.php
+
+		-
+			message: "#^Parameter \\#1 \\$fqcn of method Serenata\\\\UserInterface\\\\JsonRpcQueueItemHandler\\\\ClassInfoJsonRpcQueueItemHandler\\:\\:getClassInfo\\(\\) expects string, mixed given\\.$#"
+			count: 1
+			path: src/UserInterface/JsonRpcQueueItemHandler/ClassInfoJsonRpcQueueItemHandler.php
+
+		-
+			message: "#^Parameter \\#1 \\$uri of method Serenata\\\\UserInterface\\\\JsonRpcQueueItemHandler\\\\ClassListJsonRpcQueueItemHandler\\:\\:getAllForFilePath\\(\\) expects string, mixed given\\.$#"
+			count: 1
+			path: src/UserInterface/JsonRpcQueueItemHandler/ClassListJsonRpcQueueItemHandler.php
+
+		-
 			message: "#^Unused @throws Throwable annotation$#"
 			count: 1
 			path: src/UserInterface/JsonRpcQueueItemHandler/ClassListJsonRpcQueueItemHandler.php
+
+		-
+			message: "#^Cannot access offset 'uri' on mixed\\.$#"
+			count: 2
+			path: src/UserInterface/JsonRpcQueueItemHandler/CodeLensJsonRpcQueueItemHandler.php
+
+		-
+			message: "#^Parameter \\#1 \\$uri of method Serenata\\\\Indexing\\\\TextDocumentContentRegistry\\:\\:get\\(\\) expects string, mixed given\\.$#"
+			count: 1
+			path: src/UserInterface/JsonRpcQueueItemHandler/CodeLensJsonRpcQueueItemHandler.php
+
+		-
+			message: "#^Parameter \\#1 \\$uri of method Serenata\\\\UserInterface\\\\JsonRpcQueueItemHandler\\\\CodeLensJsonRpcQueueItemHandler\\:\\:getAll\\(\\) expects string, mixed given\\.$#"
+			count: 1
+			path: src/UserInterface/JsonRpcQueueItemHandler/CodeLensJsonRpcQueueItemHandler.php
 
 		-
 			message: "#^Unused @throws Throwable annotation$#"
@@ -171,9 +2596,119 @@ parameters:
 			path: src/UserInterface/JsonRpcQueueItemHandler/CodeLensJsonRpcQueueItemHandler.php
 
 		-
+			message: "#^Cannot access offset 'character' on mixed\\.$#"
+			count: 1
+			path: src/UserInterface/JsonRpcQueueItemHandler/CompletionJsonRpcQueueItemHandler.php
+
+		-
+			message: "#^Cannot access offset 'line' on mixed\\.$#"
+			count: 1
+			path: src/UserInterface/JsonRpcQueueItemHandler/CompletionJsonRpcQueueItemHandler.php
+
+		-
+			message: "#^Cannot access offset 'uri' on mixed\\.$#"
+			count: 2
+			path: src/UserInterface/JsonRpcQueueItemHandler/CompletionJsonRpcQueueItemHandler.php
+
+		-
+			message: "#^Parameter \\#1 \\$line of class Serenata\\\\Common\\\\Position constructor expects int, mixed given\\.$#"
+			count: 1
+			path: src/UserInterface/JsonRpcQueueItemHandler/CompletionJsonRpcQueueItemHandler.php
+
+		-
+			message: "#^Parameter \\#1 \\$uri of method Serenata\\\\Indexing\\\\TextDocumentContentRegistry\\:\\:get\\(\\) expects string, mixed given\\.$#"
+			count: 1
+			path: src/UserInterface/JsonRpcQueueItemHandler/CompletionJsonRpcQueueItemHandler.php
+
+		-
+			message: "#^Parameter \\#1 \\$uri of method Serenata\\\\UserInterface\\\\JsonRpcQueueItemHandler\\\\CompletionJsonRpcQueueItemHandler\\:\\:getSuggestions\\(\\) expects string, mixed given\\.$#"
+			count: 1
+			path: src/UserInterface/JsonRpcQueueItemHandler/CompletionJsonRpcQueueItemHandler.php
+
+		-
+			message: "#^Parameter \\#2 \\$character of class Serenata\\\\Common\\\\Position constructor expects int, mixed given\\.$#"
+			count: 1
+			path: src/UserInterface/JsonRpcQueueItemHandler/CompletionJsonRpcQueueItemHandler.php
+
+		-
+			message: "#^Parameter \\#2 \\$items of class Serenata\\\\Autocompletion\\\\CompletionList constructor expects array\\<Serenata\\\\Autocompletion\\\\CompletionItem\\>, array\\<string, mixed\\> given\\.$#"
+			count: 1
+			path: src/UserInterface/JsonRpcQueueItemHandler/CompletionJsonRpcQueueItemHandler.php
+
+		-
 			message: "#^Unused @throws Throwable annotation$#"
 			count: 1
 			path: src/UserInterface/JsonRpcQueueItemHandler/CompletionJsonRpcQueueItemHandler.php
+
+		-
+			message: "#^Cannot access offset 'character' on mixed\\.$#"
+			count: 1
+			path: src/UserInterface/JsonRpcQueueItemHandler/DeduceTypesJsonRpcQueueItemHandler.php
+
+		-
+			message: "#^Cannot access offset 'line' on mixed\\.$#"
+			count: 1
+			path: src/UserInterface/JsonRpcQueueItemHandler/DeduceTypesJsonRpcQueueItemHandler.php
+
+		-
+			message: "#^Parameter \\#1 \\$file of method Serenata\\\\Utility\\\\SourceCodeStreamReader\\:\\:getSourceCodeFromFile\\(\\) expects string\\|null, mixed given\\.$#"
+			count: 1
+			path: src/UserInterface/JsonRpcQueueItemHandler/DeduceTypesJsonRpcQueueItemHandler.php
+
+		-
+			message: "#^Parameter \\#1 \\$line of class Serenata\\\\Common\\\\Position constructor expects int, mixed given\\.$#"
+			count: 1
+			path: src/UserInterface/JsonRpcQueueItemHandler/DeduceTypesJsonRpcQueueItemHandler.php
+
+		-
+			message: "#^Parameter \\#1 \\$uri of method Serenata\\\\UserInterface\\\\JsonRpcQueueItemHandler\\\\DeduceTypesJsonRpcQueueItemHandler\\:\\:deduceTypes\\(\\) expects string, mixed given\\.$#"
+			count: 1
+			path: src/UserInterface/JsonRpcQueueItemHandler/DeduceTypesJsonRpcQueueItemHandler.php
+
+		-
+			message: "#^Parameter \\#2 \\$character of class Serenata\\\\Common\\\\Position constructor expects int, mixed given\\.$#"
+			count: 1
+			path: src/UserInterface/JsonRpcQueueItemHandler/DeduceTypesJsonRpcQueueItemHandler.php
+
+		-
+			message: "#^Parameter \\#3 \\$codeWithExpression of method Serenata\\\\UserInterface\\\\JsonRpcQueueItemHandler\\\\DeduceTypesJsonRpcQueueItemHandler\\:\\:deduceTypes\\(\\) expects string, mixed given\\.$#"
+			count: 1
+			path: src/UserInterface/JsonRpcQueueItemHandler/DeduceTypesJsonRpcQueueItemHandler.php
+
+		-
+			message: "#^Cannot access offset 'character' on mixed\\.$#"
+			count: 1
+			path: src/UserInterface/JsonRpcQueueItemHandler/DefinitionJsonRpcQueueItemHandler.php
+
+		-
+			message: "#^Cannot access offset 'line' on mixed\\.$#"
+			count: 1
+			path: src/UserInterface/JsonRpcQueueItemHandler/DefinitionJsonRpcQueueItemHandler.php
+
+		-
+			message: "#^Cannot access offset 'uri' on mixed\\.$#"
+			count: 2
+			path: src/UserInterface/JsonRpcQueueItemHandler/DefinitionJsonRpcQueueItemHandler.php
+
+		-
+			message: "#^Parameter \\#1 \\$line of class Serenata\\\\Common\\\\Position constructor expects int, mixed given\\.$#"
+			count: 1
+			path: src/UserInterface/JsonRpcQueueItemHandler/DefinitionJsonRpcQueueItemHandler.php
+
+		-
+			message: "#^Parameter \\#1 \\$uri of method Serenata\\\\Indexing\\\\TextDocumentContentRegistry\\:\\:get\\(\\) expects string, mixed given\\.$#"
+			count: 1
+			path: src/UserInterface/JsonRpcQueueItemHandler/DefinitionJsonRpcQueueItemHandler.php
+
+		-
+			message: "#^Parameter \\#1 \\$uri of method Serenata\\\\UserInterface\\\\JsonRpcQueueItemHandler\\\\DefinitionJsonRpcQueueItemHandler\\:\\:gotoDefinition\\(\\) expects string, mixed given\\.$#"
+			count: 1
+			path: src/UserInterface/JsonRpcQueueItemHandler/DefinitionJsonRpcQueueItemHandler.php
+
+		-
+			message: "#^Parameter \\#2 \\$character of class Serenata\\\\Common\\\\Position constructor expects int, mixed given\\.$#"
+			count: 1
+			path: src/UserInterface/JsonRpcQueueItemHandler/DefinitionJsonRpcQueueItemHandler.php
 
 		-
 			message: "#^Unused @throws Throwable annotation$#"
@@ -181,9 +2716,59 @@ parameters:
 			path: src/UserInterface/JsonRpcQueueItemHandler/DefinitionJsonRpcQueueItemHandler.php
 
 		-
+			message: "#^Parameter \\#1 \\$uri of method Serenata\\\\Indexing\\\\TextDocumentContentRegistry\\:\\:get\\(\\) expects string, mixed given\\.$#"
+			count: 1
+			path: src/UserInterface/JsonRpcQueueItemHandler/DiagnosticsJsonRpcQueueItemHandler.php
+
+		-
+			message: "#^Parameter \\#1 \\$uri of method Serenata\\\\UserInterface\\\\JsonRpcQueueItemHandler\\\\DiagnosticsJsonRpcQueueItemHandler\\:\\:lint\\(\\) expects string, mixed given\\.$#"
+			count: 1
+			path: src/UserInterface/JsonRpcQueueItemHandler/DiagnosticsJsonRpcQueueItemHandler.php
+
+		-
 			message: "#^Unused @throws Throwable annotation$#"
 			count: 1
 			path: src/UserInterface/JsonRpcQueueItemHandler/DidChangeConfigurationJsonRpcQueueItemHandler.php
+
+		-
+			message: "#^Cannot access offset 'text' on mixed\\.$#"
+			count: 1
+			path: src/UserInterface/JsonRpcQueueItemHandler/DidChangeJsonRpcQueueItemHandler.php
+
+		-
+			message: "#^Cannot access offset 'uri' on mixed\\.$#"
+			count: 1
+			path: src/UserInterface/JsonRpcQueueItemHandler/DidChangeJsonRpcQueueItemHandler.php
+
+		-
+			message: "#^Cannot access offset int\\<\\-1, max\\> on mixed\\.$#"
+			count: 1
+			path: src/UserInterface/JsonRpcQueueItemHandler/DidChangeJsonRpcQueueItemHandler.php
+
+		-
+			message: "#^Parameter \\#1 \\$uri of method Serenata\\\\UserInterface\\\\JsonRpcQueueItemHandler\\\\DidChangeJsonRpcQueueItemHandler\\:\\:handle\\(\\) expects string, mixed given\\.$#"
+			count: 1
+			path: src/UserInterface/JsonRpcQueueItemHandler/DidChangeJsonRpcQueueItemHandler.php
+
+		-
+			message: "#^Parameter \\#1 \\$value of function count expects array\\|Countable, mixed given\\.$#"
+			count: 1
+			path: src/UserInterface/JsonRpcQueueItemHandler/DidChangeJsonRpcQueueItemHandler.php
+
+		-
+			message: "#^Parameter \\#2 \\$contents of method Serenata\\\\UserInterface\\\\JsonRpcQueueItemHandler\\\\DidChangeJsonRpcQueueItemHandler\\:\\:handle\\(\\) expects string, mixed given\\.$#"
+			count: 1
+			path: src/UserInterface/JsonRpcQueueItemHandler/DidChangeJsonRpcQueueItemHandler.php
+
+		-
+			message: "#^Parameter \\#1 \\$callback of function array_map expects \\(callable\\(mixed\\)\\: mixed\\)\\|null, Closure\\(array\\)\\: Serenata\\\\Utility\\\\FileEvent given\\.$#"
+			count: 1
+			path: src/UserInterface/JsonRpcQueueItemHandler/DidChangeWatchedFilesJsonRpcQueueItemHandler.php
+
+		-
+			message: "#^Parameter \\#1 \\$fileEvents of method Serenata\\\\UserInterface\\\\JsonRpcQueueItemHandler\\\\DidChangeWatchedFilesJsonRpcQueueItemHandler\\:\\:createFileEventsFromRawArray\\(\\) expects array\\<string, mixed\\>, mixed given\\.$#"
+			count: 1
+			path: src/UserInterface/JsonRpcQueueItemHandler/DidChangeWatchedFilesJsonRpcQueueItemHandler.php
 
 		-
 			message: "#^Unused @throws Throwable annotation$#"
@@ -196,14 +2781,84 @@ parameters:
 			path: src/UserInterface/JsonRpcQueueItemHandler/DidOpenJsonRpcQueueItemHandler.php
 
 		-
-			message: "#^Unused @throws Throwable annotation$#"
+			message: "#^Cannot access offset 'uri' on mixed\\.$#"
+			count: 1
+			path: src/UserInterface/JsonRpcQueueItemHandler/DidSaveJsonRpcQueueItemHandler.php
+
+		-
+			message: "#^Parameter \\#1 \\$uri of method Serenata\\\\UserInterface\\\\JsonRpcQueueItemHandler\\\\DidSaveJsonRpcQueueItemHandler\\:\\:handle\\(\\) expects string, mixed given\\.$#"
+			count: 1
+			path: src/UserInterface/JsonRpcQueueItemHandler/DidSaveJsonRpcQueueItemHandler.php
+
+		-
+			message: "#^Parameter \\#2 \\$contents of method Serenata\\\\UserInterface\\\\JsonRpcQueueItemHandler\\\\DidSaveJsonRpcQueueItemHandler\\:\\:handle\\(\\) expects string\\|null, mixed given\\.$#"
+			count: 1
+			path: src/UserInterface/JsonRpcQueueItemHandler/DidSaveJsonRpcQueueItemHandler.php
+
+		-
+			message: "#^Cannot access offset 'character' on mixed\\.$#"
+			count: 1
+			path: src/UserInterface/JsonRpcQueueItemHandler/DocumentHighlightJsonRpcQueueItemHandler.php
+
+		-
+			message: "#^Cannot access offset 'line' on mixed\\.$#"
+			count: 1
+			path: src/UserInterface/JsonRpcQueueItemHandler/DocumentHighlightJsonRpcQueueItemHandler.php
+
+		-
+			message: "#^Cannot access offset 'uri' on mixed\\.$#"
+			count: 2
+			path: src/UserInterface/JsonRpcQueueItemHandler/DocumentHighlightJsonRpcQueueItemHandler.php
+
+		-
+			message: "#^Parameter \\#1 \\$line of class Serenata\\\\Common\\\\Position constructor expects int, mixed given\\.$#"
+			count: 1
+			path: src/UserInterface/JsonRpcQueueItemHandler/DocumentHighlightJsonRpcQueueItemHandler.php
+
+		-
+			message: "#^Parameter \\#1 \\$uri of method Serenata\\\\Indexing\\\\TextDocumentContentRegistry\\:\\:get\\(\\) expects string, mixed given\\.$#"
+			count: 1
+			path: src/UserInterface/JsonRpcQueueItemHandler/DocumentHighlightJsonRpcQueueItemHandler.php
+
+		-
+			message: "#^Parameter \\#1 \\$uri of method Serenata\\\\UserInterface\\\\JsonRpcQueueItemHandler\\\\DocumentHighlightJsonRpcQueueItemHandler\\:\\:getAll\\(\\) expects string, mixed given\\.$#"
+			count: 1
+			path: src/UserInterface/JsonRpcQueueItemHandler/DocumentHighlightJsonRpcQueueItemHandler.php
+
+		-
+			message: "#^Parameter \\#2 \\$character of class Serenata\\\\Common\\\\Position constructor expects int, mixed given\\.$#"
 			count: 1
 			path: src/UserInterface/JsonRpcQueueItemHandler/DocumentHighlightJsonRpcQueueItemHandler.php
 
 		-
 			message: "#^Unused @throws Throwable annotation$#"
 			count: 1
+			path: src/UserInterface/JsonRpcQueueItemHandler/DocumentHighlightJsonRpcQueueItemHandler.php
+
+		-
+			message: "#^Cannot access offset 'uri' on mixed\\.$#"
+			count: 1
 			path: src/UserInterface/JsonRpcQueueItemHandler/DocumentSymbolJsonRpcQueueItemHandler.php
+
+		-
+			message: "#^Parameter \\#1 \\$uri of method Serenata\\\\UserInterface\\\\JsonRpcQueueItemHandler\\\\DocumentSymbolJsonRpcQueueItemHandler\\:\\:getAll\\(\\) expects string, mixed given\\.$#"
+			count: 1
+			path: src/UserInterface/JsonRpcQueueItemHandler/DocumentSymbolJsonRpcQueueItemHandler.php
+
+		-
+			message: "#^Unused @throws Throwable annotation$#"
+			count: 1
+			path: src/UserInterface/JsonRpcQueueItemHandler/DocumentSymbolJsonRpcQueueItemHandler.php
+
+		-
+			message: "#^Parameter \\#1 \\$name of method Serenata\\\\Commands\\\\CommandFactory\\:\\:create\\(\\) expects string, mixed given\\.$#"
+			count: 1
+			path: src/UserInterface/JsonRpcQueueItemHandler/ExecuteCommandJsonRpcQueueItemHandler.php
+
+		-
+			message: "#^Parameter \\#2 \\$arguments of method Serenata\\\\Commands\\\\CommandFactory\\:\\:create\\(\\) expects array\\<string, mixed\\>\\|null, mixed given\\.$#"
+			count: 1
+			path: src/UserInterface/JsonRpcQueueItemHandler/ExecuteCommandJsonRpcQueueItemHandler.php
 
 		-
 			message: "#^Unused @throws Throwable annotation$#"
@@ -221,9 +2876,54 @@ parameters:
 			path: src/UserInterface/JsonRpcQueueItemHandler/GlobalFunctionsJsonRpcQueueItemHandler.php
 
 		-
+			message: "#^Cannot access offset 'character' on mixed\\.$#"
+			count: 1
+			path: src/UserInterface/JsonRpcQueueItemHandler/HoverJsonRpcQueueItemHandler.php
+
+		-
+			message: "#^Cannot access offset 'line' on mixed\\.$#"
+			count: 1
+			path: src/UserInterface/JsonRpcQueueItemHandler/HoverJsonRpcQueueItemHandler.php
+
+		-
+			message: "#^Cannot access offset 'uri' on mixed\\.$#"
+			count: 2
+			path: src/UserInterface/JsonRpcQueueItemHandler/HoverJsonRpcQueueItemHandler.php
+
+		-
+			message: "#^Parameter \\#1 \\$line of class Serenata\\\\Common\\\\Position constructor expects int, mixed given\\.$#"
+			count: 1
+			path: src/UserInterface/JsonRpcQueueItemHandler/HoverJsonRpcQueueItemHandler.php
+
+		-
+			message: "#^Parameter \\#1 \\$uri of method Serenata\\\\Indexing\\\\TextDocumentContentRegistry\\:\\:get\\(\\) expects string, mixed given\\.$#"
+			count: 1
+			path: src/UserInterface/JsonRpcQueueItemHandler/HoverJsonRpcQueueItemHandler.php
+
+		-
+			message: "#^Parameter \\#1 \\$uri of method Serenata\\\\UserInterface\\\\JsonRpcQueueItemHandler\\\\HoverJsonRpcQueueItemHandler\\:\\:getTooltip\\(\\) expects string, mixed given\\.$#"
+			count: 1
+			path: src/UserInterface/JsonRpcQueueItemHandler/HoverJsonRpcQueueItemHandler.php
+
+		-
+			message: "#^Parameter \\#2 \\$character of class Serenata\\\\Common\\\\Position constructor expects int, mixed given\\.$#"
+			count: 1
+			path: src/UserInterface/JsonRpcQueueItemHandler/HoverJsonRpcQueueItemHandler.php
+
+		-
 			message: "#^Unused @throws Throwable annotation$#"
 			count: 1
 			path: src/UserInterface/JsonRpcQueueItemHandler/HoverJsonRpcQueueItemHandler.php
+
+		-
+			message: "#^Cannot access offset 'uri' on mixed\\.$#"
+			count: 1
+			path: src/UserInterface/JsonRpcQueueItemHandler/IndexJsonRpcQueueItemHandler.php
+
+		-
+			message: "#^Parameter \\#1 \\$uri of method Serenata\\\\UserInterface\\\\JsonRpcQueueItemHandler\\\\IndexJsonRpcQueueItemHandler\\:\\:handle\\(\\) expects string, mixed given\\.$#"
+			count: 1
+			path: src/UserInterface/JsonRpcQueueItemHandler/IndexJsonRpcQueueItemHandler.php
 
 		-
 			message: "#^Missing @throws Serenata\\\\Workspace\\\\Configuration\\\\Parsing\\\\WorkspaceConfigurationParsingException annotation$#"
@@ -231,9 +2931,84 @@ parameters:
 			path: src/UserInterface/JsonRpcQueueItemHandler/InitializeJsonRpcQueueItemHandler.php
 
 		-
+			message: "#^Parameter \\#1 \\$configuration of method Serenata\\\\Workspace\\\\Configuration\\\\Parsing\\\\WorkspaceConfigurationParserInterface\\:\\:parse\\(\\) expects array\\<string, mixed\\>, mixed given\\.$#"
+			count: 1
+			path: src/UserInterface/JsonRpcQueueItemHandler/InitializeJsonRpcQueueItemHandler.php
+
+		-
+			message: "#^Parameter \\#1 \\$processId of class Serenata\\\\Utility\\\\InitializeParams constructor expects int\\|null, mixed given\\.$#"
+			count: 1
+			path: src/UserInterface/JsonRpcQueueItemHandler/InitializeJsonRpcQueueItemHandler.php
+
+		-
+			message: "#^Parameter \\#2 \\$rootPath of class Serenata\\\\Utility\\\\InitializeParams constructor expects string\\|null, mixed given\\.$#"
+			count: 1
+			path: src/UserInterface/JsonRpcQueueItemHandler/InitializeJsonRpcQueueItemHandler.php
+
+		-
+			message: "#^Parameter \\#3 \\$rootUri of class Serenata\\\\Utility\\\\InitializeParams constructor expects string\\|null, mixed given\\.$#"
+			count: 1
+			path: src/UserInterface/JsonRpcQueueItemHandler/InitializeJsonRpcQueueItemHandler.php
+
+		-
+			message: "#^Parameter \\#4 \\$initializationOptions of class Serenata\\\\Utility\\\\InitializeParams constructor expects array\\<string, mixed\\>\\|null, mixed given\\.$#"
+			count: 1
+			path: src/UserInterface/JsonRpcQueueItemHandler/InitializeJsonRpcQueueItemHandler.php
+
+		-
+			message: "#^Parameter \\#5 \\$capabilities of class Serenata\\\\Utility\\\\InitializeParams constructor expects array\\<string, mixed\\>, mixed given\\.$#"
+			count: 1
+			path: src/UserInterface/JsonRpcQueueItemHandler/InitializeJsonRpcQueueItemHandler.php
+
+		-
+			message: "#^Parameter \\#6 \\$trace of class Serenata\\\\Utility\\\\InitializeParams constructor expects string\\|null, mixed given\\.$#"
+			count: 1
+			path: src/UserInterface/JsonRpcQueueItemHandler/InitializeJsonRpcQueueItemHandler.php
+
+		-
+			message: "#^Parameter \\#7 \\$workspaceFolders of class Serenata\\\\Utility\\\\InitializeParams constructor expects array\\<array\\>\\|null, mixed given\\.$#"
+			count: 1
+			path: src/UserInterface/JsonRpcQueueItemHandler/InitializeJsonRpcQueueItemHandler.php
+
+		-
 			message: "#^Unused @throws Throwable annotation$#"
 			count: 1
 			path: src/UserInterface/JsonRpcQueueItemHandler/InitializedJsonRpcQueueItemHandler.php
+
+		-
+			message: "#^Cannot access offset 'character' on mixed\\.$#"
+			count: 1
+			path: src/UserInterface/JsonRpcQueueItemHandler/LocalizeTypeJsonRpcQueueItemHandler.php
+
+		-
+			message: "#^Cannot access offset 'line' on mixed\\.$#"
+			count: 1
+			path: src/UserInterface/JsonRpcQueueItemHandler/LocalizeTypeJsonRpcQueueItemHandler.php
+
+		-
+			message: "#^Parameter \\#1 \\$line of class Serenata\\\\Common\\\\Position constructor expects int, mixed given\\.$#"
+			count: 1
+			path: src/UserInterface/JsonRpcQueueItemHandler/LocalizeTypeJsonRpcQueueItemHandler.php
+
+		-
+			message: "#^Parameter \\#1 \\$type of method Serenata\\\\UserInterface\\\\JsonRpcQueueItemHandler\\\\LocalizeTypeJsonRpcQueueItemHandler\\:\\:localizeType\\(\\) expects string, mixed given\\.$#"
+			count: 1
+			path: src/UserInterface/JsonRpcQueueItemHandler/LocalizeTypeJsonRpcQueueItemHandler.php
+
+		-
+			message: "#^Parameter \\#2 \\$character of class Serenata\\\\Common\\\\Position constructor expects int, mixed given\\.$#"
+			count: 1
+			path: src/UserInterface/JsonRpcQueueItemHandler/LocalizeTypeJsonRpcQueueItemHandler.php
+
+		-
+			message: "#^Parameter \\#2 \\$uri of method Serenata\\\\UserInterface\\\\JsonRpcQueueItemHandler\\\\LocalizeTypeJsonRpcQueueItemHandler\\:\\:localizeType\\(\\) expects string, mixed given\\.$#"
+			count: 1
+			path: src/UserInterface/JsonRpcQueueItemHandler/LocalizeTypeJsonRpcQueueItemHandler.php
+
+		-
+			message: "#^Parameter \\#4 \\$kind of method Serenata\\\\UserInterface\\\\JsonRpcQueueItemHandler\\\\LocalizeTypeJsonRpcQueueItemHandler\\:\\:localizeType\\(\\) expects string, mixed given\\.$#"
+			count: 1
+			path: src/UserInterface/JsonRpcQueueItemHandler/LocalizeTypeJsonRpcQueueItemHandler.php
 
 		-
 			message: "#^Unused @throws Throwable annotation$#"
@@ -246,6 +3021,41 @@ parameters:
 			path: src/UserInterface/JsonRpcQueueItemHandler/ReferencesJsonRpcQueueItemHandler.php
 
 		-
+			message: "#^Cannot access offset 'character' on mixed\\.$#"
+			count: 1
+			path: src/UserInterface/JsonRpcQueueItemHandler/ResolveTypeJsonRpcQueueItemHandler.php
+
+		-
+			message: "#^Cannot access offset 'line' on mixed\\.$#"
+			count: 1
+			path: src/UserInterface/JsonRpcQueueItemHandler/ResolveTypeJsonRpcQueueItemHandler.php
+
+		-
+			message: "#^Parameter \\#1 \\$line of class Serenata\\\\Common\\\\Position constructor expects int, mixed given\\.$#"
+			count: 1
+			path: src/UserInterface/JsonRpcQueueItemHandler/ResolveTypeJsonRpcQueueItemHandler.php
+
+		-
+			message: "#^Parameter \\#1 \\$name of method Serenata\\\\UserInterface\\\\JsonRpcQueueItemHandler\\\\ResolveTypeJsonRpcQueueItemHandler\\:\\:resolveType\\(\\) expects string, mixed given\\.$#"
+			count: 1
+			path: src/UserInterface/JsonRpcQueueItemHandler/ResolveTypeJsonRpcQueueItemHandler.php
+
+		-
+			message: "#^Parameter \\#2 \\$character of class Serenata\\\\Common\\\\Position constructor expects int, mixed given\\.$#"
+			count: 1
+			path: src/UserInterface/JsonRpcQueueItemHandler/ResolveTypeJsonRpcQueueItemHandler.php
+
+		-
+			message: "#^Parameter \\#2 \\$uri of method Serenata\\\\UserInterface\\\\JsonRpcQueueItemHandler\\\\ResolveTypeJsonRpcQueueItemHandler\\:\\:resolveType\\(\\) expects string, mixed given\\.$#"
+			count: 1
+			path: src/UserInterface/JsonRpcQueueItemHandler/ResolveTypeJsonRpcQueueItemHandler.php
+
+		-
+			message: "#^Parameter \\#4 \\$kind of method Serenata\\\\UserInterface\\\\JsonRpcQueueItemHandler\\\\ResolveTypeJsonRpcQueueItemHandler\\:\\:resolveType\\(\\) expects string, mixed given\\.$#"
+			count: 1
+			path: src/UserInterface/JsonRpcQueueItemHandler/ResolveTypeJsonRpcQueueItemHandler.php
+
+		-
 			message: "#^Unused @throws Throwable annotation$#"
 			count: 1
 			path: src/UserInterface/JsonRpcQueueItemHandler/SetTraceJsonRpcQueueItemHandler.php
@@ -256,47 +3066,127 @@ parameters:
 			path: src/UserInterface/JsonRpcQueueItemHandler/ShutdownJsonRpcQueueItemHandler.php
 
 		-
+			message: "#^Cannot access offset 'character' on mixed\\.$#"
+			count: 1
+			path: src/UserInterface/JsonRpcQueueItemHandler/SignatureHelpJsonRpcQueueItemHandler.php
+
+		-
+			message: "#^Cannot access offset 'line' on mixed\\.$#"
+			count: 1
+			path: src/UserInterface/JsonRpcQueueItemHandler/SignatureHelpJsonRpcQueueItemHandler.php
+
+		-
+			message: "#^Cannot access offset 'uri' on mixed\\.$#"
+			count: 2
+			path: src/UserInterface/JsonRpcQueueItemHandler/SignatureHelpJsonRpcQueueItemHandler.php
+
+		-
+			message: "#^Parameter \\#1 \\$line of class Serenata\\\\Common\\\\Position constructor expects int, mixed given\\.$#"
+			count: 1
+			path: src/UserInterface/JsonRpcQueueItemHandler/SignatureHelpJsonRpcQueueItemHandler.php
+
+		-
+			message: "#^Parameter \\#1 \\$uri of method Serenata\\\\Indexing\\\\TextDocumentContentRegistry\\:\\:get\\(\\) expects string, mixed given\\.$#"
+			count: 1
+			path: src/UserInterface/JsonRpcQueueItemHandler/SignatureHelpJsonRpcQueueItemHandler.php
+
+		-
+			message: "#^Parameter \\#1 \\$uri of method Serenata\\\\UserInterface\\\\JsonRpcQueueItemHandler\\\\SignatureHelpJsonRpcQueueItemHandler\\:\\:signatureHelp\\(\\) expects string, mixed given\\.$#"
+			count: 1
+			path: src/UserInterface/JsonRpcQueueItemHandler/SignatureHelpJsonRpcQueueItemHandler.php
+
+		-
+			message: "#^Parameter \\#2 \\$character of class Serenata\\\\Common\\\\Position constructor expects int, mixed given\\.$#"
+			count: 1
+			path: src/UserInterface/JsonRpcQueueItemHandler/SignatureHelpJsonRpcQueueItemHandler.php
+
+		-
 			message: "#^Unused @throws Throwable annotation$#"
 			count: 1
 			path: src/UserInterface/JsonRpcQueueItemHandler/SignatureHelpJsonRpcQueueItemHandler.php
 
 		-
-			message: "#^Cannot call method setDatabaseUri\\(\\) on object\\|null\\.$#"
+			message: "#^Method Serenata\\\\UserInterface\\\\JsonRpcQueueItemHandlerFactory\\:\\:create\\(\\) should return Serenata\\\\UserInterface\\\\JsonRpcQueueItemHandler\\\\JsonRpcQueueItemHandlerInterface but returns mixed\\.$#"
 			count: 1
-			path: tests/Integration/AbstractIntegrationTest.php
+			path: src/UserInterface/JsonRpcQueueItemHandlerFactory.php
 
 		-
-			message: "#^Cannot call method initialize\\(\\) on object\\|null\\.$#"
+			message: "#^Unsafe access to private property Serenata\\\\UserInterface\\\\NodeTypeDeducerConfigurableDelegatorConfigurator\\:\\:\\$container through static\\:\\:\\.$#"
+			count: 1
+			path: src/UserInterface/NodeTypeDeducerConfigurableDelegatorConfigurator.php
+
+		-
+			message: "#^Method Serenata\\\\Utility\\\\InitializeParams\\:\\:__construct\\(\\) has parameter \\$workspaceFolders with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Utility/InitializeParams.php
+
+		-
+			message: "#^Method Serenata\\\\Utility\\\\InitializeParams\\:\\:getWorkspaceFolders\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Utility/InitializeParams.php
+
+		-
+			message: "#^Property Serenata\\\\Utility\\\\InitializeParams\\:\\:\\$workspaceFolders type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Utility/InitializeParams.php
+
+		-
+			message: "#^Parameter \\#3 \\.\\.\\.\\$values of function sprintf expects bool\\|float\\|int\\|string\\|null, mixed given\\.$#"
+			count: 1
+			path: src/Utility/NodeHelpers.php
+
+		-
+			message: "#^Class Serenata\\\\Utility\\\\Typing\\\\ClassType extends @final class Serenata\\\\Utility\\\\Typing\\\\Type\\.$#"
+			count: 1
+			path: src/Utility/Typing/ClassType.php
+
+		-
+			message: "#^Class Serenata\\\\Utility\\\\Typing\\\\SpecialType extends @final class Serenata\\\\Utility\\\\Typing\\\\Type\\.$#"
+			count: 1
+			path: src/Utility/Typing/SpecialType.php
+
+		-
+			message: "#^Class Serenata\\\\Utility\\\\Typing\\\\TypeList extends @final class Serenata\\\\Utility\\\\ImmutableSet\\.$#"
+			count: 1
+			path: src/Utility/Typing/TypeList.php
+
+		-
+			message: "#^Parameter \\#1 \\$uris of class Serenata\\\\Workspace\\\\Configuration\\\\WorkspaceConfiguration constructor expects array\\<string\\>, mixed given\\.$#"
+			count: 1
+			path: src/Workspace/Configuration/Parsing/WorkspaceConfigurationJsonParser.php
+
+		-
+			message: "#^Parameter \\#2 \\$indexDatabaseUri of class Serenata\\\\Workspace\\\\Configuration\\\\WorkspaceConfiguration constructor expects string, mixed given\\.$#"
+			count: 1
+			path: src/Workspace/Configuration/Parsing/WorkspaceConfigurationJsonParser.php
+
+		-
+			message: "#^Parameter \\#3 \\$phpVersion of class Serenata\\\\Workspace\\\\Configuration\\\\WorkspaceConfiguration constructor expects float, mixed given\\.$#"
+			count: 1
+			path: src/Workspace/Configuration/Parsing/WorkspaceConfigurationJsonParser.php
+
+		-
+			message: "#^Parameter \\#4 \\$excludedPathExpressions of class Serenata\\\\Workspace\\\\Configuration\\\\WorkspaceConfiguration constructor expects array\\<string\\>, mixed given\\.$#"
+			count: 1
+			path: src/Workspace/Configuration/Parsing/WorkspaceConfigurationJsonParser.php
+
+		-
+			message: "#^Parameter \\#5 \\$fileExtensions of class Serenata\\\\Workspace\\\\Configuration\\\\WorkspaceConfiguration constructor expects array\\<string\\>, mixed given\\.$#"
+			count: 1
+			path: src/Workspace/Configuration/Parsing/WorkspaceConfigurationJsonParser.php
+
+		-
+			message: "#^Class Serenata\\\\Workspace\\\\Configuration\\\\Parsing\\\\WorkspaceConfigurationNotFoundException extends @final class Serenata\\\\Workspace\\\\Configuration\\\\Parsing\\\\WorkspaceConfigurationParsingException\\.$#"
+			count: 1
+			path: src/Workspace/Configuration/Parsing/WorkspaceConfigurationNotFoundException.php
+
+		-
+			message: "#^Cannot call method clear\\(\\) on object\\|null\\.$#"
 			count: 1
 			path: tests/Integration/AbstractIntegrationTest.php
 
 		-
 			message: "#^Cannot call method clearCache\\(\\) on object\\|null\\.$#"
-			count: 1
-			path: tests/Integration/AbstractIntegrationTest.php
-
-		-
-			message: "#^Cannot call method setActiveWorkspace\\(\\) on object\\|null\\.$#"
-			count: 1
-			path: tests/Integration/AbstractIntegrationTest.php
-
-		-
-			message: "#^Negated boolean expression is always false\\.$#"
-			count: 1
-			path: tests/Integration/AbstractIntegrationTest.php
-
-		-
-			message: "#^Only booleans are allowed in a negated boolean, Symfony\\\\Component\\\\DependencyInjection\\\\ContainerBuilder given\\.$#"
-			count: 1
-			path: tests/Integration/AbstractIntegrationTest.php
-
-		-
-			message: "#^Parameter \\#1 \\$indexer of method Serenata\\\\Tests\\\\Integration\\\\AbstractIntegrationTest\\:\\:indexUriViaIndexer\\(\\) expects Serenata\\\\Indexing\\\\IndexerInterface, object\\|null given\\.$#"
-			count: 4
-			path: tests/Integration/AbstractIntegrationTest.php
-
-		-
-			message: "#^Cannot call method update\\(\\) on object\\|null\\.$#"
 			count: 1
 			path: tests/Integration/AbstractIntegrationTest.php
 
@@ -311,6 +3201,56 @@ parameters:
 			path: tests/Integration/AbstractIntegrationTest.php
 
 		-
+			message: "#^Cannot call method initialize\\(\\) on object\\|null\\.$#"
+			count: 1
+			path: tests/Integration/AbstractIntegrationTest.php
+
+		-
+			message: "#^Cannot call method setActiveWorkspace\\(\\) on object\\|null\\.$#"
+			count: 1
+			path: tests/Integration/AbstractIntegrationTest.php
+
+		-
+			message: "#^Cannot call method setDatabaseUri\\(\\) on object\\|null\\.$#"
+			count: 1
+			path: tests/Integration/AbstractIntegrationTest.php
+
+		-
+			message: "#^Cannot call method update\\(\\) on object\\|null\\.$#"
+			count: 1
+			path: tests/Integration/AbstractIntegrationTest.php
+
+		-
+			message: "#^Method Serenata\\\\Tests\\\\Integration\\\\AbstractIntegrationTest\\:\\:createContainer\\(\\) should return Symfony\\\\Component\\\\DependencyInjection\\\\ContainerBuilder but returns mixed\\.$#"
+			count: 1
+			path: tests/Integration/AbstractIntegrationTest.php
+
+		-
+			message: "#^Negated boolean expression is always false\\.$#"
+			count: 1
+			path: tests/Integration/AbstractIntegrationTest.php
+
+		-
+			message: "#^Negated boolean expression is always true\\.$#"
+			count: 1
+			path: tests/Integration/AbstractIntegrationTest.php
+
+		-
+			message: "#^Only booleans are allowed in a negated boolean, Symfony\\\\Component\\\\DependencyInjection\\\\ContainerBuilder given\\.$#"
+			count: 1
+			path: tests/Integration/AbstractIntegrationTest.php
+
+		-
+			message: "#^Parameter \\#1 \\$indexer of method Serenata\\\\Tests\\\\Integration\\\\AbstractIntegrationTest\\:\\:indexUriViaIndexer\\(\\) expects Serenata\\\\Indexing\\\\IndexerInterface, object\\|null given\\.$#"
+			count: 4
+			path: tests/Integration/AbstractIntegrationTest.php
+
+		-
+			message: "#^Unreachable statement \\- code above always terminates\\.$#"
+			count: 1
+			path: tests/Integration/AbstractIntegrationTest.php
+
+		-
 			message: "#^Cannot call method getAll\\(\\) on object\\|null\\.$#"
 			count: 1
 			path: tests/Integration/Analysis/ClasslikeListProviderTest.php
@@ -321,22 +3261,7 @@ parameters:
 			path: tests/Integration/Analysis/ClasslikeListRegistryIndexSynchronizationTest.php
 
 		-
-			message: "#^Cannot call method getAll\\(\\) on object\\|null\\.$#"
-			count: 3
-			path: tests/Integration/Analysis/ClasslikeListRegistryWorkspaceInteractionTest.php
-
-		-
 			message: "#^Cannot call method add\\(\\) on object\\|null\\.$#"
-			count: 1
-			path: tests/Integration/Analysis/ClasslikeListRegistryWorkspaceInteractionTest.php
-
-		-
-			message: "#^Cannot call method setDatabaseUri\\(\\) on object\\|null\\.$#"
-			count: 1
-			path: tests/Integration/Analysis/ClasslikeListRegistryWorkspaceInteractionTest.php
-
-		-
-			message: "#^Cannot call method initialize\\(\\) on object\\|null\\.$#"
 			count: 1
 			path: tests/Integration/Analysis/ClasslikeListRegistryWorkspaceInteractionTest.php
 
@@ -346,7 +3271,22 @@ parameters:
 			path: tests/Integration/Analysis/ClasslikeListRegistryWorkspaceInteractionTest.php
 
 		-
+			message: "#^Cannot call method getAll\\(\\) on object\\|null\\.$#"
+			count: 3
+			path: tests/Integration/Analysis/ClasslikeListRegistryWorkspaceInteractionTest.php
+
+		-
+			message: "#^Cannot call method initialize\\(\\) on object\\|null\\.$#"
+			count: 1
+			path: tests/Integration/Analysis/ClasslikeListRegistryWorkspaceInteractionTest.php
+
+		-
 			message: "#^Cannot call method setActiveWorkspace\\(\\) on object\\|null\\.$#"
+			count: 1
+			path: tests/Integration/Analysis/ClasslikeListRegistryWorkspaceInteractionTest.php
+
+		-
+			message: "#^Cannot call method setDatabaseUri\\(\\) on object\\|null\\.$#"
 			count: 1
 			path: tests/Integration/Analysis/ClasslikeListRegistryWorkspaceInteractionTest.php
 
@@ -356,22 +3296,7 @@ parameters:
 			path: tests/Integration/Analysis/ConstantListRegistryIndexSynchronizationTest.php
 
 		-
-			message: "#^Cannot call method getAll\\(\\) on object\\|null\\.$#"
-			count: 3
-			path: tests/Integration/Analysis/ConstantListRegistryWorkspaceInteractionTest.php
-
-		-
 			message: "#^Cannot call method add\\(\\) on object\\|null\\.$#"
-			count: 1
-			path: tests/Integration/Analysis/ConstantListRegistryWorkspaceInteractionTest.php
-
-		-
-			message: "#^Cannot call method setDatabaseUri\\(\\) on object\\|null\\.$#"
-			count: 1
-			path: tests/Integration/Analysis/ConstantListRegistryWorkspaceInteractionTest.php
-
-		-
-			message: "#^Cannot call method initialize\\(\\) on object\\|null\\.$#"
 			count: 1
 			path: tests/Integration/Analysis/ConstantListRegistryWorkspaceInteractionTest.php
 
@@ -381,17 +3306,32 @@ parameters:
 			path: tests/Integration/Analysis/ConstantListRegistryWorkspaceInteractionTest.php
 
 		-
+			message: "#^Cannot call method getAll\\(\\) on object\\|null\\.$#"
+			count: 3
+			path: tests/Integration/Analysis/ConstantListRegistryWorkspaceInteractionTest.php
+
+		-
+			message: "#^Cannot call method initialize\\(\\) on object\\|null\\.$#"
+			count: 1
+			path: tests/Integration/Analysis/ConstantListRegistryWorkspaceInteractionTest.php
+
+		-
 			message: "#^Cannot call method setActiveWorkspace\\(\\) on object\\|null\\.$#"
 			count: 1
 			path: tests/Integration/Analysis/ConstantListRegistryWorkspaceInteractionTest.php
 
 		-
-			message: "#^Cannot call method getFileByUri\\(\\) on object\\|null\\.$#"
+			message: "#^Cannot call method setDatabaseUri\\(\\) on object\\|null\\.$#"
+			count: 1
+			path: tests/Integration/Analysis/ConstantListRegistryWorkspaceInteractionTest.php
+
+		-
+			message: "#^Cannot call method getAllForFile\\(\\) on object\\|null\\.$#"
 			count: 1
 			path: tests/Integration/Analysis/FileNamespaceListProviderTest.php
 
 		-
-			message: "#^Cannot call method getAllForFile\\(\\) on object\\|null\\.$#"
+			message: "#^Cannot call method getFileByUri\\(\\) on object\\|null\\.$#"
 			count: 1
 			path: tests/Integration/Analysis/FileNamespaceListProviderTest.php
 
@@ -401,22 +3341,7 @@ parameters:
 			path: tests/Integration/Analysis/FunctionListRegistryIndexSynchronizationTest.php
 
 		-
-			message: "#^Cannot call method getAll\\(\\) on object\\|null\\.$#"
-			count: 3
-			path: tests/Integration/Analysis/FunctionListRegistryWorkspaceInteractionTest.php
-
-		-
 			message: "#^Cannot call method add\\(\\) on object\\|null\\.$#"
-			count: 1
-			path: tests/Integration/Analysis/FunctionListRegistryWorkspaceInteractionTest.php
-
-		-
-			message: "#^Cannot call method setDatabaseUri\\(\\) on object\\|null\\.$#"
-			count: 1
-			path: tests/Integration/Analysis/FunctionListRegistryWorkspaceInteractionTest.php
-
-		-
-			message: "#^Cannot call method initialize\\(\\) on object\\|null\\.$#"
 			count: 1
 			path: tests/Integration/Analysis/FunctionListRegistryWorkspaceInteractionTest.php
 
@@ -426,7 +3351,22 @@ parameters:
 			path: tests/Integration/Analysis/FunctionListRegistryWorkspaceInteractionTest.php
 
 		-
+			message: "#^Cannot call method getAll\\(\\) on object\\|null\\.$#"
+			count: 3
+			path: tests/Integration/Analysis/FunctionListRegistryWorkspaceInteractionTest.php
+
+		-
+			message: "#^Cannot call method initialize\\(\\) on object\\|null\\.$#"
+			count: 1
+			path: tests/Integration/Analysis/FunctionListRegistryWorkspaceInteractionTest.php
+
+		-
 			message: "#^Cannot call method setActiveWorkspace\\(\\) on object\\|null\\.$#"
+			count: 1
+			path: tests/Integration/Analysis/FunctionListRegistryWorkspaceInteractionTest.php
+
+		-
+			message: "#^Cannot call method setDatabaseUri\\(\\) on object\\|null\\.$#"
 			count: 1
 			path: tests/Integration/Analysis/FunctionListRegistryWorkspaceInteractionTest.php
 
@@ -441,22 +3381,7 @@ parameters:
 			path: tests/Integration/Analysis/NamespaceListRegistryIndexSynchronizationTest.php
 
 		-
-			message: "#^Cannot call method getAll\\(\\) on object\\|null\\.$#"
-			count: 3
-			path: tests/Integration/Analysis/NamespaceListRegistryWorkspaceInteractionTest.php
-
-		-
 			message: "#^Cannot call method add\\(\\) on object\\|null\\.$#"
-			count: 1
-			path: tests/Integration/Analysis/NamespaceListRegistryWorkspaceInteractionTest.php
-
-		-
-			message: "#^Cannot call method setDatabaseUri\\(\\) on object\\|null\\.$#"
-			count: 1
-			path: tests/Integration/Analysis/NamespaceListRegistryWorkspaceInteractionTest.php
-
-		-
-			message: "#^Cannot call method initialize\\(\\) on object\\|null\\.$#"
 			count: 1
 			path: tests/Integration/Analysis/NamespaceListRegistryWorkspaceInteractionTest.php
 
@@ -466,14 +3391,24 @@ parameters:
 			path: tests/Integration/Analysis/NamespaceListRegistryWorkspaceInteractionTest.php
 
 		-
+			message: "#^Cannot call method getAll\\(\\) on object\\|null\\.$#"
+			count: 3
+			path: tests/Integration/Analysis/NamespaceListRegistryWorkspaceInteractionTest.php
+
+		-
+			message: "#^Cannot call method initialize\\(\\) on object\\|null\\.$#"
+			count: 1
+			path: tests/Integration/Analysis/NamespaceListRegistryWorkspaceInteractionTest.php
+
+		-
 			message: "#^Cannot call method setActiveWorkspace\\(\\) on object\\|null\\.$#"
 			count: 1
 			path: tests/Integration/Analysis/NamespaceListRegistryWorkspaceInteractionTest.php
 
 		-
-			message: "#^Cannot call method deduceTypes\\(\\) on object\\|null\\.$#"
+			message: "#^Cannot call method setDatabaseUri\\(\\) on object\\|null\\.$#"
 			count: 1
-			path: tests/Integration/Analysis/Typing/Deduction/ExpressionTypeDeducerTest.php
+			path: tests/Integration/Analysis/NamespaceListRegistryWorkspaceInteractionTest.php
 
 		-
 			message: "#^Cannot call method deduce\\(\\) on object\\|null\\.$#"
@@ -481,13 +3416,13 @@ parameters:
 			path: tests/Integration/Analysis/Typing/Deduction/ExpressionTypeDeducerTest.php
 
 		-
-			message: "#^Parameter \\#2 \\$text of class Serenata\\\\Utility\\\\TextDocumentItem constructor expects string, string\\|false given\\.$#"
-			count: 2
+			message: "#^Cannot call method deduceTypes\\(\\) on object\\|null\\.$#"
+			count: 1
 			path: tests/Integration/Analysis/Typing/Deduction/ExpressionTypeDeducerTest.php
 
 		-
-			message: "#^Parameter \\#2 \\$string of static method Serenata\\\\Common\\\\Position\\:\\:createFromByteOffset\\(\\) expects string, string\\|false given\\.$#"
-			count: 2
+			message: "#^Method Serenata\\\\Tests\\\\Integration\\\\Analysis\\\\Typing\\\\Deduction\\\\ExpressionTypeDeducerTest\\:\\:getMarkerOffset\\(\\) should return int but returns int\\<0, max\\>\\|false\\.$#"
+			count: 1
 			path: tests/Integration/Analysis/Typing/Deduction/ExpressionTypeDeducerTest.php
 
 		-
@@ -496,9 +3431,14 @@ parameters:
 			path: tests/Integration/Analysis/Typing/Deduction/ExpressionTypeDeducerTest.php
 
 		-
-			message: "#^Cannot call method getFileByUri\\(\\) on object\\|null\\.$#"
-			count: 1
-			path: tests/Integration/Analysis/Typing/FileClasslikeListProviderTest.php
+			message: "#^Parameter \\#2 \\$string of static method Serenata\\\\Common\\\\Position\\:\\:createFromByteOffset\\(\\) expects string, string\\|false given\\.$#"
+			count: 2
+			path: tests/Integration/Analysis/Typing/Deduction/ExpressionTypeDeducerTest.php
+
+		-
+			message: "#^Parameter \\#2 \\$text of class Serenata\\\\Utility\\\\TextDocumentItem constructor expects string, string\\|false given\\.$#"
+			count: 2
+			path: tests/Integration/Analysis/Typing/Deduction/ExpressionTypeDeducerTest.php
 
 		-
 			message: "#^Cannot call method getAllForFile\\(\\) on object\\|null\\.$#"
@@ -506,9 +3446,9 @@ parameters:
 			path: tests/Integration/Analysis/Typing/FileClasslikeListProviderTest.php
 
 		-
-			message: "#^Cannot call method getSourceCodeFromFile\\(\\) on object\\|null\\.$#"
-			count: 2
-			path: tests/Integration/Analysis/VariableScannerTest.php
+			message: "#^Cannot call method getFileByUri\\(\\) on object\\|null\\.$#"
+			count: 1
+			path: tests/Integration/Analysis/Typing/FileClasslikeListProviderTest.php
 
 		-
 			message: "#^Cannot call method getAvailableVariables\\(\\) on object\\|null\\.$#"
@@ -516,8 +3456,8 @@ parameters:
 			path: tests/Integration/Analysis/VariableScannerTest.php
 
 		-
-			message: "#^Parameter \\#2 \\$text of class Serenata\\\\Utility\\\\TextDocumentItem constructor expects string, string\\|false given\\.$#"
-			count: 1
+			message: "#^Cannot call method getSourceCodeFromFile\\(\\) on object\\|null\\.$#"
+			count: 2
 			path: tests/Integration/Analysis/VariableScannerTest.php
 
 		-
@@ -531,6 +3471,16 @@ parameters:
 			path: tests/Integration/Analysis/VariableScannerTest.php
 
 		-
+			message: "#^Parameter \\#2 \\$text of class Serenata\\\\Utility\\\\TextDocumentItem constructor expects string, string\\|false given\\.$#"
+			count: 1
+			path: tests/Integration/Analysis/VariableScannerTest.php
+
+		-
+			message: "#^Cannot call method determine\\(\\) on object\\|null\\.$#"
+			count: 1
+			path: tests/Integration/Autocompletion/Providers/AbstractAutocompletionProviderTest.php
+
+		-
 			message: "#^Cannot call method getSourceCodeFromFile\\(\\) on object\\|null\\.$#"
 			count: 2
 			path: tests/Integration/Autocompletion/Providers/AbstractAutocompletionProviderTest.php
@@ -541,7 +3491,7 @@ parameters:
 			path: tests/Integration/Autocompletion/Providers/AbstractAutocompletionProviderTest.php
 
 		-
-			message: "#^Cannot call method determine\\(\\) on object\\|null\\.$#"
+			message: "#^Method Serenata\\\\Tests\\\\Integration\\\\Autocompletion\\\\Providers\\\\AbstractAutocompletionProviderTest\\:\\:getMarkerOffset\\(\\) should return int but returns int\\<0, max\\>\\|false\\.$#"
 			count: 1
 			path: tests/Integration/Autocompletion/Providers/AbstractAutocompletionProviderTest.php
 
@@ -551,23 +3501,8 @@ parameters:
 			path: tests/Integration/Commands/OpenTextDocumentCommandExecutorTest.php
 
 		-
-			message: "#^Cannot call method getSourceCodeFromFile\\(\\) on object\\|null\\.$#"
+			message: "#^Call to an undefined method Serenata\\\\GotoDefinition\\\\GotoDefinitionResponse\\:\\:getLine\\(\\)\\.$#"
 			count: 1
-			path: tests/Integration/GotoDefinition/DefinitionLocatorTest.php
-
-		-
-			message: "#^Cannot call method locate\\(\\) on object\\|null\\.$#"
-			count: 1
-			path: tests/Integration/GotoDefinition/DefinitionLocatorTest.php
-
-		-
-			message: "#^Cannot call method getResult\\(\\) on Serenata\\\\GotoDefinition\\\\GotoDefinitionResponse\\|null\\.$#"
-			count: 13
-			path: tests/Integration/GotoDefinition/DefinitionLocatorTest.php
-
-		-
-			message: "#^Strict comparison using \\=\\=\\= between false and false will always evaluate to true\\.$#"
-			count: 2
 			path: tests/Integration/GotoDefinition/DefinitionLocatorTest.php
 
 		-
@@ -586,8 +3521,23 @@ parameters:
 			path: tests/Integration/GotoDefinition/DefinitionLocatorTest.php
 
 		-
-			message: "#^Call to an undefined method Serenata\\\\GotoDefinition\\\\GotoDefinitionResponse\\:\\:getLine\\(\\)\\.$#"
+			message: "#^Cannot call method getResult\\(\\) on Serenata\\\\GotoDefinition\\\\GotoDefinitionResponse\\|null\\.$#"
+			count: 13
+			path: tests/Integration/GotoDefinition/DefinitionLocatorTest.php
+
+		-
+			message: "#^Cannot call method getSourceCodeFromFile\\(\\) on object\\|null\\.$#"
 			count: 1
+			path: tests/Integration/GotoDefinition/DefinitionLocatorTest.php
+
+		-
+			message: "#^Cannot call method locate\\(\\) on object\\|null\\.$#"
+			count: 1
+			path: tests/Integration/GotoDefinition/DefinitionLocatorTest.php
+
+		-
+			message: "#^Strict comparison using \\=\\=\\= between false and false will always evaluate to true\\.$#"
+			count: 2
 			path: tests/Integration/GotoDefinition/DefinitionLocatorTest.php
 
 		-
@@ -626,13 +3576,13 @@ parameters:
 			path: tests/Integration/Indexing/FileIndexerFileNamespaceProviderCombinationTest.php
 
 		-
-			message: "#^Cannot call method index\\(\\) on object\\|null\\.$#"
-			count: 5
+			message: "#^Cannot call method getFiles\\(\\) on object\\|null\\.$#"
+			count: 12
 			path: tests/Integration/Indexing/FileIndexingTest.php
 
 		-
-			message: "#^Cannot call method getFiles\\(\\) on object\\|null\\.$#"
-			count: 12
+			message: "#^Cannot call method index\\(\\) on object\\|null\\.$#"
+			count: 5
 			path: tests/Integration/Indexing/FileIndexingTest.php
 
 		-
@@ -696,14 +3646,39 @@ parameters:
 			path: tests/Integration/Indexing/TraitIndexingTest.php
 
 		-
+			message: "#^Cannot call method lint\\(\\) on object\\|null\\.$#"
+			count: 1
+			path: tests/Integration/Linting/LinterTest.php
+
+		-
 			message: "#^Method Serenata\\\\Tests\\\\Integration\\\\Linting\\\\LinterTest\\:\\:lintFile\\(\\) return type has no value type specified in iterable type array\\.$#"
 			count: 1
 			path: tests/Integration/Linting/LinterTest.php
 
 		-
-			message: "#^Cannot call method lint\\(\\) on object\\|null\\.$#"
-			count: 1
-			path: tests/Integration/Linting/LinterTest.php
+			message: "#^Cannot access offset 'description' on mixed\\.$#"
+			count: 2
+			path: tests/Integration/Parsing/DocblockParserTest.php
+
+		-
+			message: "#^Cannot access offset 'long' on mixed\\.$#"
+			count: 6
+			path: tests/Integration/Parsing/DocblockParserTest.php
+
+		-
+			message: "#^Cannot access offset 'short' on mixed\\.$#"
+			count: 4
+			path: tests/Integration/Parsing/DocblockParserTest.php
+
+		-
+			message: "#^Cannot access offset 'type' on mixed\\.$#"
+			count: 2
+			path: tests/Integration/Parsing/DocblockParserTest.php
+
+		-
+			message: "#^Cannot access offset 0 on mixed\\.$#"
+			count: 4
+			path: tests/Integration/Parsing/DocblockParserTest.php
 
 		-
 			message: "#^Method Serenata\\\\Tests\\\\Integration\\\\Parsing\\\\DocblockParserTest\\:\\:getDocblockParser\\(\\) should return Serenata\\\\Parsing\\\\DocblockParser but returns object\\|null\\.$#"
@@ -711,9 +3686,9 @@ parameters:
 			path: tests/Integration/Parsing/DocblockParserTest.php
 
 		-
-			message: "#^Cannot call method getSourceCodeFromFile\\(\\) on object\\|null\\.$#"
-			count: 1
-			path: tests/Integration/Refactoring/UseStatementInsertionCreatorTest.php
+			message: "#^Parameter \\#2 \\$haystack of static method PHPUnit\\\\Framework\\\\Assert\\:\\:assertCount\\(\\) expects Countable\\|iterable, mixed given\\.$#"
+			count: 2
+			path: tests/Integration/Parsing/DocblockParserTest.php
 
 		-
 			message: "#^Cannot call method create\\(\\) on object\\|null\\.$#"
@@ -721,8 +3696,13 @@ parameters:
 			path: tests/Integration/Refactoring/UseStatementInsertionCreatorTest.php
 
 		-
-			message: "#^Cannot call method getSignatures\\(\\) on Serenata\\\\SignatureHelp\\\\SignatureHelp\\|null\\.$#"
-			count: 6
+			message: "#^Cannot call method getSourceCodeFromFile\\(\\) on object\\|null\\.$#"
+			count: 1
+			path: tests/Integration/Refactoring/UseStatementInsertionCreatorTest.php
+
+		-
+			message: "#^Cannot call method get\\(\\) on object\\|null\\.$#"
+			count: 1
 			path: tests/Integration/SignatureHelp/SignatureHelpRetrieverTest.php
 
 		-
@@ -731,17 +3711,12 @@ parameters:
 			path: tests/Integration/SignatureHelp/SignatureHelpRetrieverTest.php
 
 		-
-			message: "#^Parameter \\#2 \\$haystack of static method PHPUnit\\\\Framework\\\\Assert\\:\\:assertCount\\(\\) expects Countable\\|iterable, array\\<Serenata\\\\SignatureHelp\\\\ParameterInformation\\>\\|null given\\.$#"
-			count: 2
+			message: "#^Cannot call method getSignatures\\(\\) on Serenata\\\\SignatureHelp\\\\SignatureHelp\\|null\\.$#"
+			count: 6
 			path: tests/Integration/SignatureHelp/SignatureHelpRetrieverTest.php
 
 		-
 			message: "#^Cannot call method getSourceCodeFromFile\\(\\) on object\\|null\\.$#"
-			count: 1
-			path: tests/Integration/SignatureHelp/SignatureHelpRetrieverTest.php
-
-		-
-			message: "#^Cannot call method get\\(\\) on object\\|null\\.$#"
 			count: 1
 			path: tests/Integration/SignatureHelp/SignatureHelpRetrieverTest.php
 
@@ -751,9 +3726,9 @@ parameters:
 			path: tests/Integration/SignatureHelp/SignatureHelpRetrieverTest.php
 
 		-
-			message: "#^Method Serenata\\\\Tests\\\\Integration\\\\Symbols\\\\DocumentSymbolRetrieverTest\\:\\:getSymbolsForFile\\(\\) return type has no value type specified in iterable type array\\.$#"
-			count: 1
-			path: tests/Integration/Symbols/DocumentSymbolRetrieverTest.php
+			message: "#^Parameter \\#2 \\$haystack of static method PHPUnit\\\\Framework\\\\Assert\\:\\:assertCount\\(\\) expects Countable\\|iterable, array\\<Serenata\\\\SignatureHelp\\\\ParameterInformation\\>\\|null given\\.$#"
+			count: 2
+			path: tests/Integration/SignatureHelp/SignatureHelpRetrieverTest.php
 
 		-
 			message: "#^Cannot call method getFileByUri\\(\\) on object\\|null\\.$#"
@@ -766,6 +3741,16 @@ parameters:
 			path: tests/Integration/Symbols/DocumentSymbolRetrieverTest.php
 
 		-
+			message: "#^Method Serenata\\\\Tests\\\\Integration\\\\Symbols\\\\DocumentSymbolRetrieverTest\\:\\:getSymbolsForFile\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: tests/Integration/Symbols/DocumentSymbolRetrieverTest.php
+
+		-
+			message: "#^Cannot call method get\\(\\) on object\\|null\\.$#"
+			count: 1
+			path: tests/Integration/Tooltips/TooltipProviderTest.php
+
+		-
 			message: "#^Cannot call method getFileByUri\\(\\) on object\\|null\\.$#"
 			count: 2
 			path: tests/Integration/Tooltips/TooltipProviderTest.php
@@ -776,13 +3761,363 @@ parameters:
 			path: tests/Integration/Tooltips/TooltipProviderTest.php
 
 		-
-			message: "#^Cannot call method get\\(\\) on object\\|null\\.$#"
-			count: 1
-			path: tests/Integration/Tooltips/TooltipProviderTest.php
-
-		-
 			message: "#^Call to static method PHPUnit\\\\Framework\\\\Assert\\:\\:assertNotNull\\(\\) with array\\<string, mixed\\> will always evaluate to true\\.$#"
 			count: 4
+			path: tests/Integration/UserInterface/JsonRpcQueueItemHandler/ClassInfoJsonRpcQueueItemHandlerTest.php
+
+		-
+			message: "#^Cannot access offset 'FIRST_INTERFACE…' on mixed\\.$#"
+			count: 4
+			path: tests/Integration/UserInterface/JsonRpcQueueItemHandler/ClassInfoJsonRpcQueueItemHandlerTest.php
+
+		-
+			message: "#^Cannot access offset 'INHERITED_CONSTANT' on mixed\\.$#"
+			count: 2
+			path: tests/Integration/UserInterface/JsonRpcQueueItemHandler/ClassInfoJsonRpcQueueItemHandlerTest.php
+
+		-
+			message: "#^Cannot access offset 'TEST_CONSTANT' on mixed\\.$#"
+			count: 9
+			path: tests/Integration/UserInterface/JsonRpcQueueItemHandler/ClassInfoJsonRpcQueueItemHandlerTest.php
+
+		-
+			message: "#^Cannot access offset '__construct' on mixed\\.$#"
+			count: 11
+			path: tests/Integration/UserInterface/JsonRpcQueueItemHandler/ClassInfoJsonRpcQueueItemHandlerTest.php
+
+		-
+			message: "#^Cannot access offset 'abstractMethod' on mixed\\.$#"
+			count: 2
+			path: tests/Integration/UserInterface/JsonRpcQueueItemHandler/ClassInfoJsonRpcQueueItemHandlerTest.php
+
+		-
+			message: "#^Cannot access offset 'ancestorMethod' on mixed\\.$#"
+			count: 10
+			path: tests/Integration/UserInterface/JsonRpcQueueItemHandler/ClassInfoJsonRpcQueueItemHandlerTest.php
+
+		-
+			message: "#^Cannot access offset 'ancestorProperty' on mixed\\.$#"
+			count: 9
+			path: tests/Integration/UserInterface/JsonRpcQueueItemHandler/ClassInfoJsonRpcQueueItemHandlerTest.php
+
+		-
+			message: "#^Cannot access offset 'baseMethodSelf' on mixed\\.$#"
+			count: 2
+			path: tests/Integration/UserInterface/JsonRpcQueueItemHandler/ClassInfoJsonRpcQueueItemHandlerTest.php
+
+		-
+			message: "#^Cannot access offset 'baseMethodStatic' on mixed\\.$#"
+			count: 2
+			path: tests/Integration/UserInterface/JsonRpcQueueItemHandler/ClassInfoJsonRpcQueueItemHandlerTest.php
+
+		-
+			message: "#^Cannot access offset 'baseMethodThis' on mixed\\.$#"
+			count: 2
+			path: tests/Integration/UserInterface/JsonRpcQueueItemHandler/ClassInfoJsonRpcQueueItemHandlerTest.php
+
+		-
+			message: "#^Cannot access offset 'baseMethodWithParam…' on mixed\\.$#"
+			count: 3
+			path: tests/Integration/UserInterface/JsonRpcQueueItemHandler/ClassInfoJsonRpcQueueItemHandlerTest.php
+
+		-
+			message: "#^Cannot access offset 'basePropSelf' on mixed\\.$#"
+			count: 2
+			path: tests/Integration/UserInterface/JsonRpcQueueItemHandler/ClassInfoJsonRpcQueueItemHandlerTest.php
+
+		-
+			message: "#^Cannot access offset 'basePropStatic' on mixed\\.$#"
+			count: 2
+			path: tests/Integration/UserInterface/JsonRpcQueueItemHandler/ClassInfoJsonRpcQueueItemHandlerTest.php
+
+		-
+			message: "#^Cannot access offset 'basePropThis' on mixed\\.$#"
+			count: 2
+			path: tests/Integration/UserInterface/JsonRpcQueueItemHandler/ClassInfoJsonRpcQueueItemHandlerTest.php
+
+		-
+			message: "#^Cannot access offset 'baseTraitMethod' on mixed\\.$#"
+			count: 2
+			path: tests/Integration/UserInterface/JsonRpcQueueItemHandler/ClassInfoJsonRpcQueueItemHandlerTest.php
+
+		-
+			message: "#^Cannot access offset 'baseTraitProperty' on mixed\\.$#"
+			count: 2
+			path: tests/Integration/UserInterface/JsonRpcQueueItemHandler/ClassInfoJsonRpcQueueItemHandlerTest.php
+
+		-
+			message: "#^Cannot access offset 'basicDocblockInheri…' on mixed\\.$#"
+			count: 10
+			path: tests/Integration/UserInterface/JsonRpcQueueItemHandler/ClassInfoJsonRpcQueueItemHandlerTest.php
+
+		-
+			message: "#^Cannot access offset 'class' on mixed\\.$#"
+			count: 4
+			path: tests/Integration/UserInterface/JsonRpcQueueItemHandler/ClassInfoJsonRpcQueueItemHandlerTest.php
+
+		-
+			message: "#^Cannot access offset 'declaringClass' on mixed\\.$#"
+			count: 61
+			path: tests/Integration/UserInterface/JsonRpcQueueItemHandler/ClassInfoJsonRpcQueueItemHandlerTest.php
+
+		-
+			message: "#^Cannot access offset 'declaringStructure' on mixed\\.$#"
+			count: 85
+			path: tests/Integration/UserInterface/JsonRpcQueueItemHandler/ClassInfoJsonRpcQueueItemHandlerTest.php
+
+		-
+			message: "#^Cannot access offset 'firstTraitProperty' on mixed\\.$#"
+			count: 4
+			path: tests/Integration/UserInterface/JsonRpcQueueItemHandler/ClassInfoJsonRpcQueueItemHandlerTest.php
+
+		-
+			message: "#^Cannot access offset 'foo' on mixed\\.$#"
+			count: 2
+			path: tests/Integration/UserInterface/JsonRpcQueueItemHandler/ClassInfoJsonRpcQueueItemHandlerTest.php
+
+		-
+			message: "#^Cannot access offset 'fqcn' on mixed\\.$#"
+			count: 74
+			path: tests/Integration/UserInterface/JsonRpcQueueItemHandler/ClassInfoJsonRpcQueueItemHandlerTest.php
+
+		-
+			message: "#^Cannot access offset 'hasDocumentation'\\|'isDeprecated'\\|'longDescription'\\|'parameters'\\|'returnTypes'\\|'shortDescription'\\|'throws' on mixed\\.$#"
+			count: 6
+			path: tests/Integration/UserInterface/JsonRpcQueueItemHandler/ClassInfoJsonRpcQueueItemHandlerTest.php
+
+		-
+			message: "#^Cannot access offset 'hasDocumentation'\\|'isDeprecated'\\|'longDescription'\\|'shortDescription'\\|'typeDescription'\\|'types' on mixed\\.$#"
+			count: 4
+			path: tests/Integration/UserInterface/JsonRpcQueueItemHandler/ClassInfoJsonRpcQueueItemHandlerTest.php
+
+		-
+			message: "#^Cannot access offset 'implementations' on mixed\\.$#"
+			count: 95
+			path: tests/Integration/UserInterface/JsonRpcQueueItemHandler/ClassInfoJsonRpcQueueItemHandlerTest.php
+
+		-
+			message: "#^Cannot access offset 'inheritDocBaseClass…' on mixed\\.$#"
+			count: 4
+			path: tests/Integration/UserInterface/JsonRpcQueueItemHandler/ClassInfoJsonRpcQueueItemHandlerTest.php
+
+		-
+			message: "#^Cannot access offset 'inheritDocInterface…' on mixed\\.$#"
+			count: 2
+			path: tests/Integration/UserInterface/JsonRpcQueueItemHandler/ClassInfoJsonRpcQueueItemHandlerTest.php
+
+		-
+			message: "#^Cannot access offset 'inheritDocTraitTest' on mixed\\.$#"
+			count: 4
+			path: tests/Integration/UserInterface/JsonRpcQueueItemHandler/ClassInfoJsonRpcQueueItemHandlerTest.php
+
+		-
+			message: "#^Cannot access offset 'inheritedMethod' on mixed\\.$#"
+			count: 2
+			path: tests/Integration/UserInterface/JsonRpcQueueItemHandler/ClassInfoJsonRpcQueueItemHandlerTest.php
+
+		-
+			message: "#^Cannot access offset 'inheritedProperty' on mixed\\.$#"
+			count: 2
+			path: tests/Integration/UserInterface/JsonRpcQueueItemHandler/ClassInfoJsonRpcQueueItemHandlerTest.php
+
+		-
+			message: "#^Cannot access offset 'interfaceMethod' on mixed\\.$#"
+			count: 46
+			path: tests/Integration/UserInterface/JsonRpcQueueItemHandler/ClassInfoJsonRpcQueueItemHandlerTest.php
+
+		-
+			message: "#^Cannot access offset 'interfaceParentMeth…' on mixed\\.$#"
+			count: 12
+			path: tests/Integration/UserInterface/JsonRpcQueueItemHandler/ClassInfoJsonRpcQueueItemHandlerTest.php
+
+		-
+			message: "#^Cannot access offset 'isPrivate' on mixed\\.$#"
+			count: 6
+			path: tests/Integration/UserInterface/JsonRpcQueueItemHandler/ClassInfoJsonRpcQueueItemHandlerTest.php
+
+		-
+			message: "#^Cannot access offset 'isProtected' on mixed\\.$#"
+			count: 4
+			path: tests/Integration/UserInterface/JsonRpcQueueItemHandler/ClassInfoJsonRpcQueueItemHandlerTest.php
+
+		-
+			message: "#^Cannot access offset 'isPublic' on mixed\\.$#"
+			count: 4
+			path: tests/Integration/UserInterface/JsonRpcQueueItemHandler/ClassInfoJsonRpcQueueItemHandlerTest.php
+
+		-
+			message: "#^Cannot access offset 'longDescription' on mixed\\.$#"
+			count: 10
+			path: tests/Integration/UserInterface/JsonRpcQueueItemHandler/ClassInfoJsonRpcQueueItemHandlerTest.php
+
+		-
+			message: "#^Cannot access offset 'memberRange' on mixed\\.$#"
+			count: 24
+			path: tests/Integration/UserInterface/JsonRpcQueueItemHandler/ClassInfoJsonRpcQueueItemHandlerTest.php
+
+		-
+			message: "#^Cannot access offset 'methodFromFirstInte…' on mixed\\.$#"
+			count: 4
+			path: tests/Integration/UserInterface/JsonRpcQueueItemHandler/ClassInfoJsonRpcQueueItemHandlerTest.php
+
+		-
+			message: "#^Cannot access offset 'methodOwnClassName' on mixed\\.$#"
+			count: 1
+			path: tests/Integration/UserInterface/JsonRpcQueueItemHandler/ClassInfoJsonRpcQueueItemHandlerTest.php
+
+		-
+			message: "#^Cannot access offset 'methodSelf' on mixed\\.$#"
+			count: 1
+			path: tests/Integration/UserInterface/JsonRpcQueueItemHandler/ClassInfoJsonRpcQueueItemHandlerTest.php
+
+		-
+			message: "#^Cannot access offset 'methodStatic' on mixed\\.$#"
+			count: 1
+			path: tests/Integration/UserInterface/JsonRpcQueueItemHandler/ClassInfoJsonRpcQueueItemHandlerTest.php
+
+		-
+			message: "#^Cannot access offset 'methodThis' on mixed\\.$#"
+			count: 1
+			path: tests/Integration/UserInterface/JsonRpcQueueItemHandler/ClassInfoJsonRpcQueueItemHandlerTest.php
+
+		-
+			message: "#^Cannot access offset 'overriddenInBaseAnd…' on mixed\\.$#"
+			count: 2
+			path: tests/Integration/UserInterface/JsonRpcQueueItemHandler/ClassInfoJsonRpcQueueItemHandlerTest.php
+
+		-
+			message: "#^Cannot access offset 'overriddenInChild' on mixed\\.$#"
+			count: 2
+			path: tests/Integration/UserInterface/JsonRpcQueueItemHandler/ClassInfoJsonRpcQueueItemHandlerTest.php
+
+		-
+			message: "#^Cannot access offset 'override' on mixed\\.$#"
+			count: 108
+			path: tests/Integration/UserInterface/JsonRpcQueueItemHandler/ClassInfoJsonRpcQueueItemHandlerTest.php
+
+		-
+			message: "#^Cannot access offset 'parameters' on mixed\\.$#"
+			count: 10
+			path: tests/Integration/UserInterface/JsonRpcQueueItemHandler/ClassInfoJsonRpcQueueItemHandlerTest.php
+
+		-
+			message: "#^Cannot access offset 'parentInterfaceMeth…' on mixed\\.$#"
+			count: 12
+			path: tests/Integration/UserInterface/JsonRpcQueueItemHandler/ClassInfoJsonRpcQueueItemHandlerTest.php
+
+		-
+			message: "#^Cannot access offset 'parentMethod' on mixed\\.$#"
+			count: 11
+			path: tests/Integration/UserInterface/JsonRpcQueueItemHandler/ClassInfoJsonRpcQueueItemHandlerTest.php
+
+		-
+			message: "#^Cannot access offset 'parentProperty' on mixed\\.$#"
+			count: 9
+			path: tests/Integration/UserInterface/JsonRpcQueueItemHandler/ClassInfoJsonRpcQueueItemHandlerTest.php
+
+		-
+			message: "#^Cannot access offset 'parentTraitMethod' on mixed\\.$#"
+			count: 11
+			path: tests/Integration/UserInterface/JsonRpcQueueItemHandler/ClassInfoJsonRpcQueueItemHandlerTest.php
+
+		-
+			message: "#^Cannot access offset 'parentTraitProperty' on mixed\\.$#"
+			count: 9
+			path: tests/Integration/UserInterface/JsonRpcQueueItemHandler/ClassInfoJsonRpcQueueItemHandlerTest.php
+
+		-
+			message: "#^Cannot access offset 'prop' on mixed\\.$#"
+			count: 2
+			path: tests/Integration/UserInterface/JsonRpcQueueItemHandler/ClassInfoJsonRpcQueueItemHandlerTest.php
+
+		-
+			message: "#^Cannot access offset 'propSelf' on mixed\\.$#"
+			count: 1
+			path: tests/Integration/UserInterface/JsonRpcQueueItemHandler/ClassInfoJsonRpcQueueItemHandlerTest.php
+
+		-
+			message: "#^Cannot access offset 'propStatic' on mixed\\.$#"
+			count: 1
+			path: tests/Integration/UserInterface/JsonRpcQueueItemHandler/ClassInfoJsonRpcQueueItemHandlerTest.php
+
+		-
+			message: "#^Cannot access offset 'propThis' on mixed\\.$#"
+			count: 1
+			path: tests/Integration/UserInterface/JsonRpcQueueItemHandler/ClassInfoJsonRpcQueueItemHandlerTest.php
+
+		-
+			message: "#^Cannot access offset 'range' on mixed\\.$#"
+			count: 79
+			path: tests/Integration/UserInterface/JsonRpcQueueItemHandler/ClassInfoJsonRpcQueueItemHandlerTest.php
+
+		-
+			message: "#^Cannot access offset 'returnTypes' on mixed\\.$#"
+			count: 11
+			path: tests/Integration/UserInterface/JsonRpcQueueItemHandler/ClassInfoJsonRpcQueueItemHandlerTest.php
+
+		-
+			message: "#^Cannot access offset 'someMethod' on mixed\\.$#"
+			count: 86
+			path: tests/Integration/UserInterface/JsonRpcQueueItemHandler/ClassInfoJsonRpcQueueItemHandlerTest.php
+
+		-
+			message: "#^Cannot access offset 'test1' on mixed\\.$#"
+			count: 18
+			path: tests/Integration/UserInterface/JsonRpcQueueItemHandler/ClassInfoJsonRpcQueueItemHandlerTest.php
+
+		-
+			message: "#^Cannot access offset 'testAmbiguous' on mixed\\.$#"
+			count: 4
+			path: tests/Integration/UserInterface/JsonRpcQueueItemHandler/ClassInfoJsonRpcQueueItemHandlerTest.php
+
+		-
+			message: "#^Cannot access offset 'testAmbiguousAsWell' on mixed\\.$#"
+			count: 4
+			path: tests/Integration/UserInterface/JsonRpcQueueItemHandler/ClassInfoJsonRpcQueueItemHandlerTest.php
+
+		-
+			message: "#^Cannot access offset 'testMethod' on mixed\\.$#"
+			count: 10
+			path: tests/Integration/UserInterface/JsonRpcQueueItemHandler/ClassInfoJsonRpcQueueItemHandlerTest.php
+
+		-
+			message: "#^Cannot access offset 'testProperty' on mixed\\.$#"
+			count: 9
+			path: tests/Integration/UserInterface/JsonRpcQueueItemHandler/ClassInfoJsonRpcQueueItemHandlerTest.php
+
+		-
+			message: "#^Cannot access offset 'traitMethod' on mixed\\.$#"
+			count: 11
+			path: tests/Integration/UserInterface/JsonRpcQueueItemHandler/ClassInfoJsonRpcQueueItemHandlerTest.php
+
+		-
+			message: "#^Cannot access offset 'type' on mixed\\.$#"
+			count: 1
+			path: tests/Integration/UserInterface/JsonRpcQueueItemHandler/ClassInfoJsonRpcQueueItemHandlerTest.php
+
+		-
+			message: "#^Cannot access offset 'types' on mixed\\.$#"
+			count: 13
+			path: tests/Integration/UserInterface/JsonRpcQueueItemHandler/ClassInfoJsonRpcQueueItemHandlerTest.php
+
+		-
+			message: "#^Cannot access offset 'wasAbstract' on mixed\\.$#"
+			count: 1
+			path: tests/Integration/UserInterface/JsonRpcQueueItemHandler/ClassInfoJsonRpcQueueItemHandlerTest.php
+
+		-
+			message: "#^Cannot access offset 0 on mixed\\.$#"
+			count: 33
+			path: tests/Integration/UserInterface/JsonRpcQueueItemHandler/ClassInfoJsonRpcQueueItemHandlerTest.php
+
+		-
+			message: "#^Cannot access offset 1 on mixed\\.$#"
+			count: 13
+			path: tests/Integration/UserInterface/JsonRpcQueueItemHandler/ClassInfoJsonRpcQueueItemHandlerTest.php
+
+		-
+			message: "#^Cannot access offset 2 on mixed\\.$#"
+			count: 1
 			path: tests/Integration/UserInterface/JsonRpcQueueItemHandler/ClassInfoJsonRpcQueueItemHandlerTest.php
 
 		-
@@ -801,12 +4136,12 @@ parameters:
 			path: tests/Integration/UserInterface/JsonRpcQueueItemHandler/ClassListJsonRpcQueueItemHandlerTest.php
 
 		-
-			message: "#^Method Serenata\\\\Tests\\\\Integration\\\\UserInterface\\\\JsonRpcQueueItemHandler\\\\GlobalConstantsJsonRpcQueueItemHandlerTest\\:\\:getGlobalConstants\\(\\) return type has no value type specified in iterable type array\\.$#"
+			message: "#^Cannot call method getGlobalConstants\\(\\) on object\\|null\\.$#"
 			count: 1
 			path: tests/Integration/UserInterface/JsonRpcQueueItemHandler/GlobalConstantsJsonRpcQueueItemHandlerTest.php
 
 		-
-			message: "#^Cannot call method getGlobalConstants\\(\\) on object\\|null\\.$#"
+			message: "#^Method Serenata\\\\Tests\\\\Integration\\\\UserInterface\\\\JsonRpcQueueItemHandler\\\\GlobalConstantsJsonRpcQueueItemHandlerTest\\:\\:getGlobalConstants\\(\\) return type has no value type specified in iterable type array\\.$#"
 			count: 1
 			path: tests/Integration/UserInterface/JsonRpcQueueItemHandler/GlobalConstantsJsonRpcQueueItemHandlerTest.php
 
@@ -826,17 +4161,12 @@ parameters:
 			path: tests/Integration/UserInterface/JsonRpcQueueItemHandler/ResolveTypeJsonRpcQueueItemHandlerTest.php
 
 		-
-			message: "#^Cannot call method setDatabaseUri\\(\\) on object\\|null\\.$#"
+			message: "#^Cannot call method getSourceCodeFromFile\\(\\) on object\\|null\\.$#"
 			count: 1
 			path: tests/Performance/AutocompletionPerformanceTest.php
 
 		-
 			message: "#^Cannot call method initialize\\(\\) on object\\|null\\.$#"
-			count: 1
-			path: tests/Performance/AutocompletionPerformanceTest.php
-
-		-
-			message: "#^Cannot call method getSourceCodeFromFile\\(\\) on object\\|null\\.$#"
 			count: 1
 			path: tests/Performance/AutocompletionPerformanceTest.php
 
@@ -847,13 +4177,8 @@ parameters:
 
 		-
 			message: "#^Cannot call method setDatabaseUri\\(\\) on object\\|null\\.$#"
-			count: 2
-			path: tests/Performance/FunctionListProvidingPerformanceTest.php
-
-		-
-			message: "#^Cannot call method initialize\\(\\) on object\\|null\\.$#"
-			count: 2
-			path: tests/Performance/FunctionListProvidingPerformanceTest.php
+			count: 1
+			path: tests/Performance/AutocompletionPerformanceTest.php
 
 		-
 			message: "#^Cannot call method getAll\\(\\) on object\\|null\\.$#"
@@ -861,9 +4186,14 @@ parameters:
 			path: tests/Performance/FunctionListProvidingPerformanceTest.php
 
 		-
+			message: "#^Cannot call method initialize\\(\\) on object\\|null\\.$#"
+			count: 2
+			path: tests/Performance/FunctionListProvidingPerformanceTest.php
+
+		-
 			message: "#^Cannot call method setDatabaseUri\\(\\) on object\\|null\\.$#"
 			count: 2
-			path: tests/Performance/IndexingPerformanceTest.php
+			path: tests/Performance/FunctionListProvidingPerformanceTest.php
 
 		-
 			message: "#^Cannot call method initialize\\(\\) on object\\|null\\.$#"
@@ -871,19 +4201,14 @@ parameters:
 			path: tests/Performance/IndexingPerformanceTest.php
 
 		-
+			message: "#^Cannot call method setDatabaseUri\\(\\) on object\\|null\\.$#"
+			count: 2
+			path: tests/Performance/IndexingPerformanceTest.php
+
+		-
 			message: "#^Parameter \\#1 \\$nodes of method PhpParser\\\\NodeTraverser\\:\\:traverse\\(\\) expects array\\<PhpParser\\\\Node\\>, array\\<PhpParser\\\\Node\\\\Stmt\\>\\|null given\\.$#"
 			count: 1
 			path: tests/Unit/Analysis/Visiting/ScopeLimitingVisitorTest.php
-
-		-
-			message: "#^Property Serenata\\\\Tests\\\\Unit\\\\Autocompletion\\\\AutocompletionPrefixDeterminerTest\\:\\:\\$boundaryTokenRetrieverMock has unknown class PHPUnit_Framework_MockObject_MockObject as its type\\.$#"
-			count: 1
-			path: tests/Unit/Autocompletion/AutocompletionPrefixDeterminerTest.php
-
-		-
-			message: "#^Property Serenata\\\\Tests\\\\Unit\\\\Autocompletion\\\\AutocompletionPrefixDeterminerTest\\:\\:\\$boundaryTokenRetrieverMock \\(PHPUnit_Framework_MockObject_MockObject\\) does not accept PHPUnit\\\\Framework\\\\MockObject\\\\MockObject&Serenata\\\\Autocompletion\\\\AutocompletionPrefixBoundaryTokenRetrieverInterface\\.$#"
-			count: 1
-			path: tests/Unit/Autocompletion/AutocompletionPrefixDeterminerTest.php
 
 		-
 			message: "#^Call to method method\\(\\) on an unknown class PHPUnit_Framework_MockObject_MockObject\\.$#"
@@ -896,8 +4221,23 @@ parameters:
 			path: tests/Unit/Autocompletion/AutocompletionPrefixDeterminerTest.php
 
 		-
-			message: "#^Call to an undefined method PhpParser\\\\Node\\\\Expr\\|PhpParser\\\\Node\\\\Name\\:\\:toString\\(\\)\\.$#"
-			count: 7
+			message: "#^Property Serenata\\\\Tests\\\\Unit\\\\Autocompletion\\\\AutocompletionPrefixDeterminerTest\\:\\:\\$boundaryTokenRetrieverMock \\(PHPUnit_Framework_MockObject_MockObject\\) does not accept PHPUnit\\\\Framework\\\\MockObject\\\\MockObject&Serenata\\\\Autocompletion\\\\AutocompletionPrefixBoundaryTokenRetrieverInterface\\.$#"
+			count: 1
+			path: tests/Unit/Autocompletion/AutocompletionPrefixDeterminerTest.php
+
+		-
+			message: "#^Property Serenata\\\\Tests\\\\Unit\\\\Autocompletion\\\\AutocompletionPrefixDeterminerTest\\:\\:\\$boundaryTokenRetrieverMock has unknown class PHPUnit_Framework_MockObject_MockObject as its type\\.$#"
+			count: 1
+			path: tests/Unit/Autocompletion/AutocompletionPrefixDeterminerTest.php
+
+		-
+			message: "#^Access to an undefined property PhpParser\\\\Node\\\\Expr\\:\\:\\$name\\.$#"
+			count: 8
+			path: tests/Unit/Parsing/PartialParserTest.php
+
+		-
+			message: "#^Access to an undefined property PhpParser\\\\Node\\\\Expr\\:\\:\\$value\\.$#"
+			count: 2
 			path: tests/Unit/Parsing/PartialParserTest.php
 
 		-
@@ -911,13 +4251,13 @@ parameters:
 			path: tests/Unit/Parsing/PartialParserTest.php
 
 		-
-			message: "#^Access to an undefined property PhpParser\\\\Node\\\\Expr\\:\\:\\$name\\.$#"
-			count: 8
+			message: "#^Access to an undefined property PhpParser\\\\Node\\\\Expr\\|PhpParser\\\\Node\\\\VarLikeIdentifier\\:\\:\\$name\\.$#"
+			count: 1
 			path: tests/Unit/Parsing/PartialParserTest.php
 
 		-
-			message: "#^Access to an undefined property PhpParser\\\\Node\\\\Expr\\|PhpParser\\\\Node\\\\VarLikeIdentifier\\:\\:\\$name\\.$#"
-			count: 1
+			message: "#^Call to an undefined method PhpParser\\\\Node\\\\Expr\\|PhpParser\\\\Node\\\\Name\\:\\:toString\\(\\)\\.$#"
+			count: 7
 			path: tests/Unit/Parsing/PartialParserTest.php
 
 		-
@@ -931,6 +4271,16 @@ parameters:
 			path: tests/Unit/Parsing/PartialParserTest.php
 
 		-
-			message: "#^Access to an undefined property PhpParser\\\\Node\\\\Expr\\:\\:\\$value\\.$#"
-			count: 2
-			path: tests/Unit/Parsing/PartialParserTest.php
+			message: "#^Cannot access offset 'backtrace' on mixed\\.$#"
+			count: 1
+			path: tests/Unit/Sockets/JsonRpcQueueItemProcessorTest.php
+
+		-
+			message: "#^Cannot access offset 'file' on mixed\\.$#"
+			count: 1
+			path: tests/Unit/Sockets/JsonRpcQueueItemProcessorTest.php
+
+		-
+			message: "#^Cannot access offset 'line' on mixed\\.$#"
+			count: 1
+			path: tests/Unit/Sockets/JsonRpcQueueItemProcessorTest.php
