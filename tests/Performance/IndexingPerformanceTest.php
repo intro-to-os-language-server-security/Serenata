@@ -17,7 +17,7 @@ final class IndexingPerformanceTest extends AbstractPerformanceTest
             $this->indexPath($this->container, $uriToIndex);
         });
 
-        $this->finish($time);
+        $this->finish($time, __METHOD__);
     }
 
     public function testIndexLargeFile(): void
@@ -30,6 +30,6 @@ final class IndexingPerformanceTest extends AbstractPerformanceTest
             $this->indexPath($this->container, $uriToIndex);
         });
 
-        $this->finish($time);
+        $this->finish($time, __METHOD__);
     }
 }

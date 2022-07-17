@@ -48,6 +48,6 @@ final class AutocompletionPerformanceTest extends AbstractPerformanceTest
             self::assertNotEmpty($suggestionItems);
         });
 
-        $this->finish($time);
+        $this->finish($time, __METHOD__);
     }
 }

@@ -19,7 +19,7 @@ final class FunctionListProvidingPerformanceTest extends AbstractPerformanceTest
             $this->container->get('functionListProvider')->getAll();
         });
 
-        $this->finish($time);
+        $this->finish($time, __METHOD__);
     }
 
     public function testFetchAllHotFromStubs(): void
@@ -35,6 +35,6 @@ final class FunctionListProvidingPerformanceTest extends AbstractPerformanceTest
             $this->container->get('functionListProvider')->getAll();
         });
 
-        $this->finish($time);
+        $this->finish($time, __METHOD__);
     }
 }
