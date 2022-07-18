@@ -63,8 +63,12 @@ abstract class AbstractPerformanceTest extends AbstractIntegrationTest
      */
     protected function initializeDummyProject(string $uriToIndex, float $phpVersion = 8.0): void
     {
-        $tmpDatabaseFile = tmpfile() ?:
+        $tmpDatabaseFile = tmpfile();
+
+        if ($tmpDatabaseFile === false) {
             throw new RuntimeException('Temporary database file cannot be created');
+        }
+
         $dummyDatabaseUri = $this->getNormalizedUri(stream_get_meta_data($tmpDatabaseFile)['uri']);
 
         $this->getActiveWorkspaceManager()->setActiveWorkspace(null);
