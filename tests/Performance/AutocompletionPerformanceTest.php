@@ -6,9 +6,6 @@ use Serenata\Autocompletion\Providers\AutocompletionProviderContext;
 
 use Serenata\Common\Position;
 
-use Serenata\Sockets\JsonRpcRequest;
-
-use Serenata\Utility\InitializeParams;
 use Serenata\Utility\TextDocumentItem;
 
 /**

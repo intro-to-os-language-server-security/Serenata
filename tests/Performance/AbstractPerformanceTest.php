@@ -9,8 +9,6 @@ use Serenata\Sockets\JsonRpcRequest;
 
 use Serenata\Tests\Integration\AbstractIntegrationTest;
 
-use Serenata\UserInterface\JsonRpcQueueItemHandler\InitializeJsonRpcQueueItemHandler;
-
 use Serenata\Utility\InitializeParams;
 
 use Serenata\Workspace\ActiveWorkspaceManager;
