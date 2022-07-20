@@ -110,17 +110,20 @@ test:php-8.1:
 .finalization-package-job-shared: &finalization-package-job-shared
     stage: finalization
     script:
-        - curl -sSL https://getcomposer.org/download/2.3.5/composer.phar --output composer.phar
-        - echo "3b3b5a899c06a46aec280727bdf50aad14334f6bc40436ea76b07b650870d8f4  composer.phar" > checksums
+        - curl -sSL https://getcomposer.org/download/2.3.5/composer.phar --output composer
+        - echo "3b3b5a899c06a46aec280727bdf50aad14334f6bc40436ea76b07b650870d8f4  composer" > checksums
 
-        - curl -sSL https://github.com/box-project/box/releases/download/3.16.0/box.phar --output box.phar
-        - echo "f508e28f309d7e95a319bdcd5f13dcfbb18eb91cb7a6cac9b69bc7799d78bdf9  box.phar" >> checksums
+        - curl -sSL https://github.com/box-project/box/releases/download/3.16.0/box.phar --output box
+        - echo "f508e28f309d7e95a319bdcd5f13dcfbb18eb91cb7a6cac9b69bc7799d78bdf9  box" >> checksums
 
         - sha256sum -c checksums
 
+        # Help Box to find Composer
+        - export PATH="$PATH:$(realpath .)"
+
         # Although Box will not include dev dependencies, we don't install it right from the start
-        - php composer.phar update --prefer-dist --optimize-autoloader --no-interaction --no-progress --no-dev
-        - php -d phar.readonly=0 box.phar compile
+        - ./composer update --prefer-dist --optimize-autoloader --no-interaction --no-progress --no-dev
+        - php -d phar.readonly=0 ./box compile
     cache:
         key: "$CI_JOB_NAME-composer-no-dev"
         paths:
