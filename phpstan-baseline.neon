@@ -4161,12 +4161,17 @@ parameters:
 			path: tests/Integration/UserInterface/JsonRpcQueueItemHandler/ResolveTypeJsonRpcQueueItemHandlerTest.php
 
 		-
-			message: "#^Cannot call method getSourceCodeFromFile\\(\\) on object\\|null\\.$#"
+			message: "#^Cannot call method initialize\\(\\) on object\\|null\\.$#"
 			count: 1
-			path: tests/Performance/AutocompletionPerformanceTest.php
+			path: tests/Performance/AbstractPerformanceTest.php
 
 		-
-			message: "#^Cannot call method initialize\\(\\) on object\\|null\\.$#"
+			message: "#^Cannot call method setDatabaseUri\\(\\) on object\\|null\\.$#"
+			count: 1
+			path: tests/Performance/AbstractPerformanceTest.php
+
+		-
+			message: "#^Cannot call method getSourceCodeFromFile\\(\\) on object\\|null\\.$#"
 			count: 1
 			path: tests/Performance/AutocompletionPerformanceTest.php
 
@@ -4176,34 +4181,9 @@ parameters:
 			path: tests/Performance/AutocompletionPerformanceTest.php
 
 		-
-			message: "#^Cannot call method setDatabaseUri\\(\\) on object\\|null\\.$#"
-			count: 1
-			path: tests/Performance/AutocompletionPerformanceTest.php
-
-		-
 			message: "#^Cannot call method getAll\\(\\) on object\\|null\\.$#"
 			count: 3
 			path: tests/Performance/FunctionListProvidingPerformanceTest.php
-
-		-
-			message: "#^Cannot call method initialize\\(\\) on object\\|null\\.$#"
-			count: 2
-			path: tests/Performance/FunctionListProvidingPerformanceTest.php
-
-		-
-			message: "#^Cannot call method setDatabaseUri\\(\\) on object\\|null\\.$#"
-			count: 2
-			path: tests/Performance/FunctionListProvidingPerformanceTest.php
-
-		-
-			message: "#^Cannot call method initialize\\(\\) on object\\|null\\.$#"
-			count: 2
-			path: tests/Performance/IndexingPerformanceTest.php
-
-		-
-			message: "#^Cannot call method setDatabaseUri\\(\\) on object\\|null\\.$#"
-			count: 2
-			path: tests/Performance/IndexingPerformanceTest.php
 
 		-
 			message: "#^Parameter \\#1 \\$nodes of method PhpParser\\\\NodeTraverser\\:\\:traverse\\(\\) expects array\\<PhpParser\\\\Node\\>, array\\<PhpParser\\\\Node\\\\Stmt\\>\\|null given\\.$#"

@@ -7,54 +7,29 @@ namespace Serenata\Tests\Performance;
  */
 final class IndexingPerformanceTest extends AbstractPerformanceTest
 {
-    /**
-     * @return void
-     */
     public function testIndexStubs(): void
     {
-        $pathToIndex = __DIR__ . '/../../vendor/jetbrains/phpstorm-stubs';
-        $dummyDatabaseUri = 'file://' . $this->getOutputDirectory() . '/test-stubs.sqlite';
-
-        @unlink($dummyDatabaseUri);
-
-        $this->container->get('managerRegistry')->setDatabaseUri($dummyDatabaseUri);
-        $this->container->get('initializeJsonRpcQueueItemHandler')->initialize(
-            $this->mockJsonRpcMessageSenderInterface(),
-            false
+        $this->initializeDummyProject(
+            $uriToIndex = $this->getNormalizedUri(__DIR__ . '/../../vendor/jetbrains/phpstorm-stubs'),
         );
 
-        $time = $this->time(function () use ($pathToIndex): void {
-            $this->indexPath($this->container, $pathToIndex);
+        $time = $this->time(function () use ($uriToIndex): void {
+            $this->indexPath($this->container, $uriToIndex);
         });
 
-        unlink($dummyDatabaseUri);
-
-        $this->finish($time);
+        $this->finish($time, __METHOD__);
     }
 
-    /**
-     * @return void
-     */
     public function testIndexLargeFile(): void
     {
-        // This file is about 3000 lines at the time of writing.
-        $pathToIndex = __DIR__ . '/../../vendor/doctrine/orm/lib/Doctrine/ORM/UnitOfWork.php';
-        $dummyDatabaseUri = 'file://' . $this->getOutputDirectory() . '/test-large-file.sqlite';
-
-        @unlink($dummyDatabaseUri);
-
-        $this->container->get('managerRegistry')->setDatabaseUri($dummyDatabaseUri);
-        $this->container->get('initializeJsonRpcQueueItemHandler')->initialize(
-            $this->mockJsonRpcMessageSenderInterface(),
-            false
+        $this->initializeDummyProject(
+            $uriToIndex = $this->getNormalizedUri(__DIR__ . '/../../vendor/doctrine/orm/lib/Doctrine/ORM/UnitOfWork.php'),
         );
 
-        $time = $this->time(function () use ($pathToIndex): void {
-            $this->indexPath($this->container, $pathToIndex);
+        $time = $this->time(function () use ($uriToIndex): void {
+            $this->indexPath($this->container, $uriToIndex);
         });
 
-        unlink($dummyDatabaseUri);
-
-        $this->finish($time);
+        $this->finish($time, __METHOD__);
     }
 }

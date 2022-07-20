@@ -7,58 +7,34 @@ namespace Serenata\Tests\Performance;
  */
 final class FunctionListProvidingPerformanceTest extends AbstractPerformanceTest
 {
-    /**
-     * @return void
-     */
     public function testFetchAllColdFromStubs(): void
     {
-        $pathToIndex = __DIR__ . '/../../vendor/jetbrains/phpstorm-stubs';
-        $dummyDatabaseUri = 'file://' . $this->getOutputDirectory() . '/test-global-functions-stubs.sqlite';
-
-        @unlink($dummyDatabaseUri);
-
-        $this->container->get('managerRegistry')->setDatabaseUri($dummyDatabaseUri);
-        $this->container->get('initializeJsonRpcQueueItemHandler')->initialize(
-            $this->mockJsonRpcMessageSenderInterface(),
-            false
+        $this->initializeDummyProject(
+            $uriToIndex = $this->getNormalizedUri(__DIR__ . '/../../vendor/jetbrains/phpstorm-stubs'),
         );
 
-        $this->indexPath($this->container, $pathToIndex);
+        $this->indexPath($this->container, $uriToIndex);
 
         $time = $this->time(function (): void {
             $this->container->get('functionListProvider')->getAll();
         });
 
-        unlink($dummyDatabaseUri);
-
-        $this->finish($time);
+        $this->finish($time, __METHOD__);
     }
 
-    /**
-     * @return void
-     */
     public function testFetchAllHotFromStubs(): void
     {
-        $pathToIndex = __DIR__ . '/../../vendor/jetbrains/phpstorm-stubs';
-        $dummyDatabaseUri = $this->getOutputDirectory() . '/test-global-functions-stubs.sqlite';
-
-        @unlink($dummyDatabaseUri);
-
-        $this->container->get('managerRegistry')->setDatabaseUri($dummyDatabaseUri);
-        $this->container->get('initializeJsonRpcQueueItemHandler')->initialize(
-            $this->mockJsonRpcMessageSenderInterface(),
-            false
+        $this->initializeDummyProject(
+            $uriToIndex = $this->getNormalizedUri(__DIR__ . '/../../vendor/jetbrains/phpstorm-stubs'),
         );
 
-        $this->indexPath($this->container, $pathToIndex);
+        $this->indexPath($this->container, $uriToIndex);
         $this->container->get('functionListProvider')->getAll();
 
         $time = $this->time(function (): void {
             $this->container->get('functionListProvider')->getAll();
         });
 
-        unlink($dummyDatabaseUri);
-
-        $this->finish($time);
+        $this->finish($time, __METHOD__);
     }
 }

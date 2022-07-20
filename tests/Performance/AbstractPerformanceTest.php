@@ -3,8 +3,13 @@
 namespace Serenata\Tests\Performance;
 
 use Closure;
+use RuntimeException;
+
+use Serenata\Sockets\JsonRpcRequest;
 
 use Serenata\Tests\Integration\AbstractIntegrationTest;
+
+use Serenata\Utility\InitializeParams;
 
 use Serenata\Workspace\ActiveWorkspaceManager;
 
@@ -13,19 +18,13 @@ use Serenata\Workspace\ActiveWorkspaceManager;
  */
 abstract class AbstractPerformanceTest extends AbstractIntegrationTest
 {
-    /**
-     * @return string
-     */
-    protected function getOutputDirectory(): string
+    private const EXECUTION_TIMES_OUTPUT_FILE = __DIR__ . '/Output/execution-times.txt';
+
+    protected function getNormalizedUri(string $path): string
     {
-        return 'file://' . $this->normalizePath(__DIR__ . '/Output');
+        return 'file://' . $this->normalizePath($path);
     }
 
-    /**
-     * @param Closure $closure
-     *
-     * @return float
-     */
     protected function time(Closure $closure): float
     {
         $time = microtime(true);
@@ -35,20 +34,21 @@ abstract class AbstractPerformanceTest extends AbstractIntegrationTest
         return (microtime(true) - $time) * 1000;
     }
 
-    /**
-     * @param float $time
-     *
-     * @return void
-     */
-    protected function finish(float $time): void
+    protected function finish(float $time, string $caller): void
     {
-        self::markTestSkipped("Took {$time} milliseconds (" . ($time / 1000) . " seconds)");
+        $message = "Took {$time} milliseconds (" . ($time / 1000) . " seconds)";
+
+        // Output the results to a file in the case of running with Paratest
+        // See: https://github.com/paratestphp/paratest/issues/683
+        file_put_contents(
+            self::EXECUTION_TIMES_OUTPUT_FILE,
+            "{$caller}:" . PHP_EOL . $message . PHP_EOL . PHP_EOL,
+            FILE_APPEND
+        );
+
+        self::markTestSkipped($message);
     }
 
-
-    /**
-     * @return ActiveWorkspaceManager
-     */
     protected function getActiveWorkspaceManager(): ActiveWorkspaceManager
     {
         $manager = $this->container->get(ActiveWorkspaceManager::class);
@@ -56,5 +56,45 @@ abstract class AbstractPerformanceTest extends AbstractIntegrationTest
         assert($manager instanceof ActiveWorkspaceManager);
 
         return $manager;
+    }
+
+    /**
+     * Initializes a project as dummy, with dummy values.
+     */
+    protected function initializeDummyProject(string $uriToIndex, float $phpVersion = 8.0): void
+    {
+        $tmpDatabaseFile = tmpfile();
+
+        if ($tmpDatabaseFile === false) {
+            throw new RuntimeException('Temporary database file cannot be created');
+        }
+
+        $dummyDatabaseUri = $this->getNormalizedUri(stream_get_meta_data($tmpDatabaseFile)['uri']);
+
+        $this->getActiveWorkspaceManager()->setActiveWorkspace(null);
+        $this->container->get('managerRegistry')->setDatabaseUri($dummyDatabaseUri);
+
+        $this->container->get('initializeJsonRpcQueueItemHandler')->initialize(
+            new InitializeParams(
+                123,
+                null,
+                $uriToIndex,
+                [
+                    'configuration' => [
+                        'uris'                    => [$uriToIndex],
+                        'indexDatabaseUri'        => $dummyDatabaseUri,
+                        'phpVersion'              => $phpVersion,
+                        'excludedPathExpressions' => [],
+                        'fileExtensions'          => ['php'],
+                    ],
+                ],
+                [],
+                null,
+                []
+            ),
+            $this->mockJsonRpcMessageSenderInterface(),
+            new JsonRpcRequest(null, 'NO_METHOD'),
+            false
+        );
     }
 }
