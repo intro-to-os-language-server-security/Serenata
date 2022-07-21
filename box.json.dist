@@ -1,0 +1,7 @@
+{
+    "output": "bin/distribution.phar",
+    "compression": "GZ",
+    "blacklist": [
+        "tests"
+    ]
+}
