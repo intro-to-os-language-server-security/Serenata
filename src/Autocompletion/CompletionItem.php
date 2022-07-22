@@ -271,6 +271,8 @@ final class CompletionItem implements JsonSerializable, ArrayAccess
     /**
      * @inheritDoc
      */
+    // phpcs:ignore
+    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return $this->jsonSerialize()[$offset];
